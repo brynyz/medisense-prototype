@@ -1,0 +1,89 @@
+<form method="POST" action="{% url 'add_item' %}">
+  {% csrf_token %}
+
+  <!-- Item Name -->
+  <div class="form-group row">
+    <label for="itemName" class="col-sm-3 col-form-label">Item Name</label>
+    <div class="col-sm-9">
+      <input
+        type="text"
+        class="form-control"
+        id="itemName"
+        name="name"
+        placeholder="Enter item name"
+        autocomplete="off"
+        required
+      />
+    </div>
+  </div>
+
+  <!-- Category -->
+  <div class="form-group row">
+    <label for="category" class="col-sm-3 col-form-label">Category</label>
+    <div class="col-sm-9">
+      <select class="form-control" id="category" name="category" required>
+        <option value="">Select category</option>
+        <option value="Painkiller">Painkiller</option>
+        <option value="Antibiotic">Antibiotic</option>
+        <option value="Antiseptic">Antiseptic</option>
+        <option value="Supplement">Supplement</option>
+        <option value="Cough Relief">Cough Relief</option>
+        <option value="Equipment">Equipment</option>
+        <option value="First Aid">First Aid</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Quantity -->
+  <div class="form-group row">
+    <label for="quantity" class="col-sm-3 col-form-label">Quantity</label>
+    <div class="col-sm-9">
+      <input
+        type="number"
+        class="form-control"
+        id="quantity"
+        name="quantity"
+        placeholder="Enter quantity"
+        autocomplete="off"
+        required
+      />
+    </div>
+  </div>
+
+  <!-- Unit -->
+  <div class="form-group row">
+    <label for="unit" class="col-sm-3 col-form-label">Unit</label>
+    <div class="col-sm-9">
+      <select class="form-control" id="unit" name="unit">
+        <option value="">Select unit</option>
+        <option value="pcs">Pieces</option>
+        <option value="bottles">Bottles</option>
+        <option value="tabs">Tablets</option>
+        <option value="ml">Milliliters</option>
+        <option value="g">Grams</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Status -->
+  <div class="form-group row">
+    <label for="status" class="col-sm-3 col-form-label">Status</label>
+    <div class="col-sm-9">
+      <select class="form-control" id="status" name="status">
+        <option value="">Select status</option>
+        <option value="In Stock">In Stock</option>
+        <option value="Low Stock">Low Stock</option>
+        <option value="Out of Stock">Out of Stock</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Submit -->
+  <div class="form-group row mt-4">
+    <div class="col-sm-9 offset-sm-3">
+      <button type="submit" class="btn btn-secondary">
+        <i class="material-icons">&#xE147;</i> Add Item
+      </button>
+    </div>
+  </div>
+</form>
