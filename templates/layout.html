@@ -46,14 +46,20 @@
         <div class="sidebar-user">
           <div>
             {% if user.is_authenticated %}
-            <img src="{% static 'img/brylle.jpg' %}" width="120px" alt="" />
-            <h3>{{ user.get_full_name|default:user.username }}</h3>
-            <span>{{ user.email }}</span>
-            {% else %}
-            <img src="{% static 'img/brylle.jpg' %}" width="120px" alt="" />
-            <h3>Brylle Nyel Mamuad</h3>
-            <span>bryllenyelm@gmail.com</span>
+              {% if user.is_authenticated and user.username == "bryllenyel" %}
+                  <img src="{% static 'img/brylle.jpg' %}" alt="Your Photo"/>
+              {% else %}
+                  <img src="{% static 'img/user.png' %}" alt="Default Photo" />
+              {% endif %}
             {% endif %}
+            <h3>
+              {% if user.first_name or user.last_name %}
+                {{ user.get_full_name }}
+              {% else %}
+                {{ user.username }}
+              {% endif %}
+            </h3>
+            <span>{{ user.email|default:"guest mode" }}</span>
           </div>
         </div>
 
@@ -63,7 +69,7 @@
           </div>
           <ul>
             <li>
-              <a href="">
+              <a href="{% url 'home' %}">
                 <span class="las la-chart-pie"></span>
                 Analytics
               </a>
@@ -104,13 +110,13 @@
           </div>
           <ul>
             <li>
-              <a href="">
+              <a href="{% url 'admin:auth_user_changelist' %}">
                 <span class="las la-user"> </span>
                 Accounts
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="{% url 'admin:accounts_activitylog_changelist' %}">
                 <span class="las la-history"> </span>
                 Activity Logs
               </a>
@@ -122,6 +128,16 @@
               </a>
             </li>
           </ul>
+          <div class="menu-head">
+
+          </div>
+          <ul>
+            <li>
+              <a href="{% url 'logout' %}">
+                <span class="las la-sign-out-alt"> </span>
+                Logout
+              </a>
+            </li>
         </div>
       </div>
     </div>

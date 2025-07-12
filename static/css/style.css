@@ -90,13 +90,13 @@
   width: 130px;
   height: 130px;
   border-radius: 50%;
-  border-left: 2px solid transparent;
-  border-right: 2px solid #efefef;
-  border-bottom: 2px solid #efefef;
-  border-top: 2px solid #efefef;
+
+  border-left: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
 }
 
 .sidebar-user h3 {
+  margin-top: 1rem;
   font-size: 1rem;
 }
 
@@ -135,6 +135,11 @@
   font-size: 1.2rem;
   display: inline-block;
   margin-right: 0.8rem;
+}
+
+.sidebar-menu li a:hover {
+  color: #b1ab86;
+  text-decoration: none;
 }
 
 .main-content {

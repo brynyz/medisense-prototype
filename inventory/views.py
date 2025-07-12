@@ -4,9 +4,11 @@ from openpyxl import Workbook
 from xhtml2pdf import pisa
 from django.template.loader import render_to_string
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib.auth.decorators import login_required
 from .models import InventoryItem
 from django.views.decorators.csrf import csrf_exempt
 
+@login_required
 def inventory_table(request):
     inventory_items = InventoryItem.objects.all().order_by('-date_added')
     return render(request, 'inventory/inventory_table.html', {
@@ -26,7 +28,8 @@ def add_item(request):
             category=request.POST.get('category'),
             quantity=int(request.POST.get('quantity')),
             unit=request.POST.get('unit'),
-            status=request.POST.get('status')
+            status=request.POST.get('status'),
+            last_modified_by=request.user
         )
         return redirect('inventory_table')
 
@@ -42,6 +45,7 @@ def edit_item(request, item_id):
         item.quantity = request.POST.get('quantity')
         item.unit = request.POST.get('unit')
         item.status = request.POST.get('status')
+        item.last_modified_by = request.user
         item.save()
         return redirect('inventory_table')
 
@@ -57,6 +61,8 @@ def edit_item(request, item_id):
 
 def delete_item(request, item_id):
     item = get_object_or_404(InventoryItem, id=item_id)
+    item.last_modified_by = request.user
+    item.save()
     item.delete()
     return redirect('inventory_table')
 

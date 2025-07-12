@@ -1,127 +1,9 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Medisense Home Dashboard</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
-    />
-  </head>
-  <body>
-    <div class="sidebar">
-      <div class="sidebar-brand">
-        <div class="brand-flex">
-          <div class="templogo">
-            <span class="medi">Medi</span><span class="sense">Sense</span>
-          </div>
+{% extends "layout.html" %}
 
-          {% comment %} Wala pa logo lol, eto muna {% endcomment %} {% comment%}
-          <img src="img/1.jpg" width="30px" alt="image" /> {% endcomment %}
+{% block title %}Medisense: Hompage{% endblock title %}
 
-          <div class="brand-icons">
-            <span class="las la-bell"></span>
-            <span class="las la-user-circle"></span>
-          </div>
-        </div>
-      </div>
+{% block content %}
 
-      <div class="sidebar-main">
-        <div class="sidebar-user">
-          <img src="{% static 'img/brylle.jpg' %}" width="120px" alt="" />
-          <div>
-            <h3>Brylle Mamuad</h3>
-            <span>bryllenyem@gmail.com</span>
-          </div>
-        </div>
-
-        <div class="sidebar-menu">
-          <div class="menu-head">
-            <span>Dashboard</span>
-          </div>
-          <ul>
-            <li>
-              <a href="">
-                <span class="las la-chart-pie"></span>
-                Analytics
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <span class="las la-chart-line"></span>
-                Predictions Report
-              </a>
-            </li>
-          </ul>
-
-          <div class="menu-head">
-            <span>Operations</span>
-          </div>
-          <ul>
-            <li>
-              <a href="">
-                <span class="las la-box"> </span>
-                Inventory
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <span class="las la-chart-pie"> </span>
-                Predictors
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <span class="las la-user-injured"> </span>
-                Symptom Logs
-              </a>
-            </li>
-          </ul>
-          <div class="menu-head">
-            <span>Admin</span>
-          </div>
-          <ul>
-            <li>
-              <a href="">
-                <span class="las la-user"> </span>
-                Accounts
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <span class="las la-history"> </span>
-                Activity Logs
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <span class="las la-database"> </span>
-                Backup & Restore
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="main-content">
-      <header>
-        <div class="menu-toggle">
-          <label for="">
-            <span class="las la-bars"></span>
-          </label>
-        </div>
-        <div class="header-icons">
-          <span class="las la-search"></span>
-          <span class="las la-bookmark"></span>
-          <span class="las la-sms"></span>
-        </div>
-      </header>
-
-      <main>
         <div class="page-header">
           <div>
             <h1>Analytics</h1>
@@ -209,7 +91,4 @@
             </div>
           </div>
         </div>
-      </main>
-    </div>
-  </body>
-</html>
+{% endblock  %}
