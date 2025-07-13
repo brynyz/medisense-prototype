@@ -27,7 +27,6 @@ def logout_view(request):
     request.session.flush()
     return redirect('login')
 
-@login_required
 def register(request):
     if request.method == 'POST':
         form = RegistrationForm(request.POST)
