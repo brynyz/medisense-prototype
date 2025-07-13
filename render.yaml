@@ -1,0 +1,13 @@
+# render.yaml
+services:
+  - type: web
+    name: medisense
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: gunicorn medisense.wsgi:application --bind 0.0.0.0:8000
+    envVars:
+      - key: DJANGO_SECRET_KEY
+        value: your-secret
+      - key: DATABASE_URL
+        value: mysql://root:password@localhost:3306/medisense_db
