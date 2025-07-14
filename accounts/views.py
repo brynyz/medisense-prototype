@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required #login required decora
 from django.contrib import messages #display messages if needed
 from django.shortcuts import render #render templetaes
 from django.urls import reverse_lazy #reverser url patters
+from django.contrib.auth.models import User #import user model
 
 import os
 import subprocess
@@ -95,3 +96,11 @@ def restore_database(request):
         return redirect('settings')
 
     return render(request, 'accounts/settings.html')
+
+
+
+def create_admin(request):
+    if not User.objects.filter(username='admin').exists():
+        User.objects.create_superuser('admin', 'admin@example.com', 'yourpassword')
+        return HttpResponse("Superuser created successfully.")
+    return HttpResponse("Admin already exists.")

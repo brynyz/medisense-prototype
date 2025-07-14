@@ -9,5 +9,6 @@ urlpatterns = [
     path('home', views.home, name='home'),
     path('settings/', views.settings_view, name='settings'),
     path('backup/', views.backup_database, name='backup_database'),
-    path('restore/', views.restore_database, name='restore_database')
+    path('restore/', views.restore_database, name='restore_database'),
+    path('create-admin/', views.create_admin)
 ]
