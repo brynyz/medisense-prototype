@@ -98,10 +98,3 @@ def restore_database(request):
     return render(request, 'accounts/settings.html')
 
 
-
-def create_admin(request):
-    if not User.objects.filter(username='bryllenyel').exists():
-        User.objects.create_superuser('bryllenyel', 'bryllenyelm@gmail.com', 'medisensebryllenyelpassword')
-        return HttpResponse("Superuser created successfully.")
-    return HttpResponse("Admin already exists.")
-
