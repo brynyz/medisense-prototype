@@ -1,8 +1,9 @@
 services:
   - type: web
     name: medisense
-    env: docker
-    dockerfilePath: ./Dockerfile
+    env: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn medisense.wsgi:application"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
@@ -13,7 +14,7 @@ services:
       - key: DEBUG
         value: "False"
       - key: EMAIL_HOST_PASSWORD
-        value: your-email-password
+        value: "qavn hyjr kcwe xaqh"
 
 databases:
   - name: medisense-db
