@@ -13,8 +13,6 @@ services:
         generateValue: true
       - key: DEBUG
         value: "False"
-      - key: EMAIL_HOST_PASSWORD
-        value: "qavn hyjr kcwe xaqh"
 
 databases:
   - name: medisense-db
