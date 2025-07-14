@@ -1,13 +1,20 @@
-# render.yaml
 services:
   - type: web
     name: medisense
     env: python
-    plan: free
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn medisense.wsgi:application --bind 0.0.0.0:8000
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn medisense.wsgi:application"
     envVars:
-      - key: DJANGO_SECRET_KEY
-        value: your-secret
       - key: DATABASE_URL
-        value: mysql://root:password@localhost:3306/medisense_db
+        fromDatabase:
+          name: medisense-db
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: WEB_CONCURRENCY
+        value: 4
+
+databases:
+  - name: medisense-db
+    databaseName: medisense
+    user: medisense
