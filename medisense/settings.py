@@ -87,9 +87,8 @@ WSGI_APPLICATION = "medisense.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-# Check if we're on Render (production) or localhost (development)
+# DB setup for production and local deployment
 if os.getenv('DATABASE_URL'):
-    # Use DATABASE_URL for production (Render provides this)
     DATABASES = {
         'default': dj_database_url.parse(os.getenv('DATABASE_URL'))
     }
