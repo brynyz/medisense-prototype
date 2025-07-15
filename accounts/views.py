@@ -8,11 +8,14 @@ from django.contrib.auth.models import User #import user model
 
 import os
 import subprocess
+import json
 from django.http import HttpResponse
 from django.conf import settings
 from django.utils.timezone import now
 
 from .forms import LoginForm, RegistrationForm
+
+from chartjs.views.lines import BaseLineChartView
 
 # Create your views here.
 
@@ -27,7 +30,15 @@ class CustomLoginView(LoginView):
 
 @login_required
 def home(request):
-    return render(request, 'accounts/homepage.html')
+        # Sample data for charts
+    patient_trends = [65, 59, 80, 81, 56, 55, 40]
+    inventory_data = [28, 48, 40, 19, 86, 27, 90]
+    
+    context = {
+        'patient_trends': json.dumps(patient_trends),
+        'inventory_data': json.dumps(inventory_data),
+    }
+    return render(request, 'accounts/homepage.html', context)
 
 @login_required
 def logout_view(request):
@@ -96,5 +107,3 @@ def restore_database(request):
         return redirect('settings')
 
     return render(request, 'accounts/settings.html')
-
-

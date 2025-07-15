@@ -54,16 +54,16 @@
             </td>
             <td>{{ item.date_added }}</td>
             <td>
-<a
-  href="#"
-  class="settings popup-btn"
-  title="Edit"
-  data-toggle="tooltip"
-  data-edit-url="{% url 'edit_item' item.id %}"
-  data-item-id="{{ item.id }}"
->
-  <i class="material-icons">&#xE8B8;</i>
-</a>
+              <a
+                href="{% url 'edit_item' item.id %}"
+                class="settings popup-btn"
+                title="Edit"
+                data-toggle="tooltip"
+                data-edit-url="{% url 'edit_item' item.id %}"
+                data-item-id="{{ item.id }}"
+              >
+                <i class="material-icons">&#xE8B8;</i>
+              </a>
               <a
                 href="{% url 'delete_item' item.id %}"
                 class="delete"

@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     "patients",
     "predictor",
     "inventory",
+    "chartjs",
 ]
 
 #bootstrap template pack
@@ -173,12 +174,12 @@ LOGIN_REDIRECT_URL = 'home'
 
 
 # CAPTCHA_CHALLENGE_FUNCT = 'captcha.helpers.random_char_challenge'
-CAPTCHA_LENGTH = 20
+CAPTCHA_LENGTH = 4
 CAPTCHA_LETTER_ROTATION = (-45, 45) 
 CAPTCHA_FONT_SIZE = 30
 CAPTCHA_NOISE_FUNCTIONS = (
     'captcha.helpers.noise_arcs',
-    'captcha.helpers.noise_dots',
+    # 'captcha.helpers.noise_dots',
     # 'captcha.helpers.noise_null',
 )
 

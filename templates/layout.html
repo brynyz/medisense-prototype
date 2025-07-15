@@ -18,6 +18,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <script src="{% static 'js/main.js' %}"></script>
 
     {% block load_extra%}{% endblock load_extra %}
     <link
@@ -26,6 +27,11 @@
     />
   </head>
   <body>
+
+    <input type="checkbox" name="" id="sidebar-toggle" />
+
+    <div class="sidebar-overlay"></div>
+
     <div class="sidebar">
       <div class="sidebar-brand">
         <div class="brand-flex">
@@ -106,6 +112,7 @@
               </a>
             </li>
           </ul>
+          {% if user.is_authenticated and user.is_superuser %}
           <div class="menu-head">
             <span>Admin</span>
           </div>
@@ -129,10 +136,7 @@
               </a>
             </li>
           </ul>
-          <div class="menu-head">
-
-          </div>
-          <ul>
+          {% endif %}
             <li>
               <a href="{% url 'logout' %}">
                 <span class="las la-sign-out-alt"> </span>
@@ -146,18 +150,21 @@
     <div class="main-content">
       <header>
         <div class="menu-toggle">
-          <label for="">
+          <label for="sidebar-toggle">
             <span class="las la-bars"></span>
           </label>
         </div>
-        <div class="header-icons">
-          {% comment %} <span class="las la-search"></span>
+        {% comment %} <div class="header-icons">
+          <span class="las la-search"></span>
           <span class="las la-bookmark"></span>
-          <span class="las la-sms"></span> {% endcomment %}
-        </div>
+          <span class="las la-sms"></span>
+        </div> {% endcomment %}
+        
+        <span id="clock" style="margin-left:auto;"></span>
       </header>
 
-      <main>{% block content %} {% endblock %}</main>
+      <main>
+      {% block content %} {% endblock %}</main>
     </div>
   </body>
 </html>

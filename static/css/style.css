@@ -29,6 +29,14 @@
 
 :root {
   --color-main: #0a400c;
+  --transition-speed: 300ms;
+  --transition-easing: ease-in-out;
+  --transition-all: all var(--transition-speed) var(--transition-easing);
+}
+
+body{
+  background: #efefef;
+  overflow-x: hidden;
 }
 
 * {
@@ -40,6 +48,24 @@
   padding: 0;
 }
 
+#sidebar-toggle {
+  display: none;
+}
+
+#sidebar-toggle:checked ~ .sidebar {
+  left: -280px;
+}
+
+#sidebar-toggle:checked ~ .main-content header {
+  left: 0;
+  width: 100%;
+  right: 0;
+}
+
+#sidebar-toggle:checked ~ .main-content {
+  margin-left: 0;
+}
+
 .sidebar {
   width: 280px;
   position: fixed;
@@ -49,7 +75,10 @@
   padding: 1rem 1.5rem;
   background: var(--color-main);
   color: #fff;
+  z-index: 20;
+  transition: left var(--transition-speed) var(--transition-easing);
 }
+
 
 /* temp logo */
 .templogo {
@@ -142,24 +171,26 @@
   text-decoration: none;
 }
 
-.main-content {
-  margin-left: 280px;
-}
-
 header {
   height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.5rem;
-  z-index: 10;
-  position: relative;
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.08);
+  position: fixed;
+  left: 280px;
+  width: calc(100% - 280px);
+  top: 0;
+  z-index: 20;
+  background: #fff; 
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: var(--transition-all);
 }
 
+
 .menu-toggle label {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   display: grid;
   place-items: center;
   font-size: 1.5rem;
@@ -177,13 +208,15 @@ header {
 }
 
 .main-content {
-  margin-left:280px;
+  margin-left: 280px;
+  transition: margin-left var(--transition-speed) var(--transition-easing);
 }
 
 main {
   padding: 1.5rem;
   background: #efefef;
   min-height: calc(100vh - 70px);
+  margin-top: 70px;
 }
 
 .page-header {
@@ -191,10 +224,11 @@ main {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.5rem;
+  margin-top: 1rem;
 }
 
 .header-actions button {
-  outline: none;
+  outline: none;  
   background: #1a711c;
   opacity: 0.8;
   color: #FEFAE0;
@@ -202,7 +236,7 @@ main {
   padding: .6rem 1rem;
   margin-left: 1rem;
   border-radius: 8px;
-  font-weight: 600;;
+  font-weight: 600;
 }
 
 .header-actions button span {
@@ -213,5 +247,123 @@ main {
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card-single{
+  background: #fff;
+  padding: 1rem;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.card-flex {
+  display: grid;
+  grid-template-columns: 70% auto;
+  align-items: center;
+}
+
+.card-head span {
+  display: block;
+  text-transform: uppercase;
+  color: #555;
+}
+
+.card-head small {
+  font-weight: 600;
+  color: #555;
+}
+
+.card-info h2 {
+  font-size: 2.2rem;
+  color: #0a400c;
+  margin: 0;
+}
+
+.card-chart span {
+  font-size: 5rem;
+}
+
+.card-chart.success span {
+  color: seagreen;
+}
+
+.card-chart.yellow span {
+  color: orangered;
+}
+
+.card-chart.danger span {
+  color: tomato;
+}
+
+@media only screen and (max-width: 1124px) {
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.151);
+  backdrop-filter: blur(5px);
+  z-index: 15;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-speed) var(--transition-easing);
+}
+
+#sidebar-toggle:not(:checked) ~ .sidebar-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+  .cards {
+    left: -100%;
+    z-index: 30;
+  }
+
+  .sidebar {
+    width: 280px;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  header {
+    height: 70px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-single {
+    font-size: 80%;
+  }
+}
+@media screen and (max-width: 754px) {
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .page-header {
+    display: block;
+  }
+
+  .header-actions {
+    margin-top: 1rem;
+    text-align: right;
+  }
+
+  /* Show clock by default (when sidebar is NOT toggled) */
+  #clock {
+    display: none;
+  }
+
+  /* Hide clock when sidebar IS toggled (checked) */
+  #sidebar-toggle:checked ~ .main-content header #clock {
+    display: block;
+  }
 }
