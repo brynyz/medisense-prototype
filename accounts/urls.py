@@ -10,4 +10,5 @@ urlpatterns = [
     path('settings/', views.settings_view, name='settings'),
     path('backup/', views.backup_database, name='backup_database'),
     path('restore/', views.restore_database, name='restore_database'),
+    path('profile_settings/', views.profile_settings, name='profile_settings'),
 ]

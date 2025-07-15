@@ -107,3 +107,7 @@ def restore_database(request):
         return redirect('settings')
 
     return render(request, 'accounts/settings.html')
+
+
+def profile_settings(request):
+    return render(request, 'accounts/profile_settings.html')

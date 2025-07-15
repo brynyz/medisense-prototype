@@ -1,0 +1,206 @@
+{% extends "layout.html" %} {% load static %} {% load i18n %} 
+{% block title%}Profile Settings{% endblock %} 
+{% block load_extra %}
+<link
+  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  rel="stylesheet"
+/>
+<link rel="stylesheet" href="{% static 'css/profile_settings.css' %}" />
+{% endblock load_extra %} 
+    {% block content %}
+<div class="container p-0 mt-3 mw-100">
+  <div class="tab-content">
+    <div class="tab-pane fade show active" id="account" role="tabpanel">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-actions float-right">
+            <div class="dropdown show">
+              <a href="#" data-toggle="dropdown" data-display="static">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-more-horizontal align-middle"
+                >
+                  <circle cx="12" cy="12" r="1"></circle>
+                  <circle cx="19" cy="12" r="1"></circle>
+                  <circle cx="5" cy="12" r="1"></circle>
+                </svg>
+              </a>
+
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="#">Reset Password</a>
+              </div>
+            </div>
+          </div>
+          <h5 class="card-title mb-0">User Information</h5>
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="row">
+              <div class="col-md-8">
+                <div class="form-group">
+                  <label for="inputUsername">Username</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputUsername"
+                    placeholder="Username"
+                    value="{{ user.username }}"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="inputUsername">Email</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputUsername"
+                    placeholder="Username"
+                    value="{{ user.email }}"
+                  />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="text-center">
+                  <img
+                    alt="Andrew Jones"
+                    {% load static %}
+                    src="{% static 'img/user.svg' %}"
+                    class="rounded-circle img-responsive mt-2"
+                    width="128"
+                    height="128"
+                  />
+                  <div class="mt-2">
+                    <span class="btn btn-primary"
+                      ><i class="fa fa-upload"></i
+                    ></span>
+                  </div>
+                  <small
+                    >For best results, use an image at least 128px by 128px in
+                    .jpg format</small
+                  >
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Save changes</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-actions float-right">
+            <div class="dropdown show">
+              <a href="#" data-toggle="dropdown" data-display="static">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-more-horizontal align-middle"
+                >
+                  <circle cx="12" cy="12" r="1"></circle>
+                  <circle cx="19" cy="12" r="1"></circle>
+                  <circle cx="5" cy="12" r="1"></circle>
+                </svg>
+              </a>
+
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="#">Download Logs</a>
+              </div>
+            </div>
+          </div>
+          <h5 class="card-title mb-0">Activity Logs</h5>
+        </div>
+        <div class="card-body">
+          <div class="col-lg-12 pb-5 mw-100">
+            <div class="d-flex justify-content-end pb-3">
+                <div class="form-inline">
+                    <label class="text-muted mr-3" for="activity-sort">Filter Activities</label>
+                    <select class="form-control" id="activity-sort">
+                        <option>All</option>
+                        <option>Login</option>
+                        <option>Profile Update</option>
+                        <option>Password Change</option>
+                        <option>System Alert</option>
+                        <option>Data Export</option>
+                    </select>
+                </div>
+            </div>
+            <div class="table-responsive mw-100">
+                <table class="table table-hover mb-0">
+                    <thead>
+                        <tr>
+                            <th>Activity</th>
+                            <th>Date & Time</th>
+                            <th>Type</th>
+                            <th>IP Address</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Profile information updated</td>
+                            <td>December 15, 2023 2:45 PM</td>
+                            <td><span class="badge badge-info m-0">Profile Update</span></td>
+                            <td>192.168.1.100</td>
+                            <td><span class="badge badge-success m-0">Success</span></td>
+                        </tr>
+                        <tr>
+                            <td>Password changed successfully</td>
+                            <td>December 14, 2023 9:30 AM</td>
+                            <td><span class="badge badge-warning m-0">Security</span></td>
+                            <td>192.168.1.100</td>
+                            <td><span class="badge badge-success m-0">Success</span></td>
+                        </tr>
+                        <tr>
+                            <td>Login attempt from new device</td>
+                            <td>December 13, 2023 6:15 PM</td>
+                            <td><span class="badge badge-primary m-0">Login</span></td>
+                            <td>203.0.113.45</td>
+                            <td><span class="badge badge-success m-0">Success</span></td>
+                        </tr>
+                        <tr>
+                            <td>Failed login attempt</td>
+                            <td>December 12, 2023 11:22 PM</td>
+                            <td><span class="badge badge-primary m-0">Login</span></td>
+                            <td>198.51.100.42</td>
+                            <td><span class="badge badge-danger m-0">Failed</span></td>
+                        </tr>
+                        <tr>
+                            <td>Account data exported</td>
+                            <td>December 10, 2023 3:10 PM</td>
+                            <td><span class="badge badge-secondary m-0">Data Export</span></td>
+                            <td>192.168.1.100</td>
+                            <td><span class="badge badge-success m-0">Success</span></td>
+                        </tr>
+                        <tr>
+                            <td>System security alert reviewed</td>
+                            <td>December 08, 2023 1:45 PM</td>
+                            <td><span class="badge badge-danger m-0">System Alert</span></td>
+                            <td>192.168.1.100</td>
+                            <td><span class="badge badge-success m-0">Reviewed</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
+
