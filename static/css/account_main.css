@@ -1,14 +1,5 @@
-
-
-
-
 /*//////////////////////////////////////////////////////////////////
 [ FONT ]*/
-
-@font-face {
-  font-family: OpenSans-Regular;
-  src: url('../fonts/OpenSans/OpenSans-Regular.ttf'); 
-}
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 /*//////////////////////////////////////////////////////////////////
@@ -17,7 +8,7 @@
 * {
 	margin: 0px; 
 	padding: 0px; 
-	box-sizing: border-box;
+	box-sizing: border-box; 
 }
 
 body, html {
@@ -52,7 +43,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 p {
-	font-family: OpenSans-Regular;
+	font-family: "Poppins", sans-serif;
 	font-size: 14px;
 	line-height: 1.7;
 	color: #666666;
@@ -108,14 +99,14 @@ iframe {
 /*//////////////////////////////////////////////////////////////////
 [ Utility ]*/
 .txt1 {
-  font-family: OpenSans-Regular;
+  font-family: "Poppins", sans-serif;
   font-size: 15px;
   line-height: 1.4;
   color: #999999;
 }
 
 .txt2 {
-  font-family: OpenSans-Regular;
+  font-family: "Poppins", sans-serif;
   font-size: 15px;
   line-height: 1.4;
   color: #4272d7;
@@ -172,7 +163,7 @@ iframe {
 
 .login100-form-title {
   display: block;
-  font-family: OpenSans-Regular;
+  font-family: "Poppins", sans-serif;
   font-size: 30px;
   color: #555555;
   line-height: 1.2;
@@ -197,7 +188,7 @@ iframe {
   display: block;
   width: 100%;
   background: transparent;
-  font-family: OpenSans-Regular;
+  font-family: "Poppins", sans-serif;
   font-size: 15px;
   color: #666666;
   line-height: 1.2;
@@ -331,7 +322,7 @@ input.input100 {
   height: 60px;
   background-color: #819067;
 
-  font-family: OpenSans-Regular;
+  font-family: "Poppins", sans-serif;
   font-size: 14px;
   color: #fff;
   line-height: 1.2;
@@ -372,7 +363,7 @@ input.input100 {
   right: 12px;
   pointer-events: none;
 
-  font-family: OpenSans-Regular;
+  font-family: "Poppins", sans-serif;
   color: #c80000;
   font-size: 13px;
   line-height: 1.4;
@@ -432,7 +423,7 @@ input.input100 {
   display: block;
   width: 100%;
   background: transparent;
-  font-family: OpenSans-Regular;
+  font-family: "Poppins", sans-serif;
   font-size: 15px;
   color: #666666;
   line-height: 1.2;

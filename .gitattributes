@@ -1,0 +1,11 @@
+# Ensure shell scripts use LF line endings on all platforms
+*.sh text eol=lf
+
+# Python files
+*.py text eol=lf
+
+# Other text files
+*.txt text
+*.md text
+*.yml text
+*.yaml text

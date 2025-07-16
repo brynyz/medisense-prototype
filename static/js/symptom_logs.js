@@ -6,30 +6,19 @@ $(document).ready(function() {
     e.preventDefault();
     $(".popup").addClass("active");
 
-    // Check if this is an edit button
     var editUrl = $(this).data("edit-url");
-    var itemId = $(this).data("item-id");
+    var logId = $(this).data("log-id");
     
-    if (editUrl && itemId) {
-      // This is an EDIT operation
+    if (editUrl && logId) {
       $(".popup-form").attr("action", editUrl);
-      $(".btn-text").text("Update Item");
-      
-      // TODO: Load item data and populate form fields
-      // You can make an AJAX call here to get item details and populate the form
-      
+      $(".btn-text").text("Update Log");
     } else {
-      // This is an ADD operation
-      $(".popup-form").attr("action", "/inventory/add/");
-      $(".btn-text").text("Add Item");
+      // Updated the URL to match your URL structure
+      $(".popup-form").attr("action", "/symptoms/add/");
+      $(".btn-text").text("Add Log");
       
-      // Reset form for Add
       $(".popup-form")[0].reset();
-      
-      // Reset all select boxes to default "Select..." option
-      $("#category").val("").prop('selectedIndex', 0);
-      $("#unit").val("").prop('selectedIndex', 0);
-      $("#status").val("").prop('selectedIndex', 0);
+      $("#sex").val("").prop('selectedIndex', 0);
     }
   });
 
@@ -102,7 +91,7 @@ $(document).ready(function() {
   $(document).on('click', '.delete-btn', function(e) {
     e.preventDefault();
     
-    if (confirm('Are you sure you want to delete this item?')) {
+    if (confirm('Are you sure you want to delete this symptom log?')) {
       var deleteUrl = $(this).attr('href');
       var row = $(this).closest('tr');
       
@@ -121,13 +110,13 @@ $(document).ready(function() {
               
               // Check if table is empty
               if ($('tbody tr').length === 0) {
-                $('tbody').html('<tr><td colspan="7" class="text-center">No items in inventory</td></tr>');
+                $('tbody').html('<tr><td colspan="7" class="text-center">No symptom logs recorded.</td></tr>');
               }
             });
             
-            alert(response.message || 'Item deleted');
+            alert(response.message || 'Symptom log deleted successfully!');
           } else {
-            alert('Error deleting item: ' + (response.error || 'Unknown error'));
+            alert('Error deleting log: ' + (response.error || 'Unknown error'));
           }
         },
         error: function(xhr, status, error) {

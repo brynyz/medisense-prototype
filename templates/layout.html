@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title %}{% endblock title %}</title>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -17,6 +18,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/tableToCards.js' %}"></script>
 
     {% block load_extra%}{% endblock load_extra %}
     <link
@@ -25,6 +28,11 @@
     />
   </head>
   <body>
+
+    <input type="checkbox" name="" id="sidebar-toggle" />
+
+    <div class="sidebar-overlay"></div>
+
     <div class="sidebar">
       <div class="sidebar-brand">
         <div class="brand-flex">
@@ -37,7 +45,7 @@
 
           <div class="brand-icons">
             {% comment %} <span class="las la-bell"></span> {% endcomment %}
-            <span class="las la-user-circle"></span>
+            <a href="{% url 'profile_settings' %}"><span class="las la-user-circle"></span></a>
           </div>
         </div>
       </div>
@@ -74,12 +82,12 @@
                 Analytics
               </a>
             </li>
-            <li>
+            {% comment %} <li>
               <a href="">
                 <span class="las la-chart-line"></span>
                 Predictions Report
               </a>
-            </li>
+            </li> {% endcomment %}
           </ul>
 
           <div class="menu-head">
@@ -93,18 +101,19 @@
               </a>
             </li>
             <li>
+              <a href="{% url 'symptom-logs' %}">
+                <span class="las la-user-injured"> </span>
+                Symptom Logs
+              </a>
+            </li>
+            <li>
               <a href="">
                 <span class="las la-chart-pie"> </span>
                 Predictors
               </a>
             </li>
-            <li>
-              <a href="">
-                <span class="las la-user-injured"> </span>
-                Symptom Logs
-              </a>
-            </li>
           </ul>
+          {% if user.is_authenticated and user.is_superuser %}
           <div class="menu-head">
             <span>Admin</span>
           </div>
@@ -122,16 +131,13 @@
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="{% url 'settings' %}">
                 <span class="las la-database"> </span>
                 Backup & Restore
               </a>
             </li>
           </ul>
-          <div class="menu-head">
-
-          </div>
-          <ul>
+          {% endif %}
             <li>
               <a href="{% url 'logout' %}">
                 <span class="las la-sign-out-alt"> </span>
@@ -145,18 +151,21 @@
     <div class="main-content">
       <header>
         <div class="menu-toggle">
-          <label for="">
+          <label for="sidebar-toggle">
             <span class="las la-bars"></span>
           </label>
         </div>
-        <div class="header-icons">
-          {% comment %} <span class="las la-search"></span>
+        {% comment %} <div class="header-icons">
+          <span class="las la-search"></span>
           <span class="las la-bookmark"></span>
-          <span class="las la-sms"></span> {% endcomment %}
-        </div>
+          <span class="las la-sms"></span>
+        </div> {% endcomment %}
+        
+        <span id="clock" style="margin-left:auto;"></span>
       </header>
 
-      <main>{% block content %} {% endblock %}</main>
+      <main>
+      {% block content %} {% endblock %}</main>
     </div>
   </body>
 </html>

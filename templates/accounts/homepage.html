@@ -1,9 +1,14 @@
 {% extends "layout.html" %}
 
-{% block title %}Medisense: Hompage{% endblock title %}
+{% block title %}Medisense: Homepage{% endblock title %}
+
+{% load static %}
+{% block load_extra %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{% static 'js/analytics.js' %}"></script>
+{% endblock load_extra %}
 
 {% block content %}
-
         <div class="page-header">
           <div>
             <h1>Analytics</h1>
@@ -34,7 +39,7 @@
                 <small>33.3% less this month</small>
               </div>
               <div class="card-chart">
-                <span class="las la-chart-line"></span>
+                <canvas id="patientChart" width="80" height="50"></canvas>
               </div>
             </div>
           </div>
@@ -51,7 +56,7 @@
                 <small>Based on patient logs</small>
               </div>
               <div class="card-chart">
-                <span class="las la-chart-line"></span>
+                <canvas id="symptomsChart" width="80" height="50"></canvas>
               </div>
             </div>
           </div>
@@ -68,27 +73,26 @@
                 <small>Last updated 2 days ago</small>
               </div>
               <div class="card-chart">
-                <span class="las la-chart-line"></span>
+                <canvas id="inventoryChart" width="80" height="50"></canvas>
               </div>
             </div>
           </div>
-
-        {% comment %} Card 4: Forecast / Prediction {% endcomment %} 
-        <div class="cards">
-          <div class="card-single">
-            <div class="card-flex">
-              <div class="card-info">
-                <div class="card-head">
-                  <span>Forecast</span>
-                  <small>Expected high-demand item</small>
+          {% comment %} Card 4: Forecast / Prediction {% endcomment %} 
+            <div class="card-single">
+              <div class="card-flex">
+                <div class="card-info">
+                  <div class="card-head">
+                    <span>Forecast</span>
+                    <small>Expected high-demand item</small>
+                  </div>
+                  <h2>x medicine</h2>
+                  <small>Forecasted ↑ 20% in August</small>
                 </div>
-                <h2>x medicine</h2>
-                <small>Forecasted ↑ 20% in August</small>
-              </div>
-              <div class="card-chart">
-                <span class="las la-chart-line"></span>
+                <div class="card-chart">
+                  <canvas id="forecastChart" width="80" height="50"></canvas>
+                </div>
               </div>
             </div>
           </div>
         </div>
-{% endblock  %}
+{% endblock %}
