@@ -71,10 +71,11 @@ body{
   color: #efefef;
 }
 
+/* Default state: sidebar CLOSED */
 .sidebar {
   width: 280px;
   position: fixed;
-  left: 0;
+  left: -280px; /* CLOSED by default - moved this from the :checked state */
   top: 0;
   height: 100%;
   padding: 1rem 1.5rem;
@@ -181,6 +182,7 @@ body{
   text-decoration: none;
 }
 
+/* Default state: header and main content FULL WIDTH */
 header {
   height: 100px;
   display: flex;
@@ -188,15 +190,14 @@ header {
   align-items: center;
   padding: 1rem 1.5rem;
   position: fixed;
-  left: 280px;
-  width: calc(100% - 280px);
+  left: 0; /* FULL WIDTH by default - moved this from the :checked state */
+  width: 100%; /* FULL WIDTH by default - moved this from the :checked state */
   top: 0;
   z-index: 20;
   background: #fff; 
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   transition: var(--transition-all);
 }
-
 
 .menu-toggle label {
   width: 50px;
@@ -217,8 +218,22 @@ header {
   background: #efefef;
 }
 
+/* When toggled (checked): sidebar OPENS */
+#sidebar-toggle:checked ~ .sidebar {
+  left: 0; /* OPEN when checked - moved this from the default state */
+}
+
+#sidebar-toggle:checked ~ .main-content header {
+  left: 280px; /* SIDEBAR WIDTH when checked - moved this from the default state */
+  width: calc(100% - 280px); /* REDUCED WIDTH when checked - moved this from the default state */
+}
+
+#sidebar-toggle:checked ~ .main-content {
+  margin-left: 280px; /* SIDEBAR MARGIN when checked - moved this from the default state */
+}
+
 .main-content {
-  margin-left: 280px;
+  margin-left: 0; /* NO MARGIN by default - moved this from the :checked state */
   transition: margin-left var(--transition-speed) var(--transition-easing);
 }
 
@@ -323,26 +338,25 @@ main {
   transition: all var(--transition-speed) var(--transition-easing);
 }
 
-#sidebar-toggle:not(:checked) ~ .sidebar-overlay {
+/* Show overlay when sidebar IS open (checked) */
+#sidebar-toggle:checked ~ .sidebar-overlay {
   opacity: 1;
   visibility: visible;
 }
 
-  .cards {
-    left: -100%;
-    z-index: 30;
-  }
-
   .sidebar {
     width: 280px;
+    left: -280px; /* Closed by default on mobile too */
   }
 
   .main-content {
-    margin-left: 0;
+    margin-left: 0; /* No margin by default on mobile */
   }
 
   header {
     height: 70px;
+    left: 0; /* Full width by default on mobile */
+    width: 100%; /* Full width by default on mobile */
   }
 
   .cards {
@@ -367,13 +381,13 @@ main {
     text-align: right;
   }
 
-  /* Show clock by default (when sidebar is NOT toggled) */
+  /* Show clock by default (when sidebar is closed) */
   #clock {
-    display: none;
+    display: block;
   }
 
-  /* Hide clock when sidebar IS toggled (checked) */
+  /* Hide clock when sidebar is open (checked) */
   #sidebar-toggle:checked ~ .main-content header #clock {
-    display: block;
+    display: none;
   }
 }

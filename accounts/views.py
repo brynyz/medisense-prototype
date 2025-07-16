@@ -108,6 +108,6 @@ def restore_database(request):
 
     return render(request, 'accounts/settings.html')
 
-
+@login_required
 def profile_settings(request):
     return render(request, 'accounts/profile_settings.html')

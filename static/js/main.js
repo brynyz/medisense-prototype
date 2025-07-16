@@ -2,7 +2,7 @@ function updateClock() {
   const clockElement = document.getElementById('clock');
   if (clockElement) {
     const now = new Date();
-    const timeString = now.toLocaleTimeString(); // e.g., 10:45:21 PM
+    const timeString = now.toLocaleTimeString();
     clockElement.textContent = timeString;
   }
 }

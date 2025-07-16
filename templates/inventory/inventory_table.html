@@ -4,7 +4,7 @@
 {% endblock load_extra%}
 {% block title %}MediSense: Inventory{% endblock title%} {% block content %}
 
-<div class="container-xl">
+{% comment %} <div class="container-xl">
   <div class="table-responsive">
     <div class="table-wrapper">
       <div class="table-title">
@@ -47,10 +47,9 @@
             <td>{{ item.get_unit_display }}</td>
             <td>
               <span
-                class="status {% if item.status == 'In Stock' %}text-success{% elif item.status == 'Low Stock' %}text-warning{% else %}text-danger{% endif %}"
-                >&bull;</span
+                class="badge {% if item.status == 'In Stock' %}badge-success{% elif item.status == 'Low Stock' %}badge-warning{% else %}badge-danger{% endif %} m-0"
+                >{{ item.status }}</span
               >
-              {{ item.status }}
             </td>
             <td>{{ item.date_added }}</td>
             <td>
@@ -90,62 +89,159 @@
       </div>
     </div>
   </div>
-</div>
+</div> {% endcomment %}
+
+      <div class="card mt-4">
+        <div class="card-header">
+          <div class="card-actions float-right">
+            <div class="dropdown">
+              <a href="#" data-toggle="dropdown" data-display="static">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-more-horizontal align-middle"
+                >
+                  <circle cx="12" cy="12" r="1"></circle>
+                  <circle cx="19" cy="12" r="1"></circle>
+                  <circle cx="5" cy="12" r="1"></circle>
+                </svg>
+              </a>
+
+              <div class="dropdown-menu dropdown-menu-right">
+                <a href="#" class="dropdown-item popup-btn" id="popup-btn" role="button">
+                  <i class="material-icons">&#xE147;</i>
+                  <span>Add New Item</span>
+                </a>
+                <a href="{% url 'export_inventory_excel' %}" class="dropdown-item">
+                  <i class="material-icons">&#xE24D;</i>
+                  <span>Export File</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <h5 class="card-title mb-0">Medicine <b>Management</b></h5>
+        </div>
+        <div class="card-body"> 
+            <div class="table-responsive mw-100">
+                <table class="table table-hover mb-0">
+                    <thead>
+                        <tr>
+                            <th>Item Name</th>
+                            <th>Category</th>
+                            <th>Quantity</th>
+                            <th>Unit</th>
+                            <th>Status</th>
+                            <th>Date Added</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in inventory_items %}
+                        <tr>
+                            <td>{{ item.name }}</td>
+                            <td>{{ item.category }}</td>
+                            <td>{{ item.quantity }}</td>
+                            <td>{{ item.get_unit_display }}</td>
+                            <td>
+                              <span
+                                class="badge {% if item.status == 'In Stock' %}badge-success{% elif item.status == 'Low Stock' %}badge-warning{% else %}badge-danger{% endif %} m-0"
+                                >{{ item.status }}</span
+                              >
+                            </td>
+                            <td>{{ item.date_added|date:"M d, Y" }}</td>
+                            <td>
+                              <a
+                                href="{% url 'edit_item' item.id %}"
+                                class="settings popup-btn"
+                                title="Edit"
+                                data-toggle="tooltip"
+                                data-edit-url="{% url 'edit_item' item.id %}"
+                                data-item-id="{{ item.id }}"
+                              >
+                                <i class="material-icons">&#xE8B8;</i>
+                              </a>
+                              <a
+                                href="{% url 'delete_item' item.id %}"
+                                class="delete delete-btn"
+                                title="Delete"
+                                data-toggle="tooltip"
+                                ><i class="material-icons">&#xE5C9;</i></a
+                              >
+                            </td>
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td colspan="7" class="text-center">No items in inventory.</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+          </div>
+        </div>
+      </div>
 
 <div class="container-xl">
   <div class="popup">
   <button class="close-btn">&times;</button>
-      <form method="POST" class="popup-form" action="{% if edit_item %}{% url 'edit_item' edit_item.id %}{% else %}{% url 'add_item' %}{% endif %}">
+      <!-- Remove the hardcoded action, let JavaScript set it -->
+      <form method="POST" class="popup-form" action="">
   {% csrf_token %}
 
     <label for="itemName">Item Name</label>
     <div class="col-sm-9">
       <input type="text" class="form-control" id="itemName" name="name" placeholder="Enter item name"
-             value="{% if edit_item %}{{ edit_item.name }}{% endif %}" autocomplete="off" required>
+             autocomplete="off" required>
     </div>
 
     <label for="quantity">Quantity</label>
     <div class="col-sm-9">
-      <input type="number" class="form-control" id="quantity" name="quantity" placeholder="Enter quantity"
-             value="{% if edit_item %}{{ edit_item.quantity }}{% endif %}">
+      <input type="number" class="form-control" id="quantity" name="quantity" placeholder="Enter quantity" required>
     </div>
 
     <label for="category">Category</label>
     <div class="col-sm-9">
-      <select class="form-control" id="category" name="category">
+      <select class="form-control" id="category" name="category" required>
         <option value="" disabled selected>Select category</option>
         {% for val, label in category_choices %}
-          <option value="{{ val }}" {% if edit_item and edit_item.category == val %}selected{% endif %}>{{ label }} </option>
-        
-          {% endfor %}
+          <option value="{{ val }}">{{ label }}</option>
+        {% endfor %}
       </select>
     </div>
 
-    <label for="unit" >Unit</label>
+    <label for="unit">Unit</label>
     <div class="col-sm-9">
-      <select class="form-control" id="unit" name="unit">
+      <select class="form-control" id="unit" name="unit" required>
           <option value="" disabled selected>Select unit</option>
         {% for val, label in unit_choices %}
-          <option value="{{ val }}" {% if edit_item and edit_item.unit == val %}selected{% endif %}>{{ label }}</option>
+          <option value="{{ val }}">{{ label }}</option>
         {% endfor %}
       </select>
     </div>
 
     <label for="status">Status</label>
     <div class="col-sm-9">
-      <select class="form-control" id="status" name="status">
+      <select class="form-control" id="status" name="status" required>
         <option value="" disabled selected>Select status</option>
         {% for val, label in status_choices %}
-          <option value="{{ val }}" {% if edit_item and edit_item.status == val %}selected{% endif %}>{{ label }}</option>
+          <option value="{{ val }}">{{ label }}</option>
         {% endfor %}
       </select>
     </div>
 
     <div class="col-sm-9 offset-sm-2">
       <button type="submit" class="btn btn-secondary form-add-item">
-        {% if edit_item %} Update Item {% else %} Add Item {% endif %}
+        <span class="btn-text">Add Item</span>
       </button>
-    </form>
+    </div>
+  </form>
   </div>
 </div>
 {% endblock content %}

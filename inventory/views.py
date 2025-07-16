@@ -1,5 +1,5 @@
 import datetime
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from openpyxl import Workbook
 from xhtml2pdf import pisa
 from django.template.loader import render_to_string
@@ -18,53 +18,134 @@ def inventory_table(request):
         'status_choices': InventoryItem.STATUS_CHOICES
     })
 
-@csrf_exempt
+@login_required
 def add_item(request):
     if request.method == 'POST':
-        print("POST data received:", request.POST)
+        try:
+            name = request.POST.get('name')
+            category = request.POST.get('category')
+            quantity = request.POST.get('quantity')
+            unit = request.POST.get('unit')
+            status = request.POST.get('status')
+            
+            print(f"DEBUG - Received data: name={name}, category={category}, quantity={quantity}, unit={unit}, status={status}")
+            
+            # Validate required fields
+            if not name:
+                return JsonResponse({'success': False, 'error': 'Item name is required'})
+            if not category:
+                return JsonResponse({'success': False, 'error': 'Category is required'})
+            if not quantity:
+                return JsonResponse({'success': False, 'error': 'Quantity is required'})
+            if not unit:
+                return JsonResponse({'success': False, 'error': 'Unit is required'})
+            if not status:
+                return JsonResponse({'success': False, 'error': 'Status is required'})
+            
+            # Create the item
+            new_item = InventoryItem.objects.create(
+                name=name,
+                category=category,
+                quantity=int(quantity),
+                unit=unit,
+                status=status,
+                last_modified_by=request.user
+            )
+            
+            return JsonResponse({
+                'success': True,
+                'message': 'Item added successfully!',
+                'item_data': {
+                    'id': new_item.id,
+                    'name': new_item.name,
+                    'category': new_item.category,
+                    'quantity': new_item.quantity,
+                    'unit': new_item.get_unit_display(),
+                    'status': new_item.status,
+                    'date_added': new_item.date_added.strftime('%Y-%m-%d')
+                }
+            })
+            
+        except ValueError as e:
+            return JsonResponse({'success': False, 'error': 'Invalid quantity - must be a number'})
+        except Exception as e:
+            print(f"DEBUG - Error creating item: {str(e)}")
+            return JsonResponse({'success': False, 'error': f'Error creating item: {str(e)}'})
+    
+    return JsonResponse({'success': False, 'error': 'Invalid request method'})
 
-        InventoryItem.objects.create(
-            name=request.POST.get('name'),
-            category=request.POST.get('category'),
-            quantity=int(request.POST.get('quantity')),
-            unit=request.POST.get('unit'),
-            status=request.POST.get('status'),
-            last_modified_by=request.user
-        )
-        return redirect('inventory_table')
-
-    return redirect('inventory_table')
-
-
+@login_required 
 def edit_item(request, item_id):
     item = get_object_or_404(InventoryItem, id=item_id)
-
+    
     if request.method == 'POST':
-        item.name = request.POST.get('name')
-        item.category = request.POST.get('category')
-        item.quantity = request.POST.get('quantity')
-        item.unit = request.POST.get('unit')
-        item.status = request.POST.get('status')
-        item.last_modified_by = request.user
-        item.save()
-        return redirect('inventory_table')
+        try:
+            name = request.POST.get('name')
+            category = request.POST.get('category')
+            quantity = request.POST.get('quantity')
+            unit = request.POST.get('unit')
+            status = request.POST.get('status')
+            
+            # Validate required fields
+            if not name:
+                return JsonResponse({'success': False, 'error': 'Item name is required'})
+            if not category:
+                return JsonResponse({'success': False, 'error': 'Category is required'})
+            if not quantity:
+                return JsonResponse({'success': False, 'error': 'Quantity is required'})
+            if not unit:
+                return JsonResponse({'success': False, 'error': 'Unit is required'})
+            if not status:
+                return JsonResponse({'success': False, 'error': 'Status is required'})
+            
+            # Update the item
+            item.name = name
+            item.category = category
+            item.quantity = int(quantity)
+            item.unit = unit
+            item.status = status
+            item.last_modified_by = request.user
+            item.save()
+            
+            return JsonResponse({
+                'success': True,
+                'message': 'Item updated successfully!',
+                'item_data': {
+                    'id': item.id,
+                    'name': item.name,
+                    'category': item.category,
+                    'quantity': item.quantity,
+                    'unit': item.get_unit_display(),
+                    'status': item.status,
+                    'date_added': item.date_added.strftime('%Y-%m-%d')
+                }
+            })
+            
+        except ValueError as e:
+            return JsonResponse({'success': False, 'error': 'Invalid quantity - must be a number'})
+        except Exception as e:
+            print(f"DEBUG - Error updating item: {str(e)}")
+            return JsonResponse({'success': False, 'error': f'Error updating item: {str(e)}'})
+    
+    return JsonResponse({'success': False, 'error': 'Invalid request method'})
 
-    inventory_items = InventoryItem.objects.all().order_by('-date_added')
-    return render(request, 'inventory/inventory_table.html', {
-        'inventory_items': inventory_items,
-        'edit_item': item,
-        'category_choices': InventoryItem.CATEGORY_CHOICES,
-        'unit_choices': InventoryItem.UNIT_CHOICES,
-        'status_choices': InventoryItem.STATUS_CHOICES
-    })
-
-
+@login_required
 def delete_item(request, item_id):
-    item = get_object_or_404(InventoryItem, id=item_id)
-    item.last_modified_by = request.user
-    item.save()
-    item.delete()
-    return redirect('inventory_table')
+    if request.method == 'POST':
+        try:
+            item = get_object_or_404(InventoryItem, id=item_id)
+            item.delete()
+            
+            return JsonResponse({
+                'success': True,
+                'message': 'Item deleted successfully!'
+            })
+            
+        except Exception as e:
+            print(f"DEBUG - Error deleting item: {str(e)}")
+            return JsonResponse({'success': False, 'error': f'Error deleting item: {str(e)}'})
+    
+    return JsonResponse({'success': False, 'error': 'Invalid request method'})
 
 def export_inventory_excel(request):
     wb = Workbook()
