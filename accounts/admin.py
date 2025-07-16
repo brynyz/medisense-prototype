@@ -8,6 +8,7 @@ from inventory.models import InventoryItem
 class ActivityLogAdmin(admin.ModelAdmin):
     list_display = ('user', 'action', 'timestamp', 'description')
     readonly_fields = ('user', 'action', 'timestamp', 'description')
+    search_fields = ('action', 'description')
 
     def has_add_permission(self, request):
         return False
