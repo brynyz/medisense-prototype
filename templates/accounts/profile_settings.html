@@ -35,7 +35,7 @@
               </a>
 
               <div class="dropdown-menu dropdown-menu-right">
-                <a class="dropdown-item" href="#">Reset Password</a>
+                <a class="dropdown-item" href="{% url 'password_reset' %}">Reset Password</a>
               </div>
             </div>
           </div>
@@ -94,7 +94,7 @@
         </div>
       </div>
 
-      <div class="card">
+      {% comment %} <div class="card">
         <div class="card-header">
           <div class="card-actions float-right">
             <div class="dropdown show">
@@ -198,7 +198,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> {% endcomment %}
     </div>
   </div>
 </div>

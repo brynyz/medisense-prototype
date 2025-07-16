@@ -82,12 +82,12 @@
                 Analytics
               </a>
             </li>
-            <li>
+            {% comment %} <li>
               <a href="">
                 <span class="las la-chart-line"></span>
                 Predictions Report
               </a>
-            </li>
+            </li> {% endcomment %}
           </ul>
 
           <div class="menu-head">
@@ -101,15 +101,15 @@
               </a>
             </li>
             <li>
-              <a href="">
-                <span class="las la-chart-pie"> </span>
-                Predictors
+              <a href="{% url 'symptom-logs' %}">
+                <span class="las la-user-injured"> </span>
+                Symptom Logs
               </a>
             </li>
             <li>
               <a href="">
-                <span class="las la-user-injured"> </span>
-                Symptom Logs
+                <span class="las la-chart-pie"> </span>
+                Predictors
               </a>
             </li>
           </ul>
