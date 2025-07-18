@@ -22,6 +22,8 @@ media/
 .DS_Store
 Thumbs.db
 
+medisense/backups/
+
 .env
 
 backup/
