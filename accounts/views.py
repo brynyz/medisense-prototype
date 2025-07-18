@@ -68,42 +68,160 @@ def backup_database(request):
 
     os.makedirs(os.path.dirname(filepath), exist_ok=True)
 
-    command = [
-        'mysqldump',
-        '-u', settings.DATABASES['default']['USER'],
-        f"-p{settings.DATABASES['default']['PASSWORD']}",
-        settings.DATABASES['default']['NAME']
-    ]
-
-    with open(filepath, 'w') as out:
-        subprocess.run(command, stdout=out)
-
-    with open(filepath, 'rb') as sql_file:
-        response = HttpResponse(sql_file.read(), content_type='application/sql')
-        response['Content-Disposition'] = f'attachment; filename="{filename}"'
-        return response
+    # Get database engine
+    db_engine = settings.DATABASES['default']['ENGINE']
     
+    try:
+        if 'mysql' in db_engine:
+            # MySQL backup using mysqldump
+            command = [
+                'mysqldump',
+                '-u', settings.DATABASES['default']['USER'],
+                f"-p{settings.DATABASES['default']['PASSWORD']}",
+                '--host', settings.DATABASES['default'].get('HOST', 'localhost'),
+                '--port', str(settings.DATABASES['default'].get('PORT', 3306)),
+                settings.DATABASES['default']['NAME']
+            ]
+        
+        elif 'postgresql' in db_engine:
+            # PostgreSQL backup using pg_dump
+            command = [
+                'pg_dump',
+                '--host', settings.DATABASES['default'].get('HOST', 'localhost'),
+                '--port', str(settings.DATABASES['default'].get('PORT', 5432)),
+                '--username', settings.DATABASES['default']['USER'],
+                '--dbname', settings.DATABASES['default']['NAME'],
+                '--no-password',  # Will use PGPASSWORD environment variable
+                '--verbose',
+                '--clean',
+                '--no-owner',
+                '--no-privileges'
+            ]
+            
+            # Set password environment variable for PostgreSQL
+            env = os.environ.copy()
+            env['PGPASSWORD'] = settings.DATABASES['default']['PASSWORD']
+        
+        elif 'sqlite3' in db_engine:
+            # SQLite backup (simple file copy)
+            import shutil
+            db_path = settings.DATABASES['default']['NAME']
+            shutil.copy2(db_path, filepath.replace('.sql', '.sqlite'))
+            
+            with open(filepath.replace('.sql', '.sqlite'), 'rb') as sqlite_file:
+                response = HttpResponse(sqlite_file.read(), content_type='application/x-sqlite3')
+                response['Content-Disposition'] = f'attachment; filename="{filename.replace(".sql", ".sqlite")}"'
+                return response
+        
+        else:
+            messages.error(request, f'Unsupported database engine: {db_engine}')
+            return redirect('settings')
 
+        # Execute backup command for MySQL/PostgreSQL
+        with open(filepath, 'w') as out:
+            if 'postgresql' in db_engine:
+                result = subprocess.run(command, stdout=out, stderr=subprocess.PIPE, env=env, text=True)
+            else:
+                result = subprocess.run(command, stdout=out, stderr=subprocess.PIPE, text=True)
+        
+        # Check if backup was successful
+        if result.returncode != 0:
+            messages.error(request, f'Backup failed: {result.stderr}')
+            return redirect('settings')
+
+        # Return the backup file as download
+        with open(filepath, 'rb') as sql_file:
+            response = HttpResponse(sql_file.read(), content_type='application/sql')
+            response['Content-Disposition'] = f'attachment; filename="{filename}"'
+            return response
+            
+    except FileNotFoundError as e:
+        messages.error(request, f'Database backup tool not found. Please install the required database client tools.')
+        return redirect('settings')
+    except Exception as e:
+        messages.error(request, f'Backup failed: {str(e)}')
+        return redirect('settings')
+
+@login_required
 def restore_database(request):
     if request.method == 'POST' and request.FILES.get('sql_file'):
         sql_file = request.FILES['sql_file']
         filepath = os.path.join(settings.BASE_DIR, 'backups', sql_file.name)
 
+        # Save uploaded file
         with open(filepath, 'wb+') as destination:
             for chunk in sql_file.chunks():
                 destination.write(chunk)
 
-        command = [
-            'mysql',
-            '-u', settings.DATABASES['default']['USER'],
-            f"-p{settings.DATABASES['default']['PASSWORD']}",
-            settings.DATABASES['default']['NAME']
-        ]
+        # Get database engine
+        db_engine = settings.DATABASES['default']['ENGINE']
+        
+        try:
+            if 'mysql' in db_engine:
+                # MySQL restore
+                command = [
+                    'mysql',
+                    '-u', settings.DATABASES['default']['USER'],
+                    f"-p{settings.DATABASES['default']['PASSWORD']}",
+                    '--host', settings.DATABASES['default'].get('HOST', 'localhost'),
+                    '--port', str(settings.DATABASES['default'].get('PORT', 3306)),
+                    settings.DATABASES['default']['NAME']
+                ]
+                
+                with open(filepath, 'r') as input_file:
+                    result = subprocess.run(command, stdin=input_file, stderr=subprocess.PIPE, text=True)
+            
+            elif 'postgresql' in db_engine:
+                # PostgreSQL restore using psql
+                command = [
+                    'psql',
+                    '--host', settings.DATABASES['default'].get('HOST', 'localhost'),
+                    '--port', str(settings.DATABASES['default'].get('PORT', 5432)),
+                    '--username', settings.DATABASES['default']['USER'],
+                    '--dbname', settings.DATABASES['default']['NAME'],
+                    '--no-password',
+                    '--file', filepath
+                ]
+                
+                # Set password environment variable for PostgreSQL
+                env = os.environ.copy()
+                env['PGPASSWORD'] = settings.DATABASES['default']['PASSWORD']
+                
+                result = subprocess.run(command, stderr=subprocess.PIPE, env=env, text=True)
+            
+            elif 'sqlite3' in db_engine:
+                # SQLite restore (replace database file)
+                import shutil
+                db_path = settings.DATABASES['default']['NAME']
+                
+                if sql_file.name.endswith('.sqlite'):
+                    shutil.copy2(filepath, db_path)
+                    result = type('Result', (), {'returncode': 0, 'stderr': ''})()
+                else:
+                    messages.error(request, 'Invalid file format for SQLite database.')
+                    return redirect('settings')
+            
+            else:
+                messages.error(request, f'Unsupported database engine: {db_engine}')
+                return redirect('settings')
 
-        with open(filepath, 'r') as input_file:
-            subprocess.run(command, stdin=input_file)
+            # Check if restore was successful
+            if result.returncode == 0:
+                messages.success(request, 'Database restored successfully.')
+            else:
+                messages.error(request, f'Restore failed: {result.stderr}')
+                
+        except FileNotFoundError as e:
+            messages.error(request, f'Database restore tool not found. Please install the required database client tools.')
+        except Exception as e:
+            messages.error(request, f'Restore failed: {str(e)}')
 
-        messages.success(request, 'Database restored successfully.')
+        # Clean up uploaded file
+        try:
+            os.remove(filepath)
+        except:
+            pass
+
         return redirect('settings')
 
     return render(request, 'accounts/settings.html')
