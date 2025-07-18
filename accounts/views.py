@@ -10,8 +10,10 @@ import os
 import subprocess
 import json
 from django.http import HttpResponse
+from django.template.loader import render_to_string
+from xhtml2pdf import pisa
+from django.utils import timezone
 from django.conf import settings
-from django.utils.timezone import now
 
 from .forms import LoginForm, RegistrationForm
 
@@ -63,7 +65,7 @@ def settings_view(request):
 
 @login_required
 def backup_database(request):
-    filename = f"backup_{now().strftime('%Y%m%d_%H%M%S')}.sql"
+    filename = f"backup_{timezone.now().strftime('%Y%m%d_%H%M%S')}.sql"
     filepath = os.path.join(settings.BASE_DIR, 'backups', filename)
 
     os.makedirs(os.path.dirname(filepath), exist_ok=True)
@@ -229,3 +231,39 @@ def restore_database(request):
 @login_required
 def profile_settings(request):
     return render(request, 'accounts/profile_settings.html')
+
+def homepage_view(request):
+    # Your existing homepage logic here
+    context = {
+        # Add any data you want to pass to the template
+        'current_date': timezone.now().strftime('%B %d, %Y at %I:%M %p'),
+    }
+    return render(request, 'accounts/homepage.html', context)
+
+def export_analytics_pdf(request):
+    # Get current analytics data
+    context = {
+        'report_date': timezone.now().strftime('%B %d, %Y at %I:%M %p'),
+        'patient_trends': {
+            'total': 1200,
+            'change': '33.3% less this month'
+        },
+        'common_symptoms': ['Fever', 'Cough', 'Headache'],
+        'inventory_status': 'x and y medicine',
+        'forecast': 'x medicine - Forecasted ↑ 20% in August'
+    }
+    
+    # Render the PDF template
+    html_string = render_to_string('accounts/analytics_pdf_template.html', context)
+    
+    # Create PDF response
+    response = HttpResponse(content_type='application/pdf')
+    filename = f"Analytics_Report_{timezone.now().strftime('%Y%m%d_%H%M%S')}.pdf"
+    response['Content-Disposition'] = f'attachment; filename={filename}'
+    
+    # Generate PDF
+    pisa_status = pisa.CreatePDF(html_string, dest=response)
+    if pisa_status.err:
+        return HttpResponse("Error generating PDF", status=500)
+    
+    return response

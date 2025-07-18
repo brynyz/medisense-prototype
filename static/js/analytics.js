@@ -1,104 +1,126 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Patient Trends Chart (Line Chart)
-    const patientCtx = document.getElementById('patientChart').getContext('2d');
-    new Chart(patientCtx, {
-        type: 'line',
-        data: {
-            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
-            datasets: [{
-                // Replace the array below with actual patient trend data or inject it server-side
-                data: [10, 20, 30, 40, 50, 60, 70],
-                borderColor: '#4CAF50',
-                backgroundColor: 'rgba(76, 175, 80, 0.1)',
-                borderWidth: 2,
-                fill: true,
-                tension: 0.4,
-                pointRadius: 0
-            }]
+    // Common chart options for all charts
+    const commonOptions = {
+        responsive: true,
+        maintainAspectRatio: false, // This is key - allows chart to fit container
+        plugins: {
+            legend: {
+                display: false // Hide legend to save space
+            }
         },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: { legend: { display: false } },
-            scales: {
-                x: { display: false },
-                y: { display: false }
+        scales: {
+            x: {
+                display: false // Hide x-axis
             },
-            elements: {
-                point: { radius: 0 }
+            y: {
+                display: false // Hide y-axis
             }
-        }
-    });
-
-    // Symptoms Chart (Bar Chart)
-    const symptomsCtx = document.getElementById('symptomsChart').getContext('2d');
-    new Chart(symptomsCtx, {
-        type: 'bar',
-        data: {
-            labels: ['Fever', 'Cough', 'Headache'],
-            datasets: [{
-                data: [45, 32, 28],
-                backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
-                borderWidth: 0
-            }]
         },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: { legend: { display: false } },
-            scales: {
-                x: { display: false },
-                y: { display: false }
-            }
-        }
-    });
-
-    // Inventory Chart (Doughnut Chart)
-    const inventoryCtx = document.getElementById('inventoryChart').getContext('2d');
-    new Chart(inventoryCtx, {
-        type: 'doughnut',
-        data: {
-            datasets: [{
-                data: [75, 25],
-                backgroundColor: ['#4CAF50', '#f44336'],
-                borderWidth: 0
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: { legend: { display: false } },
-            cutout: '70%'
-        }
-    });
-
-    // Forecast Chart (Area Chart)
-    const forecastCtx = document.getElementById('forecastChart').getContext('2d');
-    new Chart(forecastCtx, {
-        type: 'line',
-        data: {
-            labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
-            datasets: [{
-                data: [30, 45, 55, 75],
-                borderColor: '#ff6b6b',
-                backgroundColor: 'rgba(255, 107, 107, 0.2)',
-                borderWidth: 2,
-                fill: true,
-                tension: 0.4,
-                pointRadius: 0
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: { legend: { display: false } },
-            scales: {
-                x: { display: false },
-                y: { display: false }
+        elements: {
+            point: {
+                radius: 2 // Smaller points
             },
-            elements: {
-                point: { radius: 0 }
+            line: {
+                borderWidth: 2 // Thinner lines
             }
         }
-    });
+    };
+
+    // Patient Trends Chart
+    const patientCtx = document.getElementById('patientChart');
+    if (patientCtx) {
+        new Chart(patientCtx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                datasets: [{
+                    data: [1800, 1500, 1200, 1100, 1000, 1200],
+                    borderColor: '#0a400c',
+                    backgroundColor: 'rgba(10, 64, 12, 0.1)',
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                ...commonOptions
+            }
+        });
+    }
+
+    // Most Common Symptoms Chart (Doughnut)
+    const symptomsCtx = document.getElementById('symptomsChart');
+    if (symptomsCtx) {
+        new Chart(symptomsCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Fever', 'Cough', 'Headache'],
+                datasets: [{
+                    data: [40, 30, 30],
+                    backgroundColor: [
+                        '#0a400c',
+                        '#549c78',
+                        '#b1ab86'
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                ...commonOptions,
+                cutout: '60%' // Make doughnut hole bigger to fit better
+            }
+        });
+    }
+
+    // Inventory Status Chart (Bar)
+    const inventoryCtx = document.getElementById('inventoryChart');
+    if (inventoryCtx) {
+        new Chart(inventoryCtx, {
+            type: 'bar',
+            data: {
+                labels: ['In Stock', 'Low Stock', 'Out of Stock'],
+                datasets: [{
+                    data: [85, 12, 3],
+                    backgroundColor: [
+                        '#28a745',
+                        '#ffc107',
+                        '#dc3545'
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                ...commonOptions
+            }
+        });
+    }
+
+    // Forecast Chart (Line with prediction)
+    const forecastCtx = document.getElementById('forecastChart');
+    if (forecastCtx) {
+        new Chart(forecastCtx, {
+            type: 'line',
+            data: {
+                labels: ['Jun', 'Jul', 'Aug', 'Sep'],
+                datasets: [{
+                    label: 'Actual',
+                    data: [100, 110, null, null],
+                    borderColor: '#0a400c',
+                    backgroundColor: 'rgba(10, 64, 12, 0.1)',
+                    fill: false,
+                    tension: 0.4
+                }, {
+                    label: 'Forecast',
+                    data: [null, 110, 132, 140],
+                    borderColor: '#ffc107',
+                    backgroundColor: 'rgba(255, 193, 7, 0.1)',
+                    borderDash: [5, 5], // Dashed line for forecast
+                    fill: false,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                ...commonOptions
+            }
+        });
+    }
 });

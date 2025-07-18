@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>MediSense Analytics Report</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 1cm;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            line-height: 1.4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .header {
+            text-align: center;
+            background-color: #0A400C;
+            color: white;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .header p {
+            margin: 5px 0 0 0;
+            font-size: 14px;
+        }
+        
+        .analytics-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .analytics-card {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            page-break-inside: avoid;
+        }
+        
+        .analytics-card h3 {
+            margin: 0 0 10px 0;
+            font-size: 14px;
+            color: #0A400C;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        
+        .analytics-card .metric-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0A400C;
+            margin: 10px 0;
+        }
+        
+        .analytics-card .metric-description {
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .analytics-card .metric-change {
+            font-size: 11px;
+            color: #856404;
+            margin-top: 5px;
+        }
+        
+        .symptoms-list {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+        
+        .symptoms-list li {
+            background-color: #e9ecef;
+            padding: 5px 10px;
+            margin: 5px 0;
+            border-radius: 3px;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+            width: 100%;
+        }
+        
+        .section h2 {
+            background-color: #0A400C;
+            color: white;
+            padding: 8px 12px;
+            margin: 0 0 15px 0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .summary-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        
+        .summary-table th,
+        .summary-table td {
+            border: 1px solid #dee2e6;
+            padding: 10px 12px;
+            text-align: left;
+        }
+        
+        .summary-table th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+            color: #495057;
+        }
+        
+        .summary-table tr:nth-child(even) td {
+            background-color: #f9f9f9;
+        }
+        
+        .insights-box {
+            background-color: #d1ecf1;
+            border: 1px solid #bee5eb;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        
+        .insights-box h4 {
+            margin: 0 0 10px 0;
+            color: #0c5460;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 10px;
+            color: #666;
+            border-top: 1px solid #dee2e6;
+            padding-top: 10px;
+        }
+        
+        .chart-placeholder {
+            width: 100%;
+            height: 60px;
+            background-color: #e9ecef;
+            border: 1px dashed #adb5bd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6c757d;
+            font-size: 12px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>MediSense Analytics Report</h1>
+        <p>Generated on {{ report_date }}</p>
+    </div>
+
+    <!-- Key Metrics Grid -->
+    <div class="analytics-grid">
+        <!-- Patient Trends Card -->
+        <div class="analytics-card">
+            <h3>Patient Trends</h3>
+            <div class="metric-value">{{ patient_trends.total|default:"1,200" }}</div>
+            <div class="metric-description">Total patient visits this month</div>
+            <div class="metric-change">{{ patient_trends.change|default:"33.3% less this month" }}</div>
+            <div class="chart-placeholder">Patient Trends Chart</div>
+        </div>
+
+        <!-- Most Common Symptoms Card -->
+        <div class="analytics-card">
+            <h3>Most Common Symptoms</h3>
+            <div class="metric-description">Top 3 this month</div>
+            <ul class="symptoms-list">
+                {% for symptom in common_symptoms %}
+                <li>{{ symptom }}</li>
+                {% empty %}
+                <li>Fever</li>
+                <li>Cough</li>
+                <li>Headache</li>
+                {% endfor %}
+            </ul>
+            <div class="metric-description">Based on patient logs</div>
+            <div class="chart-placeholder">Symptoms Distribution Chart</div>
+        </div>
+
+        <!-- Inventory Status Card -->
+        <div class="analytics-card">
+            <h3>Inventory Status</h3>
+            <div class="metric-value">{{ inventory_status|default:"x and y medicine" }}</div>
+            <div class="metric-description">Low stock items</div>
+            <div class="metric-change">Last updated 2 days ago</div>
+            <div class="chart-placeholder">Inventory Status Chart</div>
+        </div>
+
+        <!-- Forecast Card -->
+        <div class="analytics-card">
+            <h3>Forecast</h3>
+            <div class="metric-description">Expected high-demand item</div>
+            <div class="metric-value">{{ forecast|default:"x medicine" }}</div>
+            <div class="metric-change">Forecasted ↑ 20% in August</div>
+            <div class="chart-placeholder">Forecast Trend Chart</div>
+        </div>
+    </div>
+
+    <!-- Summary Section -->
+    <div class="section">
+        <h2>Analytics Summary</h2>
+        <table class="summary-table">
+            <thead>
+                <tr>
+                    <th>Metric</th>
+                    <th>Current Value</th>
+                    <th>Change</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Patient Visits</td>
+                    <td>{{ patient_trends.total|default:"1,200" }}</td>
+                    <td>{{ patient_trends.change|default:"33.3% less" }}</td>
+                    <td>Monitoring</td>
+                </tr>
+                <tr>
+                    <td>Common Symptoms</td>
+                    <td>{% for symptom in common_symptoms %}{{ symptom }}{% if not forloop.last %}, {% endif %}{% empty %}Fever, Cough, Headache{% endfor %}</td>
+                    <td>Updated</td>
+                    <td>Normal</td>
+                </tr>
+                <tr>
+                    <td>Inventory Status</td>
+                    <td>{{ inventory_status|default:"Multiple items low" }}</td>
+                    <td>2 days ago</td>
+                    <td>Attention Required</td>
+                </tr>
+                <tr>
+                    <td>Forecast</td>
+                    <td>High demand expected</td>
+                    <td>↑ 20%</td>
+                    <td>Prepare Stock</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Insights and Recommendations -->
+    <div class="insights-box">
+        <h4>Key Insights & Recommendations</h4>
+        <ul>
+            <li><strong>Patient Trends:</strong> 33.3% decrease in visits this month. Consider investigating causes or seasonal patterns.</li>
+            <li><strong>Symptoms:</strong> Fever, cough, and headache remain the most common symptoms. Ensure adequate supplies for treatment.</li>
+            <li><strong>Inventory:</strong> Multiple items showing low stock. Schedule restocking for critical medicines.</li>
+            <li><strong>Forecast:</strong> Prepare for 20% increase in demand for specific medicines in August.</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <p>Generated by MediSense Analytics System | {{ report_date }}</p>
+    </div>
+</body>
+</html>

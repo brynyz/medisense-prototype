@@ -11,4 +11,5 @@ urlpatterns = [
     path('backup/', views.backup_database, name='backup_database'),
     path('restore/', views.restore_database, name='restore_database'),
     path('profile_settings/', views.profile_settings, name='profile_settings'),
+    path('export-analytics/', views.export_analytics_pdf, name='export_analytics'),
 ]
