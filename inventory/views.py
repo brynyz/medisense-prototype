@@ -173,14 +173,69 @@ def export_inventory_excel(request):
     return response
 
 def export_inventory_pdf(request):
-    items = InventoryItem.objects.all()
-    html_string = render_to_string('inventory/pdf_template.html', {'items': items})
+    items = InventoryItem.objects.all().order_by('category', 'name')
+    
+    # Calculate statistics
+    total_items = items.count()
+    total_quantity = sum(item.quantity for item in items)
+    
+    # Items per category
+    from django.db.models import Count, Sum
+    category_stats = items.values('category').annotate(
+        count=Count('id'),
+        total_qty=Sum('quantity')
+    ).order_by('category')
+    
+    # Items per status
+    status_stats = items.values('status').annotate(
+        count=Count('id'),
+        total_qty=Sum('quantity')
+    ).order_by('status')
+    
+    # Items per unit
+    unit_stats = items.values('unit').annotate(
+        count=Count('id'),
+        total_qty=Sum('quantity')
+    ).order_by('unit')
+    
+    # Low stock items (assuming "Low Stock" or quantity < 10)
+    low_stock_items = items.filter(status='Low Stock')
+    critical_items = items.filter(quantity__lt=5)  # Items with less than 5 units
+    
+    # Recent additions (last 30 days)
+    from datetime import datetime, timedelta
+    thirty_days_ago = datetime.now().date() - timedelta(days=30)
+    recent_items = items.filter(date_added__gte=thirty_days_ago)
+    
+    # Most stocked items (top 10)
+    top_stocked = items.order_by('-quantity')[:10]
+    
+    # Prepare context for PDF template
+    context = {
+        'items': items,
+        'report_date': datetime.now().strftime('%B %d, %Y at %I:%M %p'),
+        'total_items': total_items,
+        'total_quantity': total_quantity,
+        'category_stats': category_stats,
+        'status_stats': status_stats,
+        'unit_stats': unit_stats,
+        'low_stock_items': low_stock_items,
+        'critical_items': critical_items,
+        'recent_items': recent_items,
+        'top_stocked': top_stocked,
+        'low_stock_count': low_stock_items.count(),
+        'critical_count': critical_items.count(),
+        'recent_count': recent_items.count(),
+    }
+    
+    html_string = render_to_string('inventory/pdf_report_template.html', context)
 
     response = HttpResponse(content_type='application/pdf')
-    filename = f"Inventory_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.pdf"
+    filename = f"Inventory_Report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.pdf"
     response['Content-Disposition'] = f'attachment; filename={filename}'
 
     pisa_status = pisa.CreatePDF(html_string, dest=response)
     if pisa_status.err:
         return HttpResponse("Error generating PDF", status=500)
     return response
+
