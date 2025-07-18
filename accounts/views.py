@@ -50,7 +50,7 @@ def register(request):
         form = RegistrationForm(request.POST)
         if form.is_valid():
             user = form.save(commit=False)
-            user.is_active = False  #admin approval in django admin page
+            user.is_active=True #admin approval in django admin page
             user.save()
 
             return redirect('login') 
