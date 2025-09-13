@@ -1,0 +1,194 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}Model Analytics - MediSense{% endblock title %}
+
+{% block load_extra %}
+<style>
+    /* Remove main content padding for this page */
+    main {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    
+    .full-height-container {
+        height: calc(100vh - 80px);
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .card {
+        height: 100%;
+        margin: 0;
+        border-radius: 0;
+        border: none;
+        overflow: hidden;
+    }
+    
+    .card-body {
+        height: 100%;
+        padding: 0;
+        position: relative;
+    }
+    
+    .streamlit-container {
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    
+    .loading-spinner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f8f9fa;
+        z-index: 10;
+    }
+    
+    .loading-spinner div {
+        text-align: center;
+        font-size: 1.2rem;
+        color: #666;
+    }
+    
+    .error-message {
+        background-color: #f8d7da;
+        color: #721c24;
+        padding: 15px;
+        border-radius: 8px;
+        margin: 20px;
+        border: 1px solid #f5c6cb;
+    }
+    
+    #error-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f8f9fa;
+        z-index: 10;
+    }
+</style>
+{% endblock load_extra %}
+
+{% block content %}
+
+<div class="full-height-container">
+    <div class="card">
+        <div class="card-body">
+            <div id="loading" class="loading-spinner">
+                <div>
+                    <i class="las la-spinner la-spin" style="font-size: 2rem;"></i>
+                    <p>Loading analytics dashboard...</p>
+                </div>
+            </div>
+            
+            <div id="error-container" style="display: none;">
+                <div class="error-message">
+                    <strong>Connection Error:</strong> Unable to load the analytics dashboard. 
+                    Please ensure the Streamlit service is running.
+                    <button class="btn btn-primary btn-sm mt-2" onclick="reloadStreamlit()">
+                        <i class="las la-redo"></i> Retry
+                    </button>
+                </div>
+            </div>
+            
+            <iframe 
+                id="streamlit-frame"
+                src="{{ streamlit_url }}"
+                class="streamlit-container"
+                style="display: none;"
+                onload="handleFrameLoad()"
+                onerror="handleFrameError()">
+            </iframe>
+        </div>
+    </div>
+</div>
+
+<script>
+let streamlitUrl = "{{ streamlit_url }}";
+let tokenRefreshInterval;
+
+function handleFrameLoad() {
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('error-container').style.display = 'none';
+    document.getElementById('streamlit-frame').style.display = 'block';
+    
+    // Set up token refresh every 45 minutes
+    if (tokenRefreshInterval) {
+        clearInterval(tokenRefreshInterval);
+    }
+    tokenRefreshInterval = setInterval(refreshToken, 45 * 60 * 1000);
+}
+
+function handleFrameError() {
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('streamlit-frame').style.display = 'none';
+    document.getElementById('error-container').style.display = 'block';
+}
+
+function reloadStreamlit() {
+    document.getElementById('loading').style.display = 'flex';
+    document.getElementById('error-container').style.display = 'none';
+    document.getElementById('streamlit-frame').style.display = 'none';
+    
+    // Refresh token and reload iframe
+    refreshToken().then(() => {
+        document.getElementById('streamlit-frame').src = streamlitUrl;
+    });
+}
+
+async function refreshToken() {
+    try {
+        const response = await fetch('{% url "streamlit_token" %}', {
+            method: 'GET',
+            headers: {
+                'X-CSRFToken': '{{ csrf_token }}',
+                'Content-Type': 'application/json',
+            },
+        });
+        
+        if (response.ok) {
+            const data = await response.json();
+            const baseUrl = streamlitUrl.split('?')[0];
+            streamlitUrl = `${baseUrl}?token=${data.token}`;
+            return Promise.resolve();
+        }
+    } catch (error) {
+        console.error('Token refresh failed:', error);
+    }
+    return Promise.reject();
+}
+
+// Handle page visibility change to refresh token when user returns
+document.addEventListener('visibilitychange', function() {
+    if (!document.hidden) {
+        refreshToken().then(() => {
+            if (document.getElementById('streamlit-frame').style.display === 'block') {
+                document.getElementById('streamlit-frame').src = streamlitUrl;
+            }
+        });
+    }
+});
+
+// Clean up interval on page unload
+window.addEventListener('beforeunload', function() {
+    if (tokenRefreshInterval) {
+        clearInterval(tokenRefreshInterval);
+    }
+});
+</script>
+{% endblock content %}

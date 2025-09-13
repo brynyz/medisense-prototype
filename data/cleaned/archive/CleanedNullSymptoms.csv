@@ -1,0 +1,692 @@
+date,course,gender,age,symptoms,symptoms_cleaned,symptom_list,normalized_symptoms
+12/1/2022,BSLM,Female,20,Dizziness,dizziness,['dizziness'],dizziness
+12/1/2022,BSBA,Female,19,Strain,strain,['strain'],muscle strain
+12/1/2022,BSBA, Female,18, Dry Bucalarea,dry bucalarea,['dry bucalarea'],dry mouth
+12/3/2022,BSCRIM,Female,19,Farm Cramps,farm cramps,['farm cramps'],cramps
+12/3/2022,BSE,Female,21,Headache,headache,['headache'],headache
+12/3/2022,BSCRIM,Female,18, Dysmenorrhea,dysmenorrhea,['dysmenorrhea'],dysmenorrhea
+12/3/2022,BEED,Female,19,Cramps both upper & lower extremeties,"cramps both upper , lower extremeties","['cramps both upper ', ' lower extremeties']",cramps
+12/6/2022,BAELS,Female,19,Fever,fever,['fever'],fever
+11/24/2022,BSCS,Male,21,Catching a cold several days,catching a cold several days,['catching a cold several days'],cold
+11/24/2022,BSE,Female,19,Dizziness;BP 110/70; 02Sat 98%; HR 67,"dizziness, , sat","['dizziness', ' ', ' sat']","dizziness,fever"
+11/24/2022,BEED,Male,18,Skin allergy,skin allergy,['skin allergy'],skin allergy
+11/28/2022,BSTM,Male,20,Abdominal Pain,abdominal pain,['abdominal pain'],stomach ache
+11/28/2022,BAT,Female,20,Midlle finger cut from bamboo tree,midlle finger cut from bamboo,['midlle finger cut from bamboo'],cut
+11/9/2022,BSIT,Female,19,UTI,uti,['uti'],uti
+11/29/2022,BSLM,Male,18, Headache & Dizziness,"headache , dizziness","['headache ', ' dizziness']","dizziness,headache"
+11/29/2022,BEED,Female,19,Hematoma,hematoma,['hematoma'],hematoma
+11/22/2022,BSENT,Female,18,BP 120/70 Lack of Sleep,lack of sleep,['lack of sleep'],malaise
+11/22/2022,BSHM,Female,19,Colds ,colds,['colds'],cold
+11/22/2022,BAELS,Male,22,"Dry cough, on's off fever","dry cough, ons off fever","['dry cough', ' ons off fever']","cough,fever"
+11/22/2022,BSTM,Female,17," Feeling Warm 36.5'C, Colds","feeling warm c, colds","['feeling warm c', ' colds']","cold,fever"
+11/22/2022,BSBA,Male,,"Cough, Colds ","cough, colds","['cough', ' colds']","cold,cough"
+11/22/2022,BSMA,Female,18,"On & Off fever, Colds","on , off fever, colds","['on ', ' off fever', ' colds']","cold,fever"
+11/22/2022,BEED,Female,18,"Cough, Colds ","cough, colds","['cough', ' colds']","cold,cough"
+11/22/2022,BSMA,Female,18,Menstrual Cramps,menstrual cramps,['menstrual cramps'],menstrual cramps
+11/22/2022,BSTM,Female,19,Hyperacidity,hyperacidity,['hyperacidity'],hyperacidity
+11/22/2022,BSIT,Male,21,Headache,headache,['headache'],headache
+11/22/2022,BSLM,Male,18,Headache,headache,['headache'],headache
+11/22/2022,BSE,Female,19,Asthma,asthma,['asthma'],asthma
+11/22/2022,BSAIS,Female,,"Dysminorrhea, Dizziness","dysminorrhea, dizziness","['dysminorrhea', ' dizziness']","dizziness,dysmenorrhea"
+11/22/2022,BSBA,Female,18,Sore Throat,sore,['sore'],infection
+11/22/2022,BSBA,Male,21,Feeling Warm 36.2'C,feeling warm c,['feeling warm c'],fever
+11/15/2022,BAPOS,Female,18,Headache,headache,['headache'],headache
+11/15/2022,BSCRIM,Female,18,"36.0'C, Colds ","c, colds","['c', ' colds']","cold,fever"
+11/16/2022,BSBA,Female,20,Cough,cough,['cough'],cough
+11/16/2022,BSIT,Male,19,Cough,cough,['cough'],cough
+11/16/2022,BEED,Female,18,Allergic,allergic,['allergic'],allergy
+11/16/2022,BAPOS,Male,20,Feeling Warm 36.2'C,feeling warm c,['feeling warm c'],fever
+11/17/2022,BSLM,Female,19,Vomitting,vomitting,['vomitting'],vomiting
+11/17/2022,BSLM,Male,19,Colds ,colds,['colds'],cold
+11/17/2022,BEED,Female,21,Dysminorrhea,dysminorrhea,['dysminorrhea'],dysmenorrhea
+11/17/2022,BSBA,Female,19,"O2Sat 98%; Abdominal Pain, Asthma","abdominal pain, asthma","['abdominal pain', ' asthma']","asthma,stomach ache"
+11/17/2022,BSBA,Male,18,"O2Sat 96%; Cough,Colds ,Asthma","cough,colds ,asthma","['cough', 'colds ', 'asthma']","asthma,cold,cough"
+11/21/2022,BSBA,Female,18,LBM,lbm,['lbm'],lbm
+11/21/2022,BSBA,Female,18,Hypegastric Pain,hypegastric pain,['hypegastric pain'],epigastric pain
+11/21/2022,BSMA,Male,18,Headache,headache,['headache'],headache
+11/21/2022,BSIT,Male,,Epigastric Pain,epigastric pain,['epigastric pain'],epigastric pain
+11/21/2022,BSCRIM,Female,20,Dysminorrhea,dysminorrhea,['dysminorrhea'],dysmenorrhea
+11/8/2022,BSE,Male,20,For immunity,for immunity,['for immunity'],malaise
+11/8/2022,BSEntrep,Female,19,Abraision,abraision,['abraision'],abrasion
+11/8/2022,BSIT,Male,18,Colds ,colds,['colds'],cold
+11/8/2022,BSCS,Male,18,Abraision,abraision,['abraision'],abrasion
+11/8/2022,BSMA,Female,20,"Hyperventilated, Cold Clammyskin","hyperventilated, cold clammyskin","['hyperventilated', ' cold clammyskin']","clammy skin,hyperventilation"
+11/8/2022,BSCRIM,Male,18,Colds ,colds,['colds'],cold
+11/9/2022,BSIT,Female,23,Dizziness,dizziness,['dizziness'],dizziness
+11/9/2022,BSTM,Female,19,Menstrual Cramps,menstrual cramps,['menstrual cramps'],menstrual cramps
+11/9/2022,BSCRIM,Female,21,Stiffneck,stiffneck,['stiffneck'],stiff neck
+11/9/2022,BSTM,Female,18,"Cough, Colds ","cough, colds","['cough', ' colds']","cold,cough"
+11/9/2022,BSTM,Female,19,Colds ,colds,['colds'],cold
+11/10/2022,BAELS,Male,27,Cough,cough,['cough'],cough
+11/7/2022,BAPOS,Female,18,Dysminorrhea,dysminorrhea,['dysminorrhea'],dysmenorrhea
+11/7/2022,MIS,Male,33,H/A,headache,['headache'],headache
+11/7/2022,BSHM,Female,19,Dysminorrhea,dysminorrhea,['dysminorrhea'],dysmenorrhea
+11/7/2022,BSAIS,Female,19,Chest Pain,chest pain,['chest pain'],chest pain
+11/7/2022,BSCS,Female,,LBM,lbm,['lbm'],lbm
+11/7/2022,BSE,Female,17,"Hyperventilated, 02Sat 98%; HR 126","hyperventilated, sat","['hyperventilated', ' sat']","fever,hyperventilation"
+11/7/2022,GSO,Male,,LBM,lbm,['lbm'],lbm
+11/7/2022,CBAO,Male,,Colds ,colds,['colds'],cold
+11/7/2022,BSEntrep,Female,21,Allergy,allergy,['allergy'],allergy
+11/7/2022,BSEntrep,Male,22,Colds ,colds,['colds'],cold
+11/7/2022,BSLM,Female,18,Migraine,migraine,['migraine'],migraine
+11/8/2022,BSE,Female,19,Headache,headache,['headache'],headache
+11/8/2022,BSE,Female,18,Headache,headache,['headache'],headache
+11/8/2022,BEED,Female,19,Runny Nose,runny nose,['runny nose'],runny nose
+11/8/2022,Faculty,Female,30,Runny Nose,runny nose,['runny nose'],runny nose
+11/8/2022,Faculty,Female,34,H/A,headache,['headache'],headache
+10/27/2022,BSTM,Male,18,"Vomitting, Cough, Colds","vomitting, cough, colds","['vomitting', ' cough', ' colds']","cold,cough,vomiting"
+10/27/2022,Guidance,Female,32,Dysminorrhea,dysminorrhea,['dysminorrhea'],dysmenorrhea
+10/27/2022,MIS,Female,28,LBM,lbm,['lbm'],lbm
+10/27/2022,Faculty,Female,33,H/A 110/70,headache,['headache'],headache
+11/7/2022,BSLM,Male,19,BP 130/90 H/A,headache,['headache'],headache
+11/7/2022,BSHM,Female,,Colds ,colds,['colds'],cold
+11/7/2022,BSCRIM,Female,20,Allergy,allergy,['allergy'],allergy
+11/7/2022,BAELS,Female,26,Allerfy,allerfy,['allerfy'],allergy
+11/7/2022,STAFF,Female,,"Cough, Colds ","cough, colds","['cough', ' colds']","cold,cough"
+11/7/2022,BSMA,Female,19,Dizziness,dizziness,['dizziness'],dizziness
+11/7/2022,BSCRIM,Female,19,Colds,colds,['colds'],cold
+11/7/2022,BSCRIM,Female,19,Colds,colds,['colds'],cold
+10/25/2022,BSIT ,Female,23,Dizziness,dizziness,['dizziness'],dizziness
+10/25/2022,BSLM,Female,20,"Cough, Dizziness","cough, dizziness","['cough', ' dizziness']","cough,dizziness"
+10/25/2022,BAT,Female,20,H/A 90/60,headache,['headache'],headache
+10/26/2022,BSCRIM,Female,20,H/A 120/90,headache,['headache'],headache
+10/26/2022,BSAIS,Female,18,Dysminorrhea,dysminorrhea,['dysminorrhea'],dysmenorrhea
+10/26/2022,BSEntrep,Female,,Dizziness,dizziness,['dizziness'],dizziness
+10/26/2022,BSE,Female,18,Dizziness,dizziness,['dizziness'],dizziness
+10/26/2022,BSE,Female,17,"DOB, Hyperventilation","dob, hyperventilation","['dob', ' hyperventilation']","hyperventilation,shortness of breath"
+10/26/2022,BSE,Male,,Feeling Warm 36.5'C,feeling warm c,['feeling warm c'],fever
+10/27/2022,BAELS,Female,20,Feeling Warm 36.5'C,feeling warm c,['feeling warm c'],fever
+10/27/2022,STAFF,Male,,H/A,headache,['headache'],headache
+10/27/2022,BSENT,Female,19,Dysminorrhea,dysminorrhea,['dysminorrhea'],dysmenorrhea
+10/22/2022,BEED,Female,18,Cough,cough,['cough'],cough
+10/22/2022,BSCRIM,Female,18,Dizziness,dizziness,['dizziness'],dizziness
+10/22/2022,BAPOD,Female,20,Feeling Warm T=36C,feeling warm,['feeling warm'],fever
+10/24/2022,BEED,Female,21,Pimple,pimple,['pimple'],pimple
+10/24/2022,BEED,Male,19,Dizziness,dizziness,['dizziness'],dizziness
+10/24/2022,BSCRIM,Female,18,Epigastric Pain,epigastric pain,['epigastric pain'],epigastric pain
+10/24/2022,BSEntrep,Female,19,"Dizziness, Dysminorrhea","dizziness, dysminorrhea","['dizziness', ' dysminorrhea']","dizziness,dysmenorrhea"
+10/25/2022,BSLM,Male,19,LBM,lbm,['lbm'],lbm
+10/18/2022,BSE,Female,19,Dysminorrhea,dysminorrhea,['dysminorrhea'],dysmenorrhea
+10/18/2022,BSCRIM,Female,21, Headache,headache,['headache'],headache
+10/18/2022,BSE,Male,19,Pimple,pimple,['pimple'],pimple
+10/18/2022,BEED,Female,18,Dysminorrhea,dysminorrhea,['dysminorrhea'],dysmenorrhea
+10/18/2022,BSBA,Female,18,Dysminorrhea,dysminorrhea,['dysminorrhea'],dysmenorrhea
+10/18/2022,BSBA,Female,18,Dry Cough,dry cough,['dry cough'],cough
+10/18/2022,BSBA,Female,18,"Colds, Body Pain, Feeling Warm","colds, body pain, feeling warm","['colds', ' body pain', ' feeling warm']","body pain,cold,fever"
+10/19/2022,BAT ,Male,18,Abdominal Pain,abdominal pain,['abdominal pain'],stomach ache
+10/19/2022,BSIT,Male,18,Left Upper Quadrant Pain,left upper quadrant pain,['left upper quadrant pain'],stomach ache
+10/19/2022,BSTM,Female,18,UTI,uti,['uti'],uti
+10/19/2022,BSBA,Male,21,Asthma,asthma,['asthma'],asthma
+10/20/2022,BSHM,Female,19,"Dizziness, Dysminorrhea","dizziness, dysminorrhea","['dizziness', ' dysminorrhea']","dizziness,dysmenorrhea"
+10/20/2022,BSIT,Female,17,Dizziness,dizziness,['dizziness'],dizziness
+10/13/2022,BEED,Female,19,Abdominal Pain,abdominal pain,['abdominal pain'],stomach ache
+10/13/2022,BSEntrep,Female,22,"Dysminorrhea, Dizziness","dysminorrhea, dizziness","['dysminorrhea', ' dizziness']","dizziness,dysmenorrhea"
+10/13/2022,BSEntrep,Female,17,Sick,sick,['sick'],malaise
+10/13/2022,BSITEC-Elc,Male,20,"On & Off fever, Colds","on , off fever, colds","['on ', ' off fever', ' colds']","cold,fever"
+10/13/2022,BSBA,Male,21,Hyperacidity,hyperacidity,['hyperacidity'],hyperacidity
+10/13/2022,BSCS,Male,19,"Stomach Ache, Hyperacidity","stomach ache, hyperacidity","['stomach ache', ' hyperacidity']","hyperacidity,stomach ache"
+10/13/2022,BSLM,Male,18,"Dizziness,BP 120/90",dizziness,['dizziness'],dizziness
+10/17/2022,BSED,Female,20,Abdominal Pain,abdominal pain,['abdominal pain'],stomach ache
+10/18/2022,BSENT,Female,19,LBM,lbm,['lbm'],lbm
+10/18/2022,BAT,Female,19,Hyperacidity,hyperacidity,['hyperacidity'],hyperacidity
+10/18/2022,BAT,Female,20,Dizziness,dizziness,['dizziness'],dizziness
+10/18/2022,BSLM,Male,18,LBM,lbm,['lbm'],lbm
+10/10/2022,BSCRIM,Female,18,H/A,headache,['headache'],headache
+10/11/2022,BSED,Female,18,Dry Cough,dry cough,['dry cough'],cough
+10/11/2022,BSTM,Female,19,Itchy Throat,itchy,['itchy'],itchy throat
+10/11/2022,BAT,Male,21,Punctured Wound,punctured wound,['punctured wound'],punctured wound
+10/11/2022,BSITECH-ELX,Male,22,Asthma Attack,asthma attack,['asthma attack'],asthma
+10/3/2022,BSLM,Male,18,Asthma Attack,asthma attack,['asthma attack'],asthma
+10/5/2022,BAT,Male,19,Cough,cough,['cough'],cough
+10/6/2022,BEED,Female,17,H/A,headache,['headache'],headache
+9/29/2022,BSIT,Female,19,Abdominal Pain,abdominal pain,['abdominal pain'],stomach ache
+9/28/2022,BSCRIM,Female,18,Earache,earache,['earache'],earache
+9/28/2022,BSCRIM,Female,19,"Stomach Ache, Hyperacidity","stomach ache, hyperacidity","['stomach ache', ' hyperacidity']","hyperacidity,stomach ache"
+9/28/2022,BSLM,Female,19,Asthma Attack,asthma attack,['asthma attack'],asthma
+9/28/2022,BSCRIM,Female,19,Cough,cough,['cough'],cough
+9/27/2022,BSE,Female,19,LBM,lbm,['lbm'],lbm
+9/21/2022,BSHM,Male,18,Headache,headache,['headache'],headache
+9/20/2022,BEED,Female,20,Nose Bleed,nose bleed,['nose bleed'],nosebleed
+9/20/2022,BSE,Female,20,Hyperacidity,hyperacidity,['hyperacidity'],hyperacidity
+9/14/2022,BAELS,Female,21,H/A,headache,['headache'],headache
+9/14/2022,BSIT,Female,33,Asthma,asthma,['asthma'],asthma
+9/14/2022,BSLM,Female,20,AVR explode,avr explode,['avr explode'],malaise
+9/14/2022,BSCRIM,Male,18,Hyperventilation,hyperventilation,['hyperventilation'],hyperventilation
+9/14/2022,BSLM,Male,18,Abdominal Pain,abdominal pain,['abdominal pain'],stomach ache
+9/14/2022,BSBA,Female,21,Allergy,allergy,['allergy'],allergy
+9/14/2022,BSCRIM,Male,20,Fever,fever,['fever'],fever
+11/10/2022,BSTM,Female,18,Abdominal Pain,abdominal pain,['abdominal pain'],stomach ache
+11/10/2022,BAT,Female,20,Headache,headache,['headache'],headache
+11/10/2022,BSHM,Male,18,Stiches,stiches,['stiches'],stitches
+11/10/2022,BSCS,Male,18,Abraision,abraision,['abraision'],abrasion
+11/10/2022,BSCS,Female,19,Colds,colds,['colds'],cold
+11/10/2022,BSLM,Female,19,LBM,lbm,['lbm'],lbm
+11/10/2022,BS-AUTO,Male,18,"Dizziness, BP 120/90",dizziness,['dizziness'],dizziness
+11/12/2022,BSE,Female,18,Dizziness,dizziness,['dizziness'],dizziness
+11/14/2022,BSLM,Female,20,Hyperventilation,hyperventilation,['hyperventilation'],hyperventilation
+11/14/2022,BSBA,Female,18,Itchy Throat,itchy,['itchy'],itchy throat
+11/14/2022,BSLM,Male,19,Epigastric Pain,epigastric pain,['epigastric pain'],epigastric pain
+11/14/2022,BAPOS,Male,20,Hyperacidity,hyperacidity,['hyperacidity'],hyperacidity
+11/14/2022,BAPOS,Female,20,LBM,lbm,['lbm'],lbm
+11/14/2022,BSIT,Female,20,Sore Throat,sore,['sore'],infection
+11/14/2022,BSCRIM,Female,21,Fever,fever,['fever'],fever
+11/15/2022,BAPOS,Female,18,Dysminorrhea,dysminorrhea,['dysminorrhea'],dysmenorrhea
+11/15/2022,BSHM,Male,,Alergy,alergy,['alergy'],allergy
+12/6/2022,BSCRIM,Female,21,Dysminorrhea,dysminorrhea,['dysminorrhea'],dysmenorrhea
+12/7/2022,BSLM,Male,18,"Cough, Colds ","cough, colds","['cough', ' colds']","cold,cough"
+12/7/2022,BSIT,Female,25,Infected Wound,infected wound,['infected wound'],infection
+12/7/2022,BSCS,Female,19,Headache,headache,['headache'],headache
+12/14/2022,BSIT,Male,20,Colds,colds,['colds'],cold
+12/14/2022,BAELS,Male,18,Colds,colds,['colds'],cold
+12/14/2022,,Male,18,Diarrhea,diarrhea,['diarrhea'],diarrhea
+1/3/2023,BSE,Female,19,Feeling Warm,feeling warm,['feeling warm'],fever
+1/3/2023,BAPOS,Female,22,Asthma,asthma,['asthma'],asthma
+1/4/2023,BSMA,Female,20,Colds,colds,['colds'],cold
+1/4/2023,BSLM,Male,18,Feeling Warm,feeling warm,['feeling warm'],fever
+1/4/2023,BSLM ,Female,20,"Cough, Colds ","cough, colds","['cough', ' colds']","cold,cough"
+1/4/2023,BSBA,Female,21,Body Ache,body ache,['body ache'],body pain
+1/4/2023,,Female,,Hyperacidity,hyperacidity,['hyperacidity'],hyperacidity
+1/3/2023,PS,Male,20,"Cough, Colds ","cough, colds","['cough', ' colds']","cold,cough"
+1/3/2023,BAELS,Male,21,Colds,colds,['colds'],cold
+1/3/2023,BSCS,Male,20,"Colds, Body Ache","colds, body ache","['colds', ' body ache']","body pain,cold"
+1/14/2023,BSCRIM,Female,19,Dizziness,dizziness,['dizziness'],dizziness
+1/16/2023,BSIT,Female,23,Post Delivery,post delivery,['post delivery'],malaise
+1/16/2023,BAPOS,Female,20,Colds,colds,['colds'],cold
+1/16/2023,BSLM,Male,,LBM,lbm,['lbm'],lbm
+1/16/2023,BSCRIM,Male,,Body Weakness,body weakness,['body weakness'],malaise
+1/17/2023,BSIT,Female,,Cough,cough,['cough'],cough
+1/17/2023,BSE,Female,,Stomach Ache,stomach ache,['stomach ache'],stomach ache
+1/17/2023,BSE,Female,,Wrist Sprain,wrist sprain,['wrist sprain'],sprain
+1/17/2023,BAELS,Female,,Infected Wound,infected wound,['infected wound'],infection
+1/17/2023,BSENT,Male,,Colds,colds,['colds'],cold
+1/30/2023,BSCRIM,Female,21,02 Sat 99%,sat,['sat'],fever
+3/16/2023,,Male,,Colds,colds,['colds'],cold
+3/16/2023,BSIT,Female,21,Dizziness,dizziness,['dizziness'],dizziness
+3/16/2023,AB-E,Female,22,LBM,lbm,['lbm'],lbm
+3/16/2023,BAPOS,Male,18,Headache,headache,['headache'],headache
+3/16/2023,BSMA,Female,21,Cough,cough,['cough'],cough
+3/16/2023,SAS,Male,,Cough,cough,['cough'],cough
+3/29/2023,,Male,,Dry Cough,dry cough,['dry cough'],cough
+3/29/2023,,Female,,Knee Swelling,knee swelling,['knee swelling'],sprain
+3/29/2023,,Female,,Knee Swoller,knee swoller,['knee swoller'],sprain
+3/30/2023,,Male,,Body Pain,body pain,['body pain'],body pain
+3/30/2023,,Male,,Body Pain,body pain,['body pain'],body pain
+3/30/2023,,Female,,Swoller Ankle,swoller ankle,['swoller ankle'],sprain
+3/30/2023,,Male,,Body Pain,body pain,['body pain'],body pain
+3/29/2023,,Female,,Allergy,allergy,['allergy'],allergy
+3/29/2023,,Female,,Headache,headache,['headache'],headache
+3/29/2023,,Female,,Hematoma,hematoma,['hematoma'],hematoma
+3/29/2023,,Female,,Allergy,allergy,['allergy'],allergy
+3/29/2023,,Female,,Allergy,allergy,['allergy'],allergy
+3/29/2023,,Female,,Wrist Swell,wrist swell,['wrist swell'],sprain
+3/29/2023,,Male,,Shoulder Swelling,shoulder swelling,['shoulder swelling'],sprain
+3/29/2023,,Male,,Shoulder Dislocation,shoulder dislocation,['shoulder dislocation'],sprain
+3/29/2023,,Female,,Headache,headache,['headache'],headache
+3/29/2023,,Female,,Dry Cough,dry cough,['dry cough'],cough
+3/27/2023,,Female,20,Itchiness,itchiness,['itchiness'],skin allergy
+3/27/2023,,Female,19,Body Pain,body pain,['body pain'],body pain
+3/27/2023,,Male,19,Headache,headache,['headache'],headache
+3/27/2023,,Male,18,LBM,lbm,['lbm'],lbm
+3/27/2023,,Female,19,LBM,lbm,['lbm'],lbm
+3/27/2023,,Male,25,LBM,lbm,['lbm'],lbm
+3/27/2023,,Female,,LBM,lbm,['lbm'],lbm
+3/28/2023,,Male,37,Headache,headache,['headache'],headache
+3/28/2023,,Female,,LBM,lbm,['lbm'],lbm
+3/28/2023,,Male,,LBM,lbm,['lbm'],lbm
+3/28/2023,,Male,,Knee Pain,knee pain,['knee pain'],body pain
+4/12/2023,IAT,Female,21,Light Headache,light headache,['light headache'],headache
+0417/2023,BEED,Male,21,Lacerated Wound,lacerated wound,['lacerated wound'],cut
+4/17/2023,BAT,Female,20,Lower Back Pain,lower back pain,['lower back pain'],body pain
+4/24/2023,BSCRIM,Male,20,Upper Quadrant Pain,upper quadrant pain,['upper quadrant pain'],stomach ache
+4/25/2023,BSCRIM,Female,20,Light Headache,light headache,['light headache'],headache
+4/25/2023,BSBA,Female,19,Nose Bleeding,nose bleeding,['nose bleeding'],nosebleed
+4/25/2023,BAT,Male,20,AURI,auri,['auri'],cold
+4/26/2023,BAPOS,Female,19,Colds,colds,['colds'],cold
+4/26/2023,,Female,,Index Finger Wound,index finger wound,['index finger wound'],wound
+4/27/2023,BAT,Male,20,Index Finger Wound,index finger wound,['index finger wound'],wound
+5/2/2023,BAT,Male,25,Dry Cough,dry cough,['dry cough'],cough
+5/2/2023,BAPOS,Female,19,Body Pain,body pain,['body pain'],body pain
+5/2/2023,BAPOS,Female,20,Body Pain,body pain,['body pain'],body pain
+5/2/2023,BSMA,Female,21,Hyperacidity,hyperacidity,['hyperacidity'],hyperacidity
+5/3/2023,BSEntrep,Female,22,"Dysminorrhea, Muscle Cramps","dysminorrhea, muscle cramps","['dysminorrhea', ' muscle cramps']","cramps,dysmenorrhea"
+1/3/2024,HR Management,Female,22,"Cough & Cold, Dizziness","cough , cold, dizziness","['cough ', ' cold', ' dizziness']","cold,cough,dizziness"
+1/5/2024,OSAS,Male,24,Cough & Cold x4 days,"cough , cold x days","['cough ', ' cold x days']","cold,cough"
+1/8/2024,PS,Male,28,"Cough & Cold, T/C  Acute Upper Respiratory Tract Infection (AURTI)","cough , cold, ,c acute upper respiratory infection aurti","['cough ', ' cold', ' ', 'c acute upper respiratory infection aurti']","auri,cold,cough"
+1/8/2024,Security,Male,36,LW 1cm Left inner thumb,lw m left inner,['lw m left inner'],wound
+1/8/2024,BSBA,Female,20,Cough & Cold,"cough , cold","['cough ', ' cold']","cold,cough"
+1/8/2024,BEED,Male,19,Headache,headache,['headache'],headache
+1/8/2024,BSENT,Female,19,Hyperacidity,hyperacidity,['hyperacidity'],hyperacidity
+1/8/2024,CBM,Female,34,LBM,lbm,['lbm'],lbm
+1/8/2024,CBM,Male,38,Colds,colds,['colds'],cold
+1/8/2024,CBM,Female,46,Headache BP 130/80,headache,['headache'],headache
+1/8/2024,SAS,Female,50,Headache ,headache,['headache'],headache
+1/8/2024,SAS,Female,29,Colds,colds,['colds'],cold
+1/8/2024,CBM,Female,31,LBM,lbm,['lbm'],lbm
+1/8/2024,CBM-HM,Female,33,Colds,colds,['colds'],cold
+1/8/2024,CBM-HM,Female,33,Colds,colds,['colds'],cold
+1/8/2024,BSLM,Male,20,Skin Allergy at insect bite,skin allergy at insect bite,['skin allergy at insect bite'],skin allergy
+1/8/2024,MIS,Female,,Cough,cough,['cough'],cough
+1/8/2024,SAS,Male,32,Cough,cough,['cough'],cough
+1/8/2024,ENTREP,Female,19,Colds,colds,['colds'],cold
+1/8/2024,ENTREP,Male,22,Colds,colds,['colds'],cold
+1/8/2024,Planning,Female,,RBS 110; BP 130/90; Dizziness,dizziness,['dizziness'],dizziness
+1/8/2024,BSLM,Female,20,Headache,headache,['headache'],headache
+1/9/2024,BSCRIM,Female,20,Anemia,anemia,['anemia'],malaise
+1/9/2024,BSAIS,Male,21,Dizziness; 02Sat 99%; HR 95; BP 110/70,"dizziness, sat","['dizziness', ' sat']","dizziness,fever"
+1/9/2024,BSHM,Male,21,Asthma,asthma,['asthma'],asthma
+1/9/2024,BSCRIM,Female,20,Multiple Abraision at fall,multiple abraision at fall,['multiple abraision at fall'],abrasion
+1/9/2024,BSLM,Female,19,LBM,lbm,['lbm'],lbm
+1/9/2024,SAS,Female,,Abraision,abraision,['abraision'],abrasion
+1/9/2024,BSE,Female,20,Acute Upper Respiratory Tract Infection (AURTI),acute upper respiratory infection aurti,['acute upper respiratory infection aurti'],auri
+1/9/2024,Procurement,Female,26,"Colds / Rhinitis, Head Ache","colds , rhinitis, head ache","['colds ', ' rhinitis', ' head ache']","cold,headache,runny nose"
+1/9/2024,P&D,Female,38,Allergy / Rhinitis,"allergy , rhinitis","['allergy ', ' rhinitis']","allergy,runny nose"
+1/10/2024,Registrar,Female,42,Boils Right Lower Quadrant,boils right lower quadrant,['boils right lower quadrant'],infection
+1/10/2024,BAELS,Female,23,Headache BP 80/60,headache,['headache'],headache
+1/10/2024,BSCRIM,Male,19,Dizziness,dizziness,['dizziness'],dizziness
+1/10/2024,BSLM,Female,21,Weak Lungs,weak lungs,['weak lungs'],asthma
+1/10/2024,BSIT,Male,23,Headache Dizziness,headache dizziness,['headache dizziness'],headache
+1/10/2024,BSBA,Male,20,Acute Upper Respiratory Tract Infection (AURTI),acute upper respiratory infection aurti,['acute upper respiratory infection aurti'],auri
+1/10/2024,BSE-SCI,Female,20,On and Off Fever; Cough/Colds,"on and off fever, cough,colds","['on and off fever', ' cough', 'colds']","cold,cough,fever"
+1/10/2024,Registrar,Female,29,Dry cough; T/C Allergic Cough,"dry cough, ,c allergic cough","['dry cough', ' ', 'c allergic cough']",cough
+1/10/2024,BEED,Female,20,Colds,colds,['colds'],cold
+1/10/2024,BSBA,Female,19,Abdominal pain at defecating,abdominal pain at defecating,['abdominal pain at defecating'],stomach ache
+1/11/2024,BS-AUTO,Male,20,Headache BP 120/70,headache,['headache'],headache
+1/11/2024,BSIT,Male,19,T/C Acute Upper Respiratory Tract Infection (AURTI),c acute upper respiratory infection aurti,['c acute upper respiratory infection aurti'],auri
+1/11/2024,BSCRIM,Female,20,Colds x 4 days; Body pain; Vomited 3x; Hyperacidity; Chills at night,"colds x days, body pain, vomited x, hyperacidity, chills at night","['colds x days', ' body pain', ' vomited x', ' hyperacidity', ' chills at night']","body pain,cold,fever,hyperacidity,vomiting"
+1/11/2024,BSED,Male,21,Gassy/Bloated/Frequent burping,"gassy,bloated,frequent burping","['gassy', 'bloated', 'frequent burping']",hyperacidity
+1/11/2024,BAELS,Female,23,Left Upper Quadrant Abdominal pain,left upper quadrant abdominal pain,['left upper quadrant abdominal pain'],stomach ache
+1/11/2024,BAPOS,Female,20,Fever; Bodyache; Cough/Colds,"fever, bodyache, cough,colds","['fever', ' bodyache', ' cough', 'colds']","body pain,cold,cough,fever"
+1/11/2024,BEED,Female,19,Dysmenorrhea,dysmenorrhea,['dysmenorrhea'],dysmenorrhea
+1/11/2024,CED,Male,,Hyperacidity,hyperacidity,['hyperacidity'],hyperacidity
+1/11/2024,CED,Female,,Backpain,backpain,['backpain'],body pain
+1/11/2024,CED,Female,20,Dysmenorrhea,dysmenorrhea,['dysmenorrhea'],dysmenorrhea
+1/11/2024,BAPOS,Male,20,Persistent Cough,persistent cough,['persistent cough'],cough
+1/11/2024,BAPOS,Male,42,Cough,cough,['cough'],cough
+1/11/2024,Registrar,Female,,Productive Cough,productive cough,['productive cough'],cough
+1/11/2024,BSTM,Female,18,Acute Upper Respiratory Tract Infection (AURTI),acute upper respiratory infection aurti,['acute upper respiratory infection aurti'],auri
+1/11/2024,BSTM,Female,18,Acute Upper Respiratory Tract Infection (AURTI),acute upper respiratory infection aurti,['acute upper respiratory infection aurti'],auri
+1/15/2024,BSIT,Female,23,Cough,cough,['cough'],cough
+1/16/2024,BSE,Female,19,Hyperventilated 02 98%; HR 160; BP 110/70,hyperventilated,['hyperventilated'],hyperventilation
+1/16/2024,BAELS,Female,23,UTI,uti,['uti'],uti
+1/16/2024,BSAIS,Female,21,Cough / Cold,"cough , cold","['cough ', ' cold']","cold,cough"
+1/16/2024,BSIT,Female,22,Colds,colds,['colds'],cold
+1/16/2024,CSO,Male,49,Dysuria,dysuria,['dysuria'],uti
+1/16/2024,BSIT,Male,19,Headache,headache,['headache'],headache
+1/16/2024,BSCRIM,Female,20,Varicella,varicella,['varicella'],infection
+1/16/2024,CCSICT,Male,20,Hypertension BP 170/120,hypertension,['hypertension'],hypertension
+1/16/2024,BSBA,Male,18,Headache,headache,['headache'],headache
+1/16/2024,CSO,Male,31,Headache,headache,['headache'],headache
+1/17/2024,FIC,Female,,Cough / Colds / Fever,"cough , colds , fever","['cough ', ' colds ', ' fever']","cold,cough,fever"
+1/17/2024,FIC,Female,,Headache BP 140/40,headache,['headache'],headache
+1/17/2024,BSTM,Male,21,Cough,cough,['cough'],cough
+1/17/2024,BSTM,Female,21,Cough,cough,['cough'],cough
+1/17/2024,Faculty,Female,29,Cough,cough,['cough'],cough
+1/17/2024,Faculty,Male,31,Cough / Colds,"cough , colds","['cough ', ' colds']","cold,cough"
+1/17/2024,CED,Male,,Dizziness BP 100/70 + Headache,"dizziness , headache","['dizziness ', ' headache']","dizziness,headache"
+1/17/2024,BSIT,Female,20,Headache at lack of sleep,headache at lack of sleep,['headache at lack of sleep'],headache
+1/17/2024,BSTM,Female,18,Cough & Colds; Sore throat,"cough , colds, sore","['cough ', ' colds', ' sore']","cold,cough,infection"
+1/17/2024,CCSICT,Female,28,Colds,colds,['colds'],cold
+1/17/2024,BSCRIM,Male,21,Cough & Colds,"cough , colds","['cough ', ' colds']","cold,cough"
+1/17/2024,BSENT,Female,18,Hyperventilated 02 98%; HR 94; BP 90/60,hyperventilated,['hyperventilated'],hyperventilation
+1/17/2024,BSCRIM,Male,18,Inflamed punctured wound L foot,inflamed punctured wound l foot,['inflamed punctured wound l foot'],punctured wound
+1/17/2024,BSCRIM,Female,18,Multiple Bruises,multiple bruises,['multiple bruises'],hematoma
+1/18/2024,BSE,Female,18,Right Upper Quadrant Abdominal Pain,right upper quadrant abdominal pain,['right upper quadrant abdominal pain'],stomach ache
+1/18/2024,SAS,Female,,Bodypain,bodypain,['bodypain'],body pain
+1/18/2024,BSIT,Female,,Severe Headache T/C Migraine,"severe headache ,c migraine","['severe headache ', 'c migraine']","headache,migraine"
+1/18/2024,BAELS,Female,,Severe Headache BP 110/70 + Dizziness,"severe headache , dizziness","['severe headache ', ' dizziness']","dizziness,headache"
+1/18/2024,BSE,Female,,T/C Acute Upper Respiratory Tract Infection (AURTI),c acute upper respiratory infection aurti,['c acute upper respiratory infection aurti'],auri
+1/18/2024,BEED,Female,,Rashes all over the body / (Chicken Allergy),"rashes all over body , chicken allergy","['rashes all over body ', ' chicken allergy']","allergy,skin allergy"
+1/18/2024,BSCS,Female,18,Headache,headache,['headache'],headache
+1/18/2024,BSCRIM,Female,19,Headache,headache,['headache'],headache
+1/18/2024,BSE,Male,,Colds,colds,['colds'],cold
+1/18/2024,BSE,Female,20,Colds x2 days; Headache,"colds x days, headache","['colds x days', ' headache']","cold,headache"
+1/18/2024,BSE,Female,20,Colds x4 days; Itchy throat,"colds x days, itchy","['colds x days', ' itchy']","cold,itchy throat"
+1/18/2024,BEED,Female,19,Headache,headache,['headache'],headache
+1/18/2024,BSCRIM,Male,18,Boils Right Foot,boils right foot,['boils right foot'],infection
+1/22/2024,BSCRIM,Female,21,Severe Dehydration,severe dehydration,['severe dehydration'],malaise
+1/22/2024,BSCRIM,Female,18,"Acute Upper Respiratory Tract Infection (AURTI), Cough x3 days","acute upper respiratory infection aurti, cough x days","['acute upper respiratory infection aurti', ' cough x days']","auri,cough"
+1/22/2024,BSCRIM,Female,19,"Acute Upper Respiratory Tract Infection (AURTI), Cough x3 days, On and Off fever","acute upper respiratory infection aurti, cough x days, on and off fever","['acute upper respiratory infection aurti', ' cough x days', ' on and off fever']","auri,cough,fever"
+1/22/2024,BSCRIM,Female,20,Cough and Colds x1 day,cough and colds x day,['cough and colds x day'],cough
+1/22/2024,BSCRIM,Female,20,Cough and Colds x1 day,cough and colds x day,['cough and colds x day'],cough
+1/22/2024,Clinic,Male,,Dizziness T/C Vertigo,"dizziness ,c vertigo","['dizziness ', 'c vertigo']",dizziness
+1/22/2024,BEED,Female,,Dysmenorrhea,dysmenorrhea,['dysmenorrhea'],dysmenorrhea
+1/22/2024,BAS,Male,19,"Headache, Dizziness","headache, dizziness","['headache', ' dizziness']","dizziness,headache"
+1/23/2024,BSLM,Male,21,Acute Upper Respiratory Infection (AURI),acute upper respiratory infection auri,['acute upper respiratory infection auri'],auri
+1/23/2024,BSED,Female,18,Acute Upper Respiratory Infection (AURI),acute upper respiratory infection auri,['acute upper respiratory infection auri'],auri
+1/23/2024,BSIT,Male,20,Bodypain,bodypain,['bodypain'],body pain
+1/23/2024,BSENT,Female,19,Small Cut,small cut,['small cut'],cut
+1/23/2024,BSBA,Female,21,Small Cut,small cut,['small cut'],cut
+1/23/2024,,Female,,Cough / Colds,"cough , colds","['cough ', ' colds']","cold,cough"
+1/25/2024,EO Sec,Female,,Colds,colds,['colds'],cold
+1/25/2024,Library,Female,,Colds,colds,['colds'],cold
+1/25/2024,Extension,Male,,Flu vax .5 IM,flu vax im,['flu vax im'],cold
+1/25/2024,BAC,Female,,Flu vax .5 IM,flu vax im,['flu vax im'],cold
+1/25/2024,QA,Male,,Flu vax .5 IM,flu vax im,['flu vax im'],cold
+1/25/2024,HR,Female,,Flu vax .5 IM,flu vax im,['flu vax im'],cold
+1/25/2024,QA,Female,,Flu vax .5 IM,flu vax im,['flu vax im'],cold
+1/25/2024,QA,Female,,Flu vax .5 IM,flu vax im,['flu vax im'],cold
+1/25/2024,BSENT,Female,19,Headache BP 80/60,headache,['headache'],headache
+1/25/2024,BSENT,Female,19,"Gastric pain, Upper stomach, Nausea","gastric pain, upper stomach, nausea","['gastric pain', ' upper stomach', ' nausea']","epigastric pain,stomach ache"
+1/25/2024,BSCRIM,Female,18,Dysmenorrhea,dysmenorrhea,['dysmenorrhea'],dysmenorrhea
+1/29/2024,BSIT,Male,,Acute Upper Respiratory Tract Infection (AURTI) ,acute upper respiratory infection aurti,['acute upper respiratory infection aurti'],auri
+1/29/2024,BSIT,Male,,Varicella,varicella,['varicella'],infection
+1/29/2024,BSE,Female,19,Hypogastric pain + Hyperacidity,hypogastric pain hyperacidity,['hypogastric pain hyperacidity'],hyperacidity
+1/29/2024,SAS,Male,40,Headache,headache,['headache'],headache
+1/29/2024,BSITech Auto,Male,21,Dizziness,dizziness,['dizziness'],dizziness
+1/29/2024,CSO,Female,38,Cough & Colds,"cough , colds","['cough ', ' colds']","cold,cough"
+1/29/2024,BSCRIM,Male,19,LBM,lbm,['lbm'],lbm
+1/29/2024,Supply,Female,,Acute Upper Respiratory Tract Infection (AURTI),acute upper respiratory infection aurti,['acute upper respiratory infection aurti'],auri
+1/29/2024,CCSICT,Male,,Feeling warm + Bodypain,feeling warm bodypain,['feeling warm bodypain'],fever
+1/29/2024,Accounting,Female,,Vertigo,vertigo,['vertigo'],dizziness
+1/29/2024,RSD,Female,,Allergic Rhinitis,allergic rhinitis,['allergic rhinitis'],runny nose
+1/30/2024,AA,Female,,Cough,cough,['cough'],cough
+1/30/2024,MFS,Female,,LBM,lbm,['lbm'],lbm
+1/30/2024,BAC,Male,,BP 180/120 + Dizziness + Headache,dizziness headache,['dizziness headache'],headache
+1/30/2024,CED,Male,,Acid Reflux,acid reflux,['acid reflux'],hyperacidity
+1/30/2024,CSO,Female,,LBM,lbm,['lbm'],lbm
+1/30/2024,Security,Male,,BP 160/110 Headache + Dizziness,headache dizziness,['headache dizziness'],headache
+1/31/2024,BSCRIM,Female,21,Acute Upper Respiratory Tract Infection (AURTI),acute upper respiratory infection aurti,['acute upper respiratory infection aurti'],auri
+1/22/2024,BSBA,Female,22,UTI,uti,['uti'],uti
+1/22/2024,BSBA,Female,22,UTI,uti,['uti'],uti
+1/22/2024,BSBA,Female,22,UTI,uti,['uti'],uti
+1/29/2024,,Female,21,UTI,uti,['uti'],uti
+1/29/2024,,Female,21,Varicella,varicella,['varicella'],infection
+2/6/2024,Cashier,Female,,Flu vax,flu vax,['flu vax'],cold
+2/6/2024,Cashier,Female,,Flu vax,flu vax,['flu vax'],cold
+2/6/2024,Scholarship,Male,,Cough / Colds,"cough , colds","['cough ', ' colds']","cold,cough"
+2/6/2024,Accounting,Female,,Flu vax,flu vax,['flu vax'],cold
+2/6/2024,Security,Female,,Flu vax,flu vax,['flu vax'],cold
+2/6/2024,Registrar,Female,,Pelvic pain,pelvic pain,['pelvic pain'],menstrual cramps
+2/6/2024,RGO,Male,,Flu vax,flu vax,['flu vax'],cold
+2/6/2024,RGO,Female,,Flu vax,flu vax,['flu vax'],cold
+2/6/2024,CBAO,Female,,Flu vax,flu vax,['flu vax'],cold
+3/6/2024,BSE,Female,,Ankle sprain,ankle sprain,['ankle sprain'],sprain
+3/21/2024,BSENT,Female,21,UTI,uti,['uti'],uti
+3/21/2024,BAT,Female,28,Allergy,allergy,['allergy'],allergy
+3/12/2024,BSCRIM,Female,21,Dizziness,dizziness,['dizziness'],dizziness
+3/20/2024,BEED,Female,20,Headache,headache,['headache'],headache
+3/5/2024,BSCRIM,Female,20,Cough x2 days; HR 78; O2 98; Asthma; Rhinitis,"cough x days, , o , asthma, rhinitis","['cough x days', ' ', ' o ', ' asthma', ' rhinitis']","asthma,cough,fever,runny nose"
+3/5/2024,BSCRIM,Female,21,Dizziness; Cough & Cold,"dizziness, cough , cold","['dizziness', ' cough ', ' cold']","cold,cough,dizziness"
+3/5/2024,BS-EMC,Female,18,Headache BP 90/50,headache,['headache'],headache
+3/6/2024,,Female,,Cough / Colds ,"cough , colds","['cough ', ' colds']","cold,cough"
+4/23/2024,BEED,Female,20,Headache,headache,['headache'],headache
+4/24/2024,Registrar,Female,29,Dysmenorrhea,dysmenorrhea,['dysmenorrhea'],dysmenorrhea
+4/24/2024,BSCRIM,Male,19,Abraision Left Palm,abraision left palm,['abraision left palm'],abrasion
+4/24/2024,BS-AUTO,Male,20,Dry cough,dry cough,['dry cough'],cough
+5/30/2024,BSCRIM,Male,18,Hyperacidity,hyperacidity,['hyperacidity'],hyperacidity
+5/30/2024,BEED,Female,18,Right Knee Abraises,right knee abraises,['right knee abraises'],abrasion
+5/30/2024,BSCRIM,Male,18,Bodypain,bodypain,['bodypain'],body pain
+5/30/2024,BSCRIM,Male,18,Bodypain,bodypain,['bodypain'],body pain
+5/30/2024,BSCRIM,Female,19,Diarrhea,diarrhea,['diarrhea'],diarrhea
+5/30/2024,BSIT,Male,,Colds,colds,['colds'],cold
+5/31/2024,BSCRIM,Female,19,Dysmenorrhea,dysmenorrhea,['dysmenorrhea'],dysmenorrhea
+5/30/2024,BSCRIM,Female,19,Eye Irritation,eye irritation,['eye irritation'],infection
+5/30/2024,BSCRIM,Female,19,LBM,lbm,['lbm'],lbm
+4/25/2024,,Male,,Right Leg Pain,right leg pain,['right leg pain'],body pain
+5/5/2024,Guidance,Female,,Headache,headache,['headache'],headache
+5/9/2024,BSIT,Female,,Headache,headache,['headache'],headache
+5/9/2024,BSHM,Female,,Acute Upper Respiratory Infection (AURI),acute upper respiratory infection auri,['acute upper respiratory infection auri'],auri
+5/10/2024,BSCRIM,Male,,Colds x3 days & Bodypain,"colds x days , bodypain","['colds x days ', ' bodypain']","body pain,cold"
+5/13/2024,SAS,Female,,BP 100/70; O2 98; HR 53,o,['o'],fever
+5/13/2024,Faculty,Male,,Tendon Cuts,cuts,['cuts'],cut
+5/13/2024,BSBA,Female,18,Acute Upper Respiratory Infection (AURI),acute upper respiratory infection auri,['acute upper respiratory infection auri'],auri
+5/21/2024,BSIT,Male,18,Knee Sprain,knee sprain,['knee sprain'],sprain
+6/20/2024,BSLM,Female,21,Dizziness; Body Weakness; BP 100/70; O2 89; HR 86,"dizziness, body weakness, , o","['dizziness', ' body weakness', ' ', ' o']","dizziness,fever,malaise"
+6/20/2024,BSCRIM,Male,20,Hyperacidity,hyperacidity,['hyperacidity'],hyperacidity
+6/3/2024,BAPOS,Male,,Headache & Colds ,"headache , colds","['headache ', ' colds']","cold,headache"
+6/3/2024,AFS,Female,28,Colds ,colds,['colds'],cold
+6/3/2024,Accounting,female,25,Gumpain / Tootache,gumpain,['gumpain'],toothache
+6/3/2024,BSTM,Male,19,Hyperacidity + Epigastric Pain,hyperacidity epigastric pain,['hyperacidity epigastric pain'],epigastric pain
+6/3/2024,BS-EMC,Female,22,Dysmenorrhea,dysmenorrhea,['dysmenorrhea'],dysmenorrhea
+6/3/2024,BEED,Female,18,Bruises,bruises,['bruises'],hematoma
+6/3/2024,BSCRIM,Female,18,LBM,lbm,['lbm'],lbm
+6/7/2024,BSIT,Female,30,Hyperacidity,hyperacidity,['hyperacidity'],hyperacidity
+6/10/2024,CCSICT,Female,,Bodypain,bodypain,['bodypain'],body pain
+6/10/2024,BAPOS,Female,,Tooth Extraction,extraction,['extraction'],toothache
+6/10/2024,BAPOS,Female,,Bodypain,bodypain,['bodypain'],body pain
+6/10/2024,BSE,Female,21,Bodypain,bodypain,['bodypain'],body pain
+6/10/2024,BEED,Female,21,Dizziness; BP 80/60,dizziness,['dizziness'],dizziness
+6/10/2024,BSHM,Male,,Abdominal pain,abdominal pain,['abdominal pain'],stomach ache
+6/10/2024,BAPOS,Male,21,Headache; Stomachache/LBM x3 days,"headache, stomacheadacheche,lbm x days","['headache', ' stomacheadacheche', 'lbm x days']","headache,lbm,stomach ache"
+6/11/2024,BSAM,Male,19,Highblood,highblood,['highblood'],hypertension
+6/10/2024,BSHM,Male,22,Multiple Bruises,multiple bruises,['multiple bruises'],hematoma
+6/4/2024,BSED,Female,23,Dizziness BP 80/60,dizziness,['dizziness'],dizziness
+6/4/2024,CED,Female,,Acute Upper Respiratory Infection (AURI),acute upper respiratory infection auri,['acute upper respiratory infection auri'],auri
+6/4/2024,BS-EMC,Female,22,Dysmenorrhea,dysmenorrhea,['dysmenorrhea'],dysmenorrhea
+6/4/2024,BSIT,Female,23,Backpain,backpain,['backpain'],body pain
+6/4/2024,BSIT,Female,,Dysmenorrhea,dysmenorrhea,['dysmenorrhea'],dysmenorrhea
+6/5/2024,BSIT,Female,22,Dizziness,dizziness,['dizziness'],dizziness
+6/5/2024,BSIT,Male,22,Headache,headache,['headache'],headache
+6/5/2024,BSTM,Female,19,Dizziness; BP 80/60; 02 96; HR 82,dizziness,['dizziness'],dizziness
+6/5/2024,BSLM,Female,18,Headache & Cough,"headache , cough","['headache ', ' cough']","cough,headache"
+6/5/2024,BSLM,Female,20,Headache,headache,['headache'],headache
+6/5/2024,BSENT,Male,,Headache & Cough,"headache , cough","['headache ', ' cough']","cough,headache"
+6/5/2024,BSIT,Female,23,LBM,lbm,['lbm'],lbm
+6/5/2024,BAELS,Male,20,Headache,headache,['headache'],headache
+6/5/2024,BAELS,Female,21,Headache,headache,['headache'],headache
+6/5/2024,BSIT,Female,23,Hyperacidity,hyperacidity,['hyperacidity'],hyperacidity
+5/22/2024,BSBA,Female,21,Acute Upper Respiratory Infection (AURI),acute upper respiratory infection auri,['acute upper respiratory infection auri'],auri
+5/22/2024,BSE,Female,20,Cough & Colds x3 days,"cough , colds x days","['cough ', ' colds x days']","cold,cough"
+5/24/2024,BSCRIM,Female,19,Headache,headache,['headache'],headache
+5/24/2024,BSCRIM,Female,19,Fainted,fainted,['fainted'],malaise
+5/27/2024,BEED,Female,24,LBM,lbm,['lbm'],lbm
+5/27/2024,BSBA,Female,21,Dizziness,dizziness,['dizziness'],dizziness
+5/27/2024,BSIT,Female,20,Bruises,bruises,['bruises'],hematoma
+5/27/2024,BSBA,Female,20,Sore Throat; Itchyness of Throat; Colds,"sore , itchyness of , colds","['sore ', ' itchyness of ', ' colds']","cold,infection,skin allergy"
+5/27/2024,BSBA,Female,23,Cough & Colds,"cough , colds","['cough ', ' colds']","cold,cough"
+5/27/2024,BSENT,Male,19,LBM,lbm,['lbm'],lbm
+5/27/2024,BS-AUTO,Male,21,Small Cut,small cut,['small cut'],cut
+5/28/2024,BSBA,Female,21,Dizziness / Fatigue / Headace,"dizziness , fatigue , headace","['dizziness ', ' fatigue ', ' headace']","dizziness,headache,malaise"
+6/13/2024,BSENT,Female,23,LBM,lbm,['lbm'],lbm
+6/13/2024,BSHM,Female,19,Runny Nose,runny nose,['runny nose'],runny nose
+6/13/2024,BSHM,Female,19,Backpain,backpain,['backpain'],body pain
+6/13/2024,BSCRIM,Female,19,Sinusitis,sinusitis,['sinusitis'],runny nose
+6/13/2024,BSED ,Female,18,LBM x3 days,lbm x days,['lbm x days'],lbm
+6/13/2024,BSCS,Female,18,Headache,headache,['headache'],headache
+6/12/2024,BSIT,Female,23,Bodypain,bodypain,['bodypain'],body pain
+6/18/2024,BSCRIM,Female,22,Productive Cough x2 weeks; Fever,"productive cough x weeks, fever","['productive cough x weeks', ' fever']","cough,fever"
+6/18/2024,BSBA,Female,20,Acute Upper Respiratory Infection (AURI),acute upper respiratory infection auri,['acute upper respiratory infection auri'],auri
+6/18/2024,BAPOS,Female,20,Dysmenorrhea,dysmenorrhea,['dysmenorrhea'],dysmenorrhea
+6/3/2024,BSENT,Male,23,Acute Upper Respiratory Infection (AURI),acute upper respiratory infection auri,['acute upper respiratory infection auri'],auri
+6/4/2024,BSCS,,,Sore Throat,sore,['sore'],infection
+5/28/2024,BSMA,Female,22,Dry cough,dry cough,['dry cough'],cough
+5/28/2024,BSBA,Female,19,Shoulder Dislocation,shoulder dislocation,['shoulder dislocation'],sprain
+5/29/2024,Registrar,Female,33,Stomachache / LBM,"stomacheadacheche , lbm","['stomacheadacheche ', ' lbm']","lbm,stomach ache"
+5/29/2024,BSCRIM,Male,18,Acute Upper Respiratory Infection (AURI),acute upper respiratory infection auri,['acute upper respiratory infection auri'],auri
+8/7/2024,BSCS,Female,21,Slightly Dizzy; Colds,"slightly dizzy, colds","['slightly dizzy', ' colds']","cold,dizziness"
+8/12/2024,BSCRIM,Female,19,Acute Upper Respiratory Infection (AURI),acute upper respiratory infection auri,['acute upper respiratory infection auri'],auri
+6/13/2024,BSENT,Female,23,LBM,lbm,['lbm'],lbm
+8/14/2024,BSIT,Female,17,Dizzinessl; Abraison at fall,"dizzinessl, abraison at fall","['dizzinessl', ' abraison at fall']","abrasion,dizziness"
+8/14/2024,BSIT,Female,18,On and Off Fever x4 days; Common Cold x4 days,"on and off fever x days, common cold x days","['on and off fever x days', ' common cold x days']","cold,fever"
+8/14/2024,BAPOS,Female,21,Allergy,allergy,['allergy'],allergy
+8/15/2024,BSIT,Male,18,Feeling warm + Headache,feeling warm headache,['feeling warm headache'],fever
+8/15/2024,BS-Entrep,Female,18,Dizziness; Cough & Cold,"dizziness, cough , cold","['dizziness', ' cough ', ' cold']","cold,cough,dizziness"
+8/15/2024,BSIT,Male,21,Cough x2 days ,cough x days,['cough x days'],cough
+8/15/2024,BSIT,Female,18,Cough x2 days ,cough x days,['cough x days'],cough
+8/15/2024,BSED,Female,19,Hyperacidity,hyperacidity,['hyperacidity'],hyperacidity
+8/19/2024,BEED,Female,20,LBM,lbm,['lbm'],lbm
+8/19/2024,BAELS,Female,21,Hyperacidity / Gastric Pain,"hyperacidity , gastric pain","['hyperacidity ', ' gastric pain']","epigastric pain,hyperacidity"
+8/19/2024,BAELS,Female,19,Hyperacidity,hyperacidity,['hyperacidity'],hyperacidity
+8/19/2024,BEED,Female,20,Gastric Pain,gastric pain,['gastric pain'],epigastric pain
+8/19/2024,BSHM,Female,19,Multiple Bruises,multiple bruises,['multiple bruises'],hematoma
+8/19/2024,BSBA,Female,20,Acute Upper Respiratory Infection (AURI),acute upper respiratory infection auri,['acute upper respiratory infection auri'],auri
+8/19/2024,BEED,Male,20,Headache & Colds ,"headache , colds","['headache ', ' colds']","cold,headache"
+8/19/2024,BSIT,Male,,LBM,lbm,['lbm'],lbm
+8/20/2024,BSE,Female,19,LBM & Stomachache,"lbm , stomacheadacheche","['lbm ', ' stomacheadacheche']","lbm,stomach ache"
+8/20/2024,BEED,Female,21,Acute Upper Respiratory Infection (AURI),acute upper respiratory infection auri,['acute upper respiratory infection auri'],auri
+8/20/2024,BSCRIM,Female,19,Dysmenorrhea x2 days,dysmenorrhea x days,['dysmenorrhea x days'],dysmenorrhea
+8/20/2024,BSHM,Female,19,Flu T/C Acute Upper Respiratory Infection (AURI),"flu ,c acute upper respiratory infection auri","['flu ', 'c acute upper respiratory infection auri']","auri,cold"
+8/20/2024,BSLM,Male,,Dizziness,dizziness,['dizziness'],dizziness
+8/20/2024,BEED,Female,20,Hyperacidity,hyperacidity,['hyperacidity'],hyperacidity
+8/12/2024,BSC,Female,20,Dizziness,dizziness,['dizziness'],dizziness
+8/12/2024,BSCRIM,Male,20,Headache BP 80/60,headache,['headache'],headache
+8/12/2024,BAT,Male,21,Headache,headache,['headache'],headache
+8/12/2024,BSIT,Male,18,Abraision,abraision,['abraision'],abrasion
+8/13/2024,BSE,Female,20,LBM x3 days,lbm x days,['lbm x days'],lbm
+8/13/2024,,Male,,Flu,flu,['flu'],cold
+8/13/2024,,Male,,Flu,flu,['flu'],cold
+8/13/2024,BSHM,Female,19,Headache,headache,['headache'],headache
+8/14/2024,BSHM,Male,18,Stomachache ,stomacheadacheche,['stomacheadacheche'],stomach ache
+8/14/2024,BSHM,Male,19,Stomachache,stomacheadacheche,['stomacheadacheche'],stomach ache
+8/20/2024,BSENT,Female,18,Colds x2 days,colds x days,['colds x days'],cold
+8/20/2024,BEED,,20,Hyperacidity + Vomiting ,hyperacidity vomiting,['hyperacidity vomiting'],vomiting
+8/20/2024,BSLM,Male,19,Acute Upper Respiratory Infection (AURI),acute upper respiratory infection auri,['acute upper respiratory infection auri'],auri
+8/20/2024,BS-EMC,Female,18,Dymenorrhea,dymenorrhea,['dymenorrhea'],dysmenorrhea
+8/28/2024,BSENT,Female,18,Dymenorrhea,dymenorrhea,['dymenorrhea'],dysmenorrhea
+8/28/2024,BSCRIM,Female,21,Dymenorrhea,dymenorrhea,['dymenorrhea'],dysmenorrhea
+8/22/2024,BEED,Female,20,Bodypain,bodypain,['bodypain'],body pain
+8/22/2024,BSENT,Female,19,Menstrual Cramps,menstrual cramps,['menstrual cramps'],menstrual cramps
+8/20/2024,BSCS,Male,23,Dizziness,dizziness,['dizziness'],dizziness
+8/21/2024,BAT,Male,21,Allergy,allergy,['allergy'],allergy
+8/21/2024,BSENT,Female,17,Body Weakness,body weakness,['body weakness'],malaise
+8/21/2024,BS-EMC,Female,18,Skin Allergy,skin allergy,['skin allergy'],skin allergy
+8/21/2024,BS-EMC,Male,20,Cough,cough,['cough'],cough
+8/25/2024,BSCRIM,Male,,Underweight,underweight,['underweight'],malaise
+8/25/2024,BSCRIM,Male,,Cough / Colds,"cough , colds","['cough ', ' colds']","cold,cough"
+8/25/2024,BSCRIM,Male,,Cough / Colds,"cough , colds","['cough ', ' colds']","cold,cough"
+8/25/2024,BSCRIM,Male,,Cough / Colds,"cough , colds","['cough ', ' colds']","cold,cough"
+8/25/2024,BSCRIM,Male,,Cough / Colds,"cough , colds","['cough ', ' colds']","cold,cough"
+8/25/2024,BSCRIM,Male,,Cough / Colds,"cough , colds","['cough ', ' colds']","cold,cough"
+8/25/2024,BSCRIM,Male,,Cough / Colds,"cough , colds","['cough ', ' colds']","cold,cough"
+8/25/2024,BSCRIM,Male,,Cough / Colds,"cough , colds","['cough ', ' colds']","cold,cough"
+8/25/2024,BSCRIM,Male,,Cough / Colds,"cough , colds","['cough ', ' colds']","cold,cough"
+8/25/2024,BSCRIM,Male,,Cough / Colds,"cough , colds","['cough ', ' colds']","cold,cough"
+8/25/2024,BSCRIM,Male,,Cough / Colds,"cough , colds","['cough ', ' colds']","cold,cough"
+8/25/2024,BSCRIM,Male,,Cough / Colds,"cough , colds","['cough ', ' colds']","cold,cough"
+8/25/2024,BSCRIM,Male,,Cough / Colds,"cough , colds","['cough ', ' colds']","cold,cough"
+8/25/2024,BSCRIM,Male,,Cough / Colds,"cough , colds","['cough ', ' colds']","cold,cough"
+8/25/2024,BSCRIM,Male,,Cough / Colds,"cough , colds","['cough ', ' colds']","cold,cough"
+8/25/2024,BSCRIM,Male,,Cough / Colds,"cough , colds","['cough ', ' colds']","cold,cough"
+8/25/2024,BSCRIM,Male,,Cough / Colds,"cough , colds","['cough ', ' colds']","cold,cough"
+8/25/2024,BSCRIM,Male,,Cough / Colds,"cough , colds","['cough ', ' colds']","cold,cough"
+8/25/2024,BSCRIM,Male,,Cough / Colds,"cough , colds","['cough ', ' colds']","cold,cough"
+8/25/2024,BSCRIM,Male,,Cough / Colds,"cough , colds","['cough ', ' colds']","cold,cough"
+8/25/2024,BSCRIM,Male,,Cough / Colds,"cough , colds","['cough ', ' colds']","cold,cough"
+8/25/2024,BSCRIM,Male,,Cough / Colds,"cough , colds","['cough ', ' colds']","cold,cough"
+8/25/2024,BSCRIM,Male,,Cough / Colds,"cough , colds","['cough ', ' colds']","cold,cough"
+8/25/2024,BSCRIM,Male,,Cough / Colds,"cough , colds","['cough ', ' colds']","cold,cough"
+8/25/2024,BSCRIM,Male,,Cough / Colds,"cough , colds","['cough ', ' colds']","cold,cough"
+8/25/2024,BSCRIM,Male,,Cough / Colds,"cough , colds","['cough ', ' colds']","cold,cough"
+8/25/2024,BSCRIM,Male,,Cough / Colds,"cough , colds","['cough ', ' colds']","cold,cough"
+8/25/2024,BSCRIM,Male,,Cough / Colds,"cough , colds","['cough ', ' colds']","cold,cough"
+8/25/2024,BSCRIM,Male,,Cough / Colds,"cough , colds","['cough ', ' colds']","cold,cough"
+8/25/2024,BSCRIM,Male,,Cough / Colds,"cough , colds","['cough ', ' colds']","cold,cough"
+8/25/2024,BSCRIM,Male,,Cough / Colds,"cough , colds","['cough ', ' colds']","cold,cough"
+8/25/2024,BSCRIM,Male,,Cough / Colds,"cough , colds","['cough ', ' colds']","cold,cough"
+8/25/2024,BSCRIM,Female,,Cough / Colds,"cough , colds","['cough ', ' colds']","cold,cough"
+8/25/2024,BSCRIM,Female,,Cough / Colds,"cough , colds","['cough ', ' colds']","cold,cough"
+9/11/2024,BSED,Female,21,Cough,cough,['cough'],cough
+9/11/2024,BSIT,Female,,Hyperventilated,hyperventilated,['hyperventilated'],hyperventilation
+9/9/2024,BSED,Female,18,Colds,colds,['colds'],cold
+9/9/2024,BSCRIM,Male,20,Dizziness,dizziness,['dizziness'],dizziness
+9/11/2024,BSEMC,Female,,Stomachache,stomacheadacheche,['stomacheadacheche'],stomach ache
+9/11/2024,BSBA,Female,,Dysminorrhea,dysminorrhea,['dysminorrhea'],dysmenorrhea
+9/11/2024,BSE,Female,,Hyperacidity,hyperacidity,['hyperacidity'],hyperacidity
+9/12/2024,BSCRIM,Female,,Sore Throat,sore,['sore'],infection
+9/12/2024,BAELS,Female,,Headache,headache,['headache'],headache
+9/12/2024,BSLM,Male,21,Sore Throat,sore,['sore'],infection
+9/12/2024,BSE,Female,17,Hip Pain,hip pain,['hip pain'],body pain
+9/12/2024,BSE,Female,20,Headache,headache,['headache'],headache
+9/12/2024,BSE,Female,,Hyperventilated,hyperventilated,['hyperventilated'],hyperventilation
+9/12/2024,BSE,Female,19,Rhinitis,rhinitis,['rhinitis'],runny nose
+9/13/2024,BSAIS,Male,19,Eye Irritation,eye irritation,['eye irritation'],infection
+9/13/2024,BSAIS,Male,,Eye Irritation,eye irritation,['eye irritation'],infection
+9/13/2024,BEED,Female,,Asthma,asthma,['asthma'],asthma
+9/13/2024,,Female,22,Dizziness,dizziness,['dizziness'],dizziness
+9/13/2024,,Female,21,Hyperacidity,hyperacidity,['hyperacidity'],hyperacidity
+9/16/2024,,Female,21,Headache,headache,['headache'],headache
+9/16/2024,,Female,23,Colds,colds,['colds'],cold
+9/16/2024,,Female,20,Dysminorrhea,dysminorrhea,['dysminorrhea'],dysmenorrhea
+9/16/2024,BAPOS,Female,21,Cough,cough,['cough'],cough
+9/16/2024,BSMA,Female,17,Skin Allergy,skin allergy,['skin allergy'],skin allergy
+9/16/2024,BAELS,Female,21,Bone Pain,bone pain,['bone pain'],body pain
+9/28/2024,BSENT,Male,18,Colds,colds,['colds'],cold
+9/30/2024,BAT,Female,18,Minimal Cramps,minimal cramps,['minimal cramps'],cramps
+10/1/2024,BSCRIM,Female,20,H/A,headache,['headache'],headache
+10/1/2024,BSCRIM,Female,20,Colds,colds,['colds'],cold
+10/1/2024,BSCRIM,Female,21,Allergy,allergy,['allergy'],allergy
+10/2/2024,BSE,Male,19,H/A,headache,['headache'],headache
+10/2/2024,BSITECH-AUTO,Female,23,H/A,headache,['headache'],headache
+10/7/2024,BSHM,Male,19,Anxiety Attack,anxiety attack,['anxiety attack'],anxiety
+10/7/2024,BSIT,Male,18,Cough,cough,['cough'],cough
+10/7/2024,BSCRIM,Male,18,Colds,colds,['colds'],cold
+10/7/2024,BAT,Male,20,LW Stiches ,lw stiches,['lw stiches'],stitches
+10/7/2024,BSTM,Female,19,Dizziness,dizziness,['dizziness'],dizziness
+10/16/2024,BSHM,Male,18,Stomachache,stomacheadacheche,['stomacheadacheche'],stomach ache
+10/16/2024,BEED,Male,,Headache,headache,['headache'],headache
+10/16/2024,BEED,Female,17,Colds,colds,['colds'],cold
+10/16/2024,BSE,Male,,Headache,headache,['headache'],headache
+10/16/2024,BSENT,Female,19,Headache,headache,['headache'],headache
+10/18/2024,BSHM,Male,20,Cough,cough,['cough'],cough
+10/7/2024,BPED,Male,18,"Cough, Cold","cough, cold","['cough', ' cold']","cold,cough"
+10/7/2024,BSITECH-AUTO,Male,21,"Cough, Cold","cough, cold","['cough', ' cold']","cold,cough"
+10/7/2024,BSENT,Female,19,Headache,headache,['headache'],headache
+10/7/2024,BSIT,Female,17,Abdominal pain,abdominal pain,['abdominal pain'],stomach ache
+10/7/2024,BAELS,Male,18,Cough,cough,['cough'],cough
+10/7/2024,BSCRIM,Male,19,Cough,cough,['cough'],cough
+10/7/2024,BSBA,Male,18,LBM,lbm,['lbm'],lbm
+10/7/2024,BSIT,Male,19,CCF,ccf,['ccf'],malaise
+10/7/2024,BSMA,Female,20,Sprain,sprain,['sprain'],sprain
+10/7/2024,BSMA,Female,20,Insect Bite,insect bite,['insect bite'],skin allergy
+10/7/2024,BSLM,Female,20,Colds,colds,['colds'],cold
+10/9/2024,BAT,Male,20,Fever,fever,['fever'],fever
+10/9/2024,BSIT,Male,18,Strain,strain,['strain'],muscle strain
+10/9/2024,BSITECH-AUTO,Male,20,H/A,headache,['headache'],headache
+10/14/2024,BSLM,Female,19,Cough,cough,['cough'],cough
+10/14/2024,BSE,Female,18,H/A,headache,['headache'],headache
+10/14/2024,BSENT,Female,20,Back Pain,back pain,['back pain'],body pain
+10/14/2024,BSENT,Female,19,Cough,cough,['cough'],cough
+10/14/2024,BEED,Female,20,Cough,cough,['cough'],cough
+10/14/2024,BSITECH-AUTO,Male,21,Cough,cough,['cough'],cough
+10/14/2024,BEED,Female,20,Dysminorrhea,dysminorrhea,['dysminorrhea'],dysmenorrhea
+10/14/2024,BEED,Male,18,Cough,cough,['cough'],cough
+10/14/2024,BEED,Female,18,Cough,cough,['cough'],cough
+10/14/2024,BSE,Female,18,Itchy Throat,itchy,['itchy'],itchy throat
+10/14/2024,BAPOS,Female,20,Cough,cough,['cough'],cough
+10/14/2024,BSHM,Male,19,H/A,headache,['headache'],headache
+10/15/2024,BSCRIM,Male,20,Sore Eyes,sore eyes,['sore eyes'],infection
+10/15/2024,BSCRIM,Female,21,Cough,cough,['cough'],cough
+10/15/2024,BAT,Female,20,Colds,colds,['colds'],cold
+10/15/2024,BSIT,Female,24,LBM,lbm,['lbm'],lbm
+10/15/2024,BSBA,Male,18,LBM,lbm,['lbm'],lbm
+10/17/2024,BSLM,Male,19,Fever,fever,['fever'],fever
+10/19/2024,BSIT,Male,18,LBM,lbm,['lbm'],lbm
+10/19/2024,BSLM,Female,18,Dizziness,dizziness,['dizziness'],dizziness
+10/19/2024,BSCRIM,Female,18,Muscle Sprain,muscle sprain,['muscle sprain'],muscle strain
+10/21/2024,BSCS,Male,19,Dizziness,dizziness,['dizziness'],dizziness
+10/21/2024,BAPOS,Female,20,Cough,cough,['cough'],cough
+10/21/2024,BEED,Female,20,Hyperacidity,hyperacidity,['hyperacidity'],hyperacidity
+10/21/2024,PS,Male,18,Burn,burn,['burn'],wound
+10/21/2024,BSLM,Male,21,Boils armpit,boils armpit,['boils armpit'],boils armpit
+10/21/2024,PS,Male,20,Feeling warm + Headache,feeling warm headache,['feeling warm headache'],fever
+10/21/2024,BSCS,Female,18,LBM,lbm,['lbm'],lbm
+10/21/2024,BEED,Female,20,Hyperacidity,hyperacidity,['hyperacidity'],hyperacidity
+10/22/2024,BSCRIM,Female,,Hyperacidity,hyperacidity,['hyperacidity'],hyperacidity
+10/22/2024,BEED,Female,18,Hyperacidity,hyperacidity,['hyperacidity'],hyperacidity
+10/22/2024,BAPOS,Male,20,H/A,headache,['headache'],headache
+10/22/2024,BSCRIM,Male,20,Colds,colds,['colds'],cold
+11/27/2024,BSCRIM,Female,20,Stomachache,stomacheadacheche,['stomacheadacheche'],stomach ache
+12/14/2024,BSITECH-ELX,Male,18,Stomachache,stomacheadacheche,['stomacheadacheche'],stomach ache
+12/14/2024,BSCRIM,Male,18,Muscle Sprain,muscle sprain,['muscle sprain'],muscle strain
+12/14/2024,BSCRIM,Female,18,Abdominal pain,abdominal pain,['abdominal pain'],stomach ache
+12/14/2024,BSCS,Male,19,Colds,colds,['colds'],cold
+12/14/2024,BSCRIM,Male,18,Colds,colds,['colds'],cold
+12/14/2024,BSCRIM,Male,18,Cough,cough,['cough'],cough
+12/14/2024,BSCRIM,Female,20,Sore Throat,sore,['sore'],infection
+12/14/2024,BSCRIM,Female,18,Hyperacidity,hyperacidity,['hyperacidity'],hyperacidity
+6/2/2025,SECURITY,Male,36,"Hypertensive, BP 160/120",hypertensive,['hypertensive'],hypertension
+6/2/2025,BSE,Male,21,Headache,headache,['headache'],headache
+6/3/2025,BSIT,Male,20,Headache,headache,['headache'],headache
+6/3/2025,MIS,Male,,Headache,headache,['headache'],headache
+6/4/2025,BSLM,Male,20,Anxiety Attack,anxiety attack,['anxiety attack'],anxiety
+6/10/2025,SUPPLY,Female,40,Body Ache,body ache,['body ache'],body pain
+O7/02/2025,BSE,Female,,Epigastric Pain,epigastric pain,['epigastric pain'],epigastric pain
+7/7/2025,BSED,Female,22,Allergic,allergic,['allergic'],allergy
+7/7/2025,BSTM,Female,18,Allergic,allergic,['allergic'],allergy
+5/13/2025,BSCRIM,Female,20,Hyperacidity,hyperacidity,['hyperacidity'],hyperacidity
+5/23/2025,BSBA,Female,20,Hyperacidity,hyperacidity,['hyperacidity'],hyperacidity
+5/23/2025,BSED,Female,19,Hyperacidity,hyperacidity,['hyperacidity'],hyperacidity
+5/26/2025,BSHM,Female,19,Nose Bleeding,nose bleeding,['nose bleeding'],nosebleed
+5/26/2025,BEED,Female,18,Dysminorrhea,dysminorrhea,['dysminorrhea'],dysmenorrhea
+5/26/2025,BAELS,Female,21,Dysminorrhea,dysminorrhea,['dysminorrhea'],dysmenorrhea
+5/26/2025,BEED,Female,18,Headache,headache,['headache'],headache

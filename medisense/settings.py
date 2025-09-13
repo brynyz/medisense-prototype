@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "accounts",
     "patients",
     "predictor",
+    "predictors",
     "inventory",
     "chartjs",
 ]
@@ -192,6 +193,8 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'bryllenyelm@gmail.com'
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 
+# Streamlit Integration Settings
+STREAMLIT_URL = os.getenv('STREAMLIT_URL', 'http://localhost:8501')
 
 # Security settings for production
 if not DEBUG:

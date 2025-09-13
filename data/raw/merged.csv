@@ -1,0 +1,873 @@
+date,course,gender,age,symptoms
+12/01/2022,BSLM,Female,20,Dizziness
+12/01/2022,BSBA,Female,19,Strain
+12/01/2022,BSBA, Female,18, Dry Bucalarea
+12/03/2022,BSCRIM,Female,19,Farm Cramps
+12/03/2022,BSE,Female,21,Headache
+12/03/2022,BSCRIM,Female,18, Dysmenorrhea
+12/03/2022,BEED,Female,19,Cramps both upper & lower extremeties
+12/06/2022,BAELS,Female,19,Fever
+11/24/2022,BSCS,Male,21,Catching a cold several days
+11/24/2022,BSE,Female,19,Dizziness;BP 110/70; 02Sat 98%; HR 67
+11/24/2022,BEED,Male,18,Skin allergy
+11/28/2022,BSTM,Male,20,Abdominal Pain
+11/28/2022,BSENT,Female,19,BP 100/60
+11/28/2022,BSENT,Male,20,BP 110/80
+11/28/2022,BSTM,Male,20,BP 120/80
+11/28/2022,BSTM,Male,21,BP 110/70
+11/28/2022,BSCRIM,Female,20,BP 110/80
+11/28/2022,BAT,Female,20,Midlle finger cut from bamboo tree
+11/09/2022,BSIT,Female,19,UTI
+11/29/2022,BSCRIM,Female,21,BP 100/70
+11/29/2022,BSCRIM,Female,21,BP 80/60
+11/29/2022,BSLM,Male,18, Headache & Dizziness
+11/29/2022,BEED,Female,19,Hematoma
+11/29/2022,BAELS,Female,21,BP 90/60
+11/22.2022,BSENT,Female,18,BP 120/70 Lack of Sleep
+11/22/2022,BSHM,Female,19,Colds 
+11/22/2022,BAELS,Male,22,"Dry cough, on's off fever"
+11/22/2022,BSTM,Female,17," Feeling Warm 36.5'C, Colds"
+11/22/2022,BSBA,Male,N/A,"Cough, Colds "
+11/22/2022,BSMA,Female,18,"On & Off fever, Colds"
+11/22/2022,BEED,Female,18,"Cough, Colds "
+11/22/2022,BSMA,Female,18,Menstrual Cramps
+11/22/2022,BSTM,Female,19,Hyperacidity
+11/22/2022,BSIT,Male,21,Headache
+11/22/2022,BSLM,Male,18,Headache
+11/22/2022,BSE,Female,19,Asthma
+11/22/2022,BSEntrep,Female,21,BP 120/70; HR 96; O2Sat 85%
+11/22/2022,BSAIS,Female,N/A,"Dysminorrhea, Dizziness"
+11/22/2022,BSBA,Female,18,Sore Throat
+11/22/2022,BSBA,Male,21,Feeling Warm 36.2'C
+11/15/2022,BAPOS,Female,18,Headache
+11/15/2022,BSCRIM,Female,18,"36.0'C, Colds "
+11/16/2022,BSBA,Female,20,Cough
+11/16/2022,BSIT,Male,19,Cough
+11/16/2022,BEED,Female,18,Allergic
+11/16/2022,BAPOS,Male,20,Feeling Warm 36.2'C
+11/17/2022,BSLM,Female,19,Vomitting
+11/17/2022,BSLM,Male,19,Colds 
+11/17/2022,BEED,Female,21,Dysminorrhea
+11/17/2022,BSBA,Female,19,"O2Sat 98%; Abdominal Pain, Asthma"
+11/17/2022,BSBA,Male,18,"O2Sat 96%; Cough,Colds ,Asthma"
+11/21/2022,BSBA,Female,18,LBM
+11/21/2022,BSBA,Female,18,Hypegastric Pain
+11/21/2022,BSMA,Male,18,Headache
+11/21/2022,BSIT,Male,N/A,Epigastric Pain
+11/21/2022,BSCRIM,Female,20,Dysminorrhea
+11/08/2022,BSE,Male,20,For immunity
+11/08/2022,BSEntrep,Female,19,Abraision
+11/08/2022,BSIT,Male,18,Colds 
+11/08/2022,BSCS,Male,18,Abraision
+11/08/2022,BSMA,Female,20,"Hyperventilated, Cold Clammyskin"
+11/08/2022,BSCRIM,Male,18,Colds 
+11/09/2022,BSIT,Male,24,BP 120/90
+11/09/2022,BSIT,Male,25,BP 160/100
+11/09/2022,BSIT,Female,23,Dizziness
+11/09/2022,BSIT,Female,29,BP 90/60
+11/09/2022,BSTM,Female,19,Menstrual Cramps
+11/09/2022,BSCRIM,Female,21,Stiffneck
+11/09/2022,BSTM,Female,18,"Cough, Colds "
+11/09/2022,BSTM,Female,19,Colds 
+11/09/2022,BSCRIM,Female,21,BP 100/80
+11/10/2022,BAELS,Male,27,Cough
+11/07/2022,BAPOS,Female,18,Dysminorrhea
+11/07/2022,MIS,Male,33,H/A
+11/07/2022,BSHM,Female,19,Dysminorrhea
+11/07/2022,BSAIS,Female,19,Chest Pain
+11/07/2022,BSCS,Female,N/A,LBM
+11/07/2022,BSE,Female,17,"Hyperventilated, 02Sat 98%; HR 126"
+11/07/2022,GSO,Male,N/A,LBM
+11/07/2022,CBAO,Male,N/A,Colds 
+11/07/2022,BSEntrep,Female,21,Allergy
+11/07/2022,BSEntrep,Male,22,Colds 
+11/07/2022,BSLM,Female,18,Migraine
+11/08/2022,BSE,Female,19,Headache
+11/08/2022,BSE,Female,18,Headache
+11/08/2022,BEED,Female,19,Runny Nose
+11/08/2022,Faculty,Female,30,Runny Nose
+11/08/2022,Faculty,Female,34,H/A
+10/27/2022,BSTM,Male,20,BP 130/90
+10/27/2022,BSTM,Male,20,BP 120/70
+10/27/2022,BSTM,Male,19,BP 100/70
+10/27/2022,BSTM,Male,20,BP 120/60
+10/27/2022,BSTM,Male,18,"Vomitting, Cough, Colds"
+10/27/2022,Guidance,Female,32,Dysminorrhea
+10/27/2022,MIS,Female,28,LBM
+10/27/2022,Faculty,Female,33,H/A 110/70
+11/07/2022,BSLM,Male,20,RBS 73
+11/07/2022,BSLM,Male,19,BP 130/90 H/A
+11/07/2022,BSHM,Female,N/A,Colds 
+11/07/2022,BSCRIM,Female,20,Allergy
+11/07/2022,BAELS,Female,26,Allerfy
+11/07/2022,STAFF,Female,N/A,"Cough, Colds "
+11/07/2022,BSMA,Female,19,Dizziness
+11/07/2022,BSCRIM,Female,19,Colds
+11/07/2022,BSCRIM,Female,19,Colds
+10/25/2022,BSIT ,Female,23,Dizziness
+10/25/2022,BSLM,Female,20,"Cough, Dizziness"
+10/25/2022,BAT,Female,20,H/A 90/60
+10/26/2022,BSCRIM,Female,20,H/A 120/90
+10/26/2022,BAT,Male,21,BP 160/80
+10/26/2022,BSCS,Female,19,Toothache
+10/26/2022,BSAIS,Female,18,Dysminorrhea
+10/26/2022,BSEntrep,Female,N/A,Dizziness
+10/26/2022,BSE,Female,18,Dizziness
+10/26/2022,BSE,Female,17,"DOB, Hyperventilation"
+10/26/2022,BSE,Male,N/A,Feeling Warm 36.5'C
+10/27/2022,BAELS,Female,20,Feeling Warm 36.5'C
+10/27/2022,STAFF,Male,N/A,H/A
+10/27/2022,BSENT,Female,19,Dysminorrhea
+10/27/2022,BAPOS,Male,N/A,BP 100/80
+10/27/2022,BAPOS,Male,N/A,BP 120/90
+10/22/2022,BEED,Female,18,Cough
+10/22/2022,BSCRIM,Female,18,Dizziness
+10/22/2022,BAPOD,Female,20,Feeling Warm T=36C
+10/24/2022,BSENT,Female,19,BP 100/60
+10/24/2022,BEED,Female,21,BP 100/70
+10/24/2022,BEED,Female,22,BP 110/70
+10/24/2022,BEED,Female,21,BP 120/70
+10/24/2022,BEED,Female,22,BP 100/70
+10/24/2022,BSIT,Male,19,BP 110/90
+10/24/2022,BSIT,Female,20,BP 120/80
+10/24/2022,BEED,Female,21,Pimple
+10/24/2022,BEED,Male,19,Dizziness
+10/24/2022,BSCRIM,Female,18,Epigastric Pain
+10/24/2022,BSEntrep,Female,19,"Dizziness, Dysminorrhea"
+10/25/2022,BSLM,Male,19,LBM
+10/25/2022,BEED,Female,21,BP 140/90
+10/18/2022,BSE,Female,19,Dysminorrhea
+10/18/2022,BSCRIM,Female,21, Headache
+10/18/2022,BSE,Male,19,Pimple
+10/18/2022,BSMA,Male,18,Toothache
+10/18/2022,BEED,Female,18,Dysminorrhea
+10/18/2022,BSBA,Female,18,Dysminorrhea
+10/18/2022,BSBA,Female,18,Dry Cough
+10/18/2022,BSBA,Female,18,"Colds, Body Pain, Feeling Warm"
+10/19/2022,BAT ,Male,18,Abdominal Pain
+10/19/2022,BSIT,Female,20,BP 80/60
+10/19/2022,BSIT,Female,19,BP 100/60
+10/19/2022,BSIT,Male,18,Left Upper Quadrant Pain
+10/19/2022,BSTM,Female,18,UTI
+10/19/2022,BSBA,Male,21,Asthma
+10/19/2022,BEED,Male,21,BP 110/70
+10/20/2022,BSHM,Female,19,"Dizziness, Dysminorrhea"
+10/20/2022,BSIT,Female,17,Dizziness
+10/13/2022,BSCRIM,Female,21,BP 80/60
+10/13/2022,BEED,Female,19,Abdominal Pain
+10/13/2022,BSEntrep,Female,22,"Dysminorrhea, Dizziness"
+10/13/2022,BSEntrep,Female,17,Sick
+10/13/2022,BSITEC-Elc,Male,20,"On & Off fever, Colds"
+10/13/2022,BSBA,Male,21,Hyperacidity
+10/13/2022,BSCS,Male,19,"Stomach Ache, Hyperacidity"
+10/13/2022,BSLM,Male,18,"Dizziness,BP 120/90"
+10/17/2022,BSMA,Female,18,Toothache
+10/17/2022,BSED,Female,20,Abdominal Pain
+10/17/2022,BSAIS,Female,23,BP 110/90
+10/18/2022,BSENT,Female,19,LBM
+10/18/2022,BSLM,Female,19,BP 100/70
+10/18/2022,BAT,Female,19,Hyperacidity
+10/18/2022,BAT,Female,20,Dizziness
+10/18/2022,BSLM,Male,18,LBM
+10/10/2022,BSIT,Female,17,BP 100/70
+10/10/2022,BSBA, Female,19,BP 90/60
+10/10/2022,BSBA,Female,17,BP 90/60
+10/10/2022,BSCRIM,Female,18,H/A
+10/10/2022,BSCRIM,Female,21,BP 90/60
+10/11/2022,BSED,Female,18,Dry Cough
+10/11/2022,BSTM,Male,18,BP 90/60
+10/11/2022,BSTM,Female,19,Itchy Throat
+10/11/2022,BAT,Male,21,Punctured Wound
+10/11/2022,BEED,Female,20,BP 110/70
+10/11/2022,BEED,Female,N/A,BP 100/70
+10/11/2022,BSIT,Male,19,BP 140/80
+10/11/2022,BSCRIM,Male,21,BP 110/80
+10/11/2022,BSCRIM,Male,22,BP 120/80
+10/11/2022,BSITECH-ELX,Male,22,Asthma Attack
+10/01/2022,BSCRIM,Female,18,BP 90/60
+10/01/2022,BSCRIM,Female,18,BP 100/70
+10/01/2022,BSE,Female,21,BP 90/60
+10/01/2022,BSCRIM,Female,17,BP 80/60
+10/03/2022,BSLM,Male,18,Asthma Attack
+10/05/2022,BEED,Female,23,BP 100/70
+10/05/2022,BAT,Male,19,Cough
+10/06/2022,BS- AUTO,Male,20,BP 90/60
+10/06/2022,BEED,Female,17,H/A
+10/10/2022,BSCRIM,Female,18,BP 120/60
+09/29/2022,BSLM,Female,20,BP 90/70
+09/29/2022,BSIT,Female,19,BP 120/70
+09/29/2022,BSIT,Female,19,BP 100/70
+09/29/2022,BSE,Male,19,Toothache
+09/29/2022,BSIT,Female,19,Abdominal Pain
+09/29/2022,BSLM,Female,19,BP 110/70
+09/29/2022,BSLM,Female,21,BP 100/70
+09/29/2022,BSLM,Male,20,BP 100/70
+09/29/2022,BSLM,Male,19,BP 120/80
+09/29/2022,BSLM,Female,20,BP 100/60
+09/28/2022,BSCRIM,Female,18,Earache
+09/28/2022,BSCRIM,Female,19,"Stomach Ache, Hyperacidity"
+09/28/2022,BAELS,Female,19,BP 120/70
+09/28/2022,BSLM,Female,19,Asthma Attack
+09/28/2022,BSCRIM,Female,18,BP 90/60
+09/28/2022,BSCRIM,Female,19,Cough
+09/27/2022,BSE,Female,19,LBM
+09/27/2022,BSCRIM,Male,N/A,BP 100/70
+09/23/2022,BSIT,Male,18,BP 130/80
+09/21/2022,BSHM,Male,18,Headache
+09/20/2022,BSIT,Female,23,BP 120/80
+09/20/2022,BEED,Female,20,Nose Bleed
+09/20/2022,BSE,Female,20,Hyperacidity
+09/20/2022,BEED,Female,23,BP 110/80 
+09/20/2022,BEED,Female,21,BP 110/80
+09/20/2022,BEED,Female,22,BP 90/60
+09/20/2022,BEED,Female,21,BP 100/80
+09/20/2022,BEED,Female,22,BP 120/80
+09/20/2022,BSCS,Female,22,BP 90/60
+09/20/2022,BSHM,Female,18,BP 90/60
+09/20/2022,GSO,Female,55,BP 110/70
+09/20/2022,CLINIC,Female,26,BP 100/80
+09/20/2022,BAELS,Female,21,BP 90/60
+09/20/2022,GSO,Male,34,BP 100/70
+09/14/2022,BAELS,Female,21,H/A
+09/14/2022,BSIT,Female,33,Asthma
+09/14/2022,BSLM,Female,20,AVR explode
+09/14/2022,BSCRIM,Male,18,Hyperventilation
+09/14/2022,BSLM,Male,18,Abdominal Pain
+09/14/2022,BSBA,Female,21,Allergy
+09/14/2022,BSCRIM,Male,20,Fever
+11/10/2022,BSTM,Female,18,Abdominal Pain
+11/10/2022,BAT,Female,20,Headache
+11/10/2022,BSHM,Male,18,Stiches
+11/10/2022,BSCS,Male,18,Abraision
+11/10/2022,BSCS,Female,19,Colds
+11/10/2022,BSLM,Female,19,LBM
+11/10/2022,BS-AUTO,Male,18,"Dizziness, BP 120/90"
+11/12/2022,BSE,Female,18,Dizziness
+11/14/2022,BSLM,Female,20,Hyperventilation
+11/14/2022,BSBA,Female,18,Itchy Throat
+11/14/2022,BSLM,Male,19,Epigastric Pain
+11/14/2022,BAPOS,Male,20,Hyperacidity
+11/14/2022,BAPOS,Female,20,LBM
+11/14/2022,BSIT,Female,20,Sore Throat
+11/14/2022,BSCRIM,Female,21,Fever
+11/15/2022,BAPOS,Female,18,Dysminorrhea
+11/15/2022,BSHM,Male,N/A,Alergy
+12/05/2022,BSCRIM,Female,21,BP 90/60
+12/06/2022,BSCS,Male,18,BP 100/70
+12/06/2022,BSCRIM,Female,22,BP 130/100
+12/06/2022,BSIT,Female,20,BP 100/60
+12/06/2022,BSCRIM,Female,21,Dysminorrhea
+12/07/2022,BSLM,Male,18,"Cough, Colds "
+12/07/2022,BSIT,Female,25,Infected Wound
+12/07/2022,BSCS,Female,19,Headache
+12/07/2022,BSE,Female,20,BP 100/80
+12/07/2022,BSE,Male,21,BP 100/70
+12/07/2022,BSCRIM,Female,21,BP 100/60
+12/08/2022,BSIT,Female,22,BP 100/70
+12/12/2022,BSE,Female,19,BP 90/60
+12/12/2022,BAELS,Female,20,BP 100/60
+12/14/2022,BSIT,Male,20,Colds
+12/14/2022,BAELS,Male,18,Colds
+12/14/2022,N/A,Male,18,Diarrhea
+01/03/2023,BSE,Female,19,Feeling Warm
+01/03/2023,BAPOS,Female,22,Asthma
+01/04/2023,BSMA,Female,20,Colds
+01/04/2023,BSLM,Male,18,Feeling Warm
+01/04/2023,BSLM ,Female,20,"Cough, Colds "
+01/04/2023,BSBA,Female,21,Body Ache
+01/04/2023,N/A,Female,N/A,Hyperacidity
+01/03/2023,PS,Male,20,"Cough, Colds "
+01/03/2023,BAELS,Male,21,Colds
+01/03/2023,BSCS,Male,20,"Colds, Body Ache"
+01/14/2023,BSCRIM,Female,19,Dizziness
+01/16/2023,BSIT,Female,23,Post Delivery
+01/16/2023,BAPOS,Female,20,Colds
+01/16/2023,BSLM,Male,N/A,LBM
+01/16/2023,BSCRIM,Male,N/A,Body Weakness
+01/17/2023,BSIT,Female,N/A,Cough
+01/17/2023,BSE,Female,N/A,Stomach Ache
+01/17/2023,BSE,Female,N/A,Wrist Sprain
+01/17/2023,BAELS,Female,N/A,Infected Wound
+01/17/2023,BSENT,Male,N/A,Colds
+01/30/2023,BSCRIM,Female,21,02 Sat 99%
+03/16/2023,N/A,Male,N/A,Colds
+03/16/2023,BSIT,Female,21,Dizziness
+03/16/2023,AB-E,Female,22,LBM
+03/16/2023,BAPOS,Male,18,Headache
+03/16/2023,BSMA,Female,21,Cough
+03/16/2023,SAS,Male,N/A,Cough
+03/29/2023,N/A,Male,N/A,Dry Cough
+03/29/2023,N/A,Female,N/A,Knee Swelling
+03/29/2023,N/A,Female,N/A,Knee Swoller
+03/30/2023,N/A,Male,N/A,Body Pain
+03/30/2023,N/A,Male,N/A,Body Pain
+03/30/2023,N/A,Female,N/A,Swoller Ankle
+03/30/2023,N/A,Male,N/A,Body Pain
+03/29/2023,N/A,Female,N/A,Allergy
+03/29/2023,N/A,Female,N/A,Headache
+03/29/2023,N/A,Female,N/A,Hematoma
+03/29/2023,N/A,Female,N/A,Allergy
+03/29/2023,N/A,Female,N/A,Allergy
+03/29/2023,N/A,Female,N/A,Wrist Swell
+03/29/2023,N/A,Male,N/A,Shoulder Swelling
+03/29/2023,N/A,Male,N/A,Shoulder Dislocation
+03/29/2023,N/A,Female,N/A,Headache
+03/29/2023,N/A,Female,N/A,Dry Cough
+03/27/2023,N/A,Female,20,Itchiness
+03/27/2023,N/A,Female,19,Body Pain
+03/27/2023,N/A,Male,19,Headache
+03/27/2023,N/A,Male,18,LBM
+03/27/2023,N/A,Female,19,LBM
+03/27/2023,N/A,Male,25,LBM
+03/27/2023,N/A,Female,N/A,LBM
+03/28/2023,N/A,Male,37,Headache
+03/28/2023,N/A,Female,N/A,LBM
+03/28/2023,N/A,Male,N/A,LBM
+03/28/2023,N/A,Male,N/A,Knee Pain
+04/12/2023,IAT,Female,21,Light Headache
+0417/2023,BEED,Male,21,Lacerated Wound
+04/17/2023,BAT,Female,20,Lower Back Pain
+04/24/2023,BSCRIM,Male,20,Upper Quadrant Pain
+04/25/2023,BSCRIM,Female,20,Light Headache
+04/25/2023,BSBA,Female,19,Nose Bleeding
+04/25/2023,BAT,Male,20,AURI
+04/26/2023,BAPOS,Female,19,Colds
+04/26/2023,N/A,Female,N/A,Index Finger Wound
+04/27/2023,BAT,Male,20,Index Finger Wound
+05/02/2023,BAT,Male,25,Dry Cough
+05/02/2023,BAPOS,Female,19,Body Pain
+05/02/2023,BAPOS,Female,20,Body Pain
+05/02/2023,BSMA,Female,21,Hyperacidity
+05/03/2023,BSEntrep,Female,22,"Dysminorrhea, Muscle Cramps"
+01/03/2024,HR Management,Female,22,"Cough & Cold, Dizziness"
+01/05/2024,OSAS,Male,24,Cough & Cold x4 days
+01/08/2024,PS,Male,28,"Cough & Cold, T/C  Acute Upper Respiratory Tract Infection (AURTI)"
+01/08/2024,Security,Male,36,LW 1cm Left inner thumb
+01/08/2024,BSBA,Female,20,Cough & Cold
+01/08/2024,BEED,Male,19,Headache
+01/08/2024,BSENT,Female,19,Hyperacidity
+01/08/2024,CBM,Female,34,LBM
+01/08/2024,CBM,Male,38,Colds
+01/08/2024,CBM,Female,46,Headache BP 130/80
+01/08/2024,SAS,Female,50,Headache 
+01/08/2024,SAS,Female,29,Colds
+01/08/2024,CBM,Female,31,LBM
+01/08/2024,CBM-HM,Female,33,Colds
+01/08/2024,CBM-HM,Female,33,Colds
+01/08/2024,BSLM,Male,20,Skin Allergy at insect bite
+01/08/2024,MIS,Female,NA,Cough
+01/08/2024,SAS,Male,32,Cough
+01/08/2024,ENTREP,Female,19,Colds
+01/08/2024,ENTREP,Male,22,Colds
+01/08/2024,Planning,Female,N/A,RBS 110; BP 130/90; Dizziness
+01/08/2024,BSLM,Female,20,Headache
+01/09/2024,BSCRIM,Female,20,Anemia
+01/09/2024,BSAIS,Male,21,Dizziness; 02Sat 99%; HR 95; BP 110/70
+01/09/2024,BSHM,Male,21,Asthma
+01/09/2024,BSCRIM,Female,20,Multiple Abraision at fall
+01/09/2024,BSLM,Female,19,LBM
+01/09/2024,SAS,Female,N/A,Abraision
+01/09/2024,BSE,Female,20,Acute Upper Respiratory Tract Infection (AURTI)
+01/09/2024,Planning,Female,N/A,BP 120/70
+01/09/2024,Procurement,Female,26,"Colds / Rhinitis, Head Ache"
+01/09/2024,P&D,Female,38,Allergy / Rhinitis
+01/10/2024,Registrar,Female,42,Boils Right Lower Quadrant
+01/10/2024,BAELS,Female,23,Headache BP 80/60
+01/10/2024,BSCRIM,Male,19,Dizziness
+01/10/2024,Planning,Female,N/A,BP 120/80
+01/10/2024,BSLM,Female,21,Weak Lungs
+01/10/2024,BSIT,Male,23,Headache Dizziness
+01/10/2024,BSBA,Male,20,Acute Upper Respiratory Tract Infection (AURTI)
+01/10/2024,BSE-SCI,Female,20,On and Off Fever; Cough/Colds
+01/10/2024,BSE-SCI,Female,20,BP 80/60
+01/10/2024,BSE-SCI,Male,20,BP 120/80
+01/10/2024,Registrar,Female,29,Dry cough; T/C Allergic Cough
+01/10/2024,BEED,Female,20,Colds
+01/10/2024,BSBA,Female,19,Abdominal pain at defecating
+01/10/2024,BSIT,Male,20,BP 120/70
+01/11/2024,BS-AUTO,Male,20,Headache BP 120/70
+01/11/2024,BSIT,Male,19,T/C Acute Upper Respiratory Tract Infection (AURTI)
+01/11/2024,BS-AUTO,Male,21,Tootache
+01/11/2024,BSCRIM,Female,20,Colds x 4 days; Body pain; Vomited 3x; Hyperacidity; Chills at night
+01/11/2024,BSED,Male,21,Gassy/Bloated/Frequent burping
+01/11/2024,BAELS,Female,23,Left Upper Quadrant Abdominal pain
+01/11/2024,BAPOS,Female,20,Fever; Bodyache; Cough/Colds
+01/11/2024,BEED,Female,19,Dysmenorrhea
+01/11/2024,Clinic,Female,N/A,BP 90/60
+01/11/2024,Clinic,Female,N/A,BP 100/70
+01/11/2024,Clinic,Female,N/A,BP 120/70
+01/11/2024,CED,Male,N/A,Hyperacidity
+01/11/2024,CED,Female,N/A,Backpain
+01/11/2024,CED,Female,20,Dysmenorrhea
+01/11/2024,BAPOS,Male,20,Persistent Cough
+01/11/2024,BAPOS,Male,42,Cough
+01/11/2024,Registrar,Female,N/A,Productive Cough
+01/11/2024,BSTM,Female,18,Acute Upper Respiratory Tract Infection (AURTI)
+01/11/2024,BSTM,Female,18,Acute Upper Respiratory Tract Infection (AURTI)
+01/15/2024,BSIT,Female,23,Cough
+01/16/2024,BSE,Female,19,Hyperventilated 02 98%; HR 160; BP 110/70
+01/16/2024,BAELS,Female,23,UTI
+01/16/2024,BSAIS,Female,21,Cough / Cold
+01/16/2024,CED,Female,N/A,BP 160/70
+01/16/2024,BSIT,Female,22,Colds
+01/16/2024,CSO,Male,49,Dysuria
+01/16/2024,BSIT,Male,19,Headache
+01/16/2024,CED,Female,N/A,BP 100/70
+01/16/2024,BSCRIM,Female,20,Varicella
+01/16/2024,CCSICT,Male,20,Hypertension BP 170/120
+01/16/2024,SAS,Male,N/A,RBS 120
+01/17/2024,SAS,Female,N/A,RBS 156
+01/16/2024,BSBA,Male,18,Headache
+01/16/2024,SAS,Male,N/A,FBS 100
+01/16/2024,CSO,Male,31,Headache
+01/17/2024,FIC,Female,N/A,Cough / Colds / Fever
+01/17/2024,FIC,Female,N/A,Headache BP 140/40
+01/17/2024,BSTM,Male,21,Cough
+01/17/2024,BSTM,Female,21,Cough
+01/17/2024,Faculty,Female,29,Cough
+01/17/2024,Faculty,Male,31,Cough / Colds
+01/17/2024,CED,Male,N/A,Dizziness BP 100/70 + Headache
+01/17/2024,BSIT,Female,20,Headache at lack of sleep
+01/17/2024,BSTM,Female,18,Cough & Colds; Sore throat
+01/17/2024,CCSICT,Female,28,Colds
+01/17/2024,BSCRIM,Male,21,Cough & Colds
+01/17/2024,BSMA,Male,20,Tootache
+01/17/2024,BSENT,Female,18,Hyperventilated 02 98%; HR 94; BP 90/60
+01/17/2024,BSCRIM,Male,18,Inflamed punctured wound L foot
+01/17/2024,BSCRIM,Female,18,Multiple Bruises
+01/18/2024,BSE,Female,18,Right Upper Quadrant Abdominal Pain
+01/18/2024,SAS,Female,N/A,Bodypain
+01/18/2024,BSIT,Female,N/A,Severe Headache T/C Migraine
+01/18/2024,BAELS,Female,N/A,Severe Headache BP 110/70 + Dizziness
+01/18/2024,BSE,Female,N/A,T/C Acute Upper Respiratory Tract Infection (AURTI)
+01/18/2024,BEED,Female,N/A,Rashes all over the body / (Chicken Allergy)
+01/18/2024,BSCS,Female,18,Headache
+01/18/2024,BSCRIM,Female,19,Headache
+01/18/2024,BSE,Male,N/A,Colds
+01/18/2024,BSE,Female,20,Colds x2 days; Headache
+01/18/2024,BSE,Female,20,Colds x4 days; Itchy throat
+01/18/2024,BEED,Female,19,Headache
+01/18/2024,BSCRIM,Male,18,Boils Right Foot
+01/22/2024,BSCRIM,Female,21,Severe Dehydration
+01/22/2024,BSCRIM,Female,18,"Acute Upper Respiratory Tract Infection (AURTI), Cough x3 days"
+01/22/2024,BSCRIM,Female,19,"Acute Upper Respiratory Tract Infection (AURTI), Cough x3 days, On and Off fever"
+01/22/2024,BSCRIM,Female,20,Cough and Colds x1 day
+01/22/2024,BSCRIM,Female,20,Cough and Colds x1 day
+01/22/2024,Clinic,Male,N/A,Dizziness T/C Vertigo
+01/22/2024,BEED,Female,N/A,Dysmenorrhea
+01/22/2024,BAS,Male,19,"Headache, Dizziness"
+01/23/2024,BSLM,Male,21,Acute Upper Respiratory Infection (AURI)
+01/23/2024,BSED,Female,18,Acute Upper Respiratory Infection (AURI)
+01/23/2024,BSIT,Male,20,Bodypain
+01/23/2024,BSENT,Female,19,Small Cut
+01/23/2024,BSBA,Female,21,Small Cut
+01/23/2024,N/A,Female,N/A,Cough / Colds
+01/25/2024,EO Sec,Female,N/A,Colds
+01/25/2024,Library,Female,N/A,Colds
+01/25/2024,Extension,Male,N/A,Flu vax .5 IM
+01/25/2024,BAC,Female,N/A,Flu vax .5 IM
+01/25/2024,QA,Male,N/A,Flu vax .5 IM
+01/25/2024,HR,Female,N/A,Flu vax .5 IM
+01/25/2024,QA,Female,N/A,Flu vax .5 IM
+01/25/2024,QA,Female,N/A,Flu vax .5 IM
+01/25/2024,BSENT,Female,19,Headache BP 80/60
+01/25/2024,BSENT,Female,19,"Gastric pain, Upper stomach, Nausea"
+01/25/2024,BSCRIM,Female,18,Dysmenorrhea
+01/29/2024,BSIT,Male,N/A,Acute Upper Respiratory Tract Infection (AURTI) 
+01/29/2024,BSIT,Male,N/A,Varicella
+01/29/2024,BSE,Female,19,Hypogastric pain + Hyperacidity
+01/29/2024,SAS,Male,40,Headache
+01/29/2024,BSITech Auto,Male,21,Dizziness
+01/29/2024,CSO,Female,38,Cough & Colds
+01/29/2024,BSCRIM,Male,19,LBM
+01/29/2024,Supply,Female,N/A,Acute Upper Respiratory Tract Infection (AURTI)
+01/29/2024,CCSICT,Male,N/A,Feeling warm + Bodypain
+01/29/2024,Accounting,Female,N/A,Vertigo
+01/29/2024,RSD,Female,N/A,Allergic Rhinitis
+01/30/2024,AA,Female,N/A,Cough
+01/30/2024,MFS,Female,N/A,LBM
+01/30/2024,BAC,Male,N/A,BP 180/120 + Dizziness + Headache
+01/30/2024,CED,Male,N/A,Acid Reflux
+01/30/2024,CSO,Female,N/A,LBM
+01/30/2024,Security,Male,N/A,BP 160/110 Headache + Dizziness
+01/30/2024,COL,Female,N/A,BP 170/110
+01/30/2024,N/A,Female,N/A,BP 130/90
+01/31/2024,BSCRIM,Female,21,Acute Upper Respiratory Tract Infection (AURTI)
+01/31/2024,BSCS,Male,20,Tootache
+01/22/2024,BSBA,Female,22,UTI
+01/22/2024,BSBA,Female,22,UTI
+01/22/2024,BSBA,Female,22,UTI
+01/29/2024,N/A,Female,21,UTI
+01/29/2024,N/A,Female,21,Varicella
+02/06/2024,Cashier,Female,N/A,Flu vax
+02/06/2024,Cashier,Female,N/A,Flu vax
+02/06/2024,Scholarship,Male,N/A,Cough / Colds
+02/06/2024,CCSICT,Female,N/A,BP 100/70
+02/06/2024,CED,Female,N/A,BP 110/70
+02/06/2024,CED,Female,N/A,BP 140/100
+02/06/2024,Accounting,Female,N/A,Flu vax
+02/06/2024,Security,Female,N/A,Flu vax
+02/06/2024,Registrar,Female,N/A,Pelvic pain
+02/06/2024,RGO,Male,N/A,Flu vax
+02/06/2024,RGO,Female,N/A,Flu vax
+02/06/2024,CBAO,Female,N/A,Flu vax
+02/22/2024,BSMA,Female,18,Tootache
+03/06/2024,BSE,Female,N/A,Ankle sprain
+03/21/2024,BSENT,Female,21,UTI
+03/21/2024,BAT,Female,28,Allergy
+03/12/2024,BSCRIM,Female,21,Dizziness
+03/20/2024,BEED,Female,20,Headache
+03/05/2024,BSCRIM,Female,20,Cough x2 days; HR 78; O2 98; Asthma; Rhinitis
+03/05/2024,BSCRIM,Female,21,Dizziness; Cough & Cold
+03/05/2024,BS-EMC,Female,18,Headache BP 90/50
+03/06/2024,N/A,Female,N/A,Cough / Colds 
+04/23/2024,BEED,Female,20,Headache
+04/24/2024,N/A,Male,52,BP 110/70
+04/24/2024,Staff,Female,52,BP 100/70
+04/24/2024,Registrar,Female,29,Dysmenorrhea
+04/24/2024,BSCRIM,Male,19,Abraision Left Palm
+04/24/2024,AFS,Female,28,Tootache
+04/24/2024,BS-AUTO,Male,20,Dry cough
+04/24/2024,BSE,Female,20,BP 80/60
+05/30/2024,BSCRIM,Male,18,Hyperacidity
+05/30/2024,BEED,Female,18,Right Knee Abraises
+05/30/2024,BSCRIM,Male,18,Bodypain
+05/30/2024,BSCRIM,Male,18,Bodypain
+05/30/2024,BSCRIM,Female,19,Diarrhea
+05/30/2024,BSIT,Male,N/A,Colds
+05/31/2024,BSCRIM,Female,19,Dysmenorrhea
+05/30/2024,BSCRIM,Female,19,Eye Irritation
+05/30/2024,BSCRIM,Female,19,LBM
+04/25/2024,N/A,Male,N/A,Right Leg Pain
+05/05/2024,Guidance,Female,N/A,Headache
+05/09/2024,BSIT,Female,N/A,Headache
+05/09/2024,BSHM,Female,N/A,Acute Upper Respiratory Infection (AURI)
+05/10/2024,BSCRIM,Male,N/A,Tootache
+05/10/2024,BSCRIM,Male,N/A,Colds x3 days & Bodypain
+05/13/2024,SAS,Female,N/A,BP 100/70; O2 98; HR 53
+05/13/2024,Faculty,Male,N/A,Tendon Cuts
+05/13/2024,BSBA,Female,18,Acute Upper Respiratory Infection (AURI)
+05/21/2024,BAPOS,Male,22,BP 110/70
+05/21/2024,BSIT,Male,18,Knee Sprain
+06/20/2024,BSLM,Female,21,Dizziness; Body Weakness; BP 100/70; O2 89; HR 86
+06/20/2024,BSCRIM,Male,20,Hyperacidity
+06/03/2024,BAPOS,Male,N/A,Headache & Colds 
+06/03/2024,AFS,Female,28,Colds 
+06/03/2024,Accounting,female,25,Gumpain / Tootache
+06/03/2024,Faculty,Female,N/A,RBS 118
+07/21/2024,BSCRIM,Female,22,BP 80/60
+07/21/2024,BSCRIM,Female,22,BP 90/60
+08/05/2024,BSE,Female,21,BP 80/60
+08/05/2024,BSE,Male,21,BP 90/60
+06/03/2024,CED,Female,20,BP 90/60
+06/03/2024,CED,Male,20,BP 90/60
+06/03/2024,CCSICT,N/A,N/A,BP 90/60
+06/03/2024,BSTM,Male,19,Hyperacidity + Epigastric Pain
+06/03/2024,BS-EMC,Female,22,Dysmenorrhea
+06/03/2024,BEED,Female,18,Bruises
+06/03/2024,BSCRIM,Female,18,LBM
+06/07/2024,BSIT,Female,30,Hyperacidity
+06/10/2024,CCSICT,Female,N/A,Bodypain
+06/10/2024,BAPOS,Female,N/A,Tooth Extraction
+06/10/2024,BAPOS,Female,N/A,Bodypain
+06/10/2024,BSE,Female,21,Bodypain
+06/10/2024,BEED,Female,21,Dizziness; BP 80/60
+06/10/2024,BSHM,Male,N/A,Abdominal pain
+06/10/2024,BAPOS,Male,21,Headache; Stomachache/LBM x3 days
+06/11/2024,BSAM,Male,19,Highblood
+06/10/2024,BSHM,Male,22,Multiple Bruises
+06/04/2024,BSAIS,Female,21,Tootache
+06/04/2024,BSED,Female,23,Dizziness BP 80/60
+06/04/2024,CED,Female,N/A,Acute Upper Respiratory Infection (AURI)
+06/04/2024,BS-EMC,Female,22,Dysmenorrhea
+06/04/2024,BSIT,Female,23,Backpain
+06/04/2024,BSIT,Female,N/A,Dysmenorrhea
+06/05/2024,BSIT,Female,22,Dizziness
+06/05/2024,BSIT,Male,22,Headache
+06/05/2024,BSTM,Female,19,Dizziness; BP 80/60; 02 96; HR 82
+06/05/2024,BSLM,Female,18,Headache & Cough
+06/05/2024,BSLM,Female,20,Headache
+06/05/2024,BSENT,Male,N/A,Headache & Cough
+06/05/2024,BSIT,Female,23,LBM
+06/05/2024,BAELS,Male,20,Headache
+06/05/2024,BAELS,Female,21,Headache
+06/05/2024,BSIT,Female,23,Hyperacidity
+05/22/2024,BSBA,Female,21,Acute Upper Respiratory Infection (AURI)
+05/22/2024,BSE,Female,20,Cough & Colds x3 days
+05/24/2024,BSCRIM,Female,19,Headache
+05/24/2024,BSCRIM,Female,19,Fainted
+05/27/2024,BEED,Female,24,LBM
+05/27/2024,BSBA,Female,21,Dizziness
+05/27/2024,BSIT,Female,20,Bruises
+05/27/2024,BSBA,Female,20,Sore Throat; Itchyness of Throat; Colds
+05/27/2024,BSBA,Female,23,Cough & Colds
+05/27/2024,BSENT,Male,19,LBM
+05/27/2024,BS-AUTO,Male,21,Small Cut
+05/28/2024,BSIT,Female,20,BP 80/60
+05/28/2024,BSBA,Female,21,Dizziness / Fatigue / Headace
+06/13/2024,BSENT,Female,23,LBM
+06/13/2024,BSHM,Female,19,Runny Nose
+06/13/2024,BSHM,Female,19,Backpain
+06/13/2024,BSCRIM,Female,19,Sinusitis
+06/13/2024,BSED ,Female,18,LBM x3 days
+06/13/2024,BSENT,Female,23,Tootache
+06/13/2024,BSCS,Female,18,Headache
+06/12/2024,BSIT,Female,23,Bodypain
+06/18/2024,BSCRIM,Female,22,Productive Cough x2 weeks; Fever
+06/18/2024,BSBA,Female,20,Acute Upper Respiratory Infection (AURI)
+06/18/2024,BAPOS,Female,20,Dysmenorrhea
+06/03/2024,BSENT,Male,23,Acute Upper Respiratory Infection (AURI)
+06/04/2024,BSCS,N/A,N/A,Sore Throat
+05/28/2024,BSMA,Female,22,Dry cough
+05/28/2024,BSBA,Female,19,Shoulder Dislocation
+05/29/2024,Registrar,Female,33,Stomachache / LBM
+05/29/2024,BSCRIM,Male,18,Acute Upper Respiratory Infection (AURI)
+08/07/2024,BSCS,Female,21,Slightly Dizzy; Colds
+08/12/2024,BSCRIM,Female,19,Acute Upper Respiratory Infection (AURI)
+06/13/2024,BSENT,Female,23,LBM
+08/14/2024,BSIT,Female,17,Dizzinessl; Abraison at fall
+08/14/2024,BSIT,Female,18,On and Off Fever x4 days; Common Cold x4 days
+08/14/2024,BAPOS,Female,21,Allergy
+08/15/2024,BSIT,Male,18,Feeling warm + Headache
+08/15/2024,BSE,Male,N/A,Tootache
+08/15/2024,BS-Entrep,Female,18,Dizziness; Cough & Cold
+08/15/2024,BSIT,Male,21,Cough x2 days 
+08/15/2024,BSIT,Female,18,Cough x2 days 
+08/15/2024,BSED,Female,19,Hyperacidity
+08/19/2024,BEED,Female,20,LBM
+08/19/2024,BAELS,Female,21,Hyperacidity / Gastric Pain
+08/19/2024,BAELS,Female,19,Hyperacidity
+08/19/2024,BEED,Female,20,Gastric Pain
+08/19/2024,BSHM,Female,19,Multiple Bruises
+08/19/2024,BSBA,Female,20,Acute Upper Respiratory Infection (AURI)
+08/19/2024,BEED,Male,20,Headache & Colds 
+08/19/2024,BSIT,Male,N/A,LBM
+08/20/2024,BSE,Female,19,LBM & Stomachache
+08/20/2024,BEED,Female,21,Acute Upper Respiratory Infection (AURI)
+08/20/2024,BSCRIM,Female,19,Dysmenorrhea x2 days
+08/20/2024,BSHM,Female,19,Flu T/C Acute Upper Respiratory Infection (AURI)
+08/20/2024,BSLM,Male,N/A,Dizziness
+08/20/2024,BEED,Female,20,Hyperacidity
+08/12/2024,BSC,Female,20,Dizziness
+08/12/2024,BSCRIM,Male,20,Headache BP 80/60
+08/12/2024,BAT,Male,21,Headache
+08/12/2024,BSIT,Male,18,Abraision
+08/13/2024,BSE,Female,20,LBM x3 days
+08/13/2024,N/A,Male,N/A,Flu
+08/13/2024,N/A,Male,N/A,Flu
+08/13/2024,BSHM,Female,19,Headache
+08/14/2024,BSHM,Male,18,Stomachache 
+08/14/2024,BSHM,Male,19,Stomachache
+08/20/2024,BSITECH,Male,19,Tootache
+08/20/2024,BSENT,Female,18,Colds x2 days
+08/20/2024,BEED,N/A,20,Hyperacidity + Vomiting 
+08/20/2024,BSLM,Male,19,Acute Upper Respiratory Infection (AURI)
+08/20/2024,BS-EMC,Female,18,Dymenorrhea
+08/28/2024,BSENT,Female,18,Dymenorrhea
+08/28/2024,BSCRIM,Female,21,Dymenorrhea
+08/22/2024,BEED,Female,20,Bodypain
+08/22/2024,BSENT,Female,19,Menstrual Cramps
+08/20/2024,BSCS,Male,23,Dizziness
+08/21/2024,BAT,Male,21,Allergy
+08/21/2024,BSENT,Female,17,Body Weakness
+08/21/2024,BS-EMC,Female,18,Skin Allergy
+08/21/2024,BS-EMC,Male,20,Cough
+08/25/2024,BSCRIM,Male,N/A,Underweight
+08/25/2024,BSCRIM,Male,N/A,Cough / Colds
+08/25/2024,BSCRIM,Male,N/A,Cough / Colds
+08/25/2024,BSCRIM,Male,N/A,Cough / Colds
+08/25/2024,BSCRIM,Male,N/A,Cough / Colds
+08/25/2024,BSCRIM,Male,N/A,Cough / Colds
+08/25/2024,BSCRIM,Male,N/A,Cough / Colds
+08/25/2024,BSCRIM,Male,N/A,Cough / Colds
+08/25/2024,BSCRIM,Male,N/A,Cough / Colds
+08/25/2024,BSCRIM,Male,N/A,Cough / Colds
+08/25/2024,BSCRIM,Male,N/A,Cough / Colds
+08/25/2024,BSCRIM,Male,N/A,Cough / Colds
+08/25/2024,BSCRIM,Male,N/A,Cough / Colds
+08/25/2024,BSCRIM,Male,N/A,Cough / Colds
+08/25/2024,BSCRIM,Male,N/A,Cough / Colds
+08/25/2024,BSCRIM,Male,N/A,Cough / Colds
+08/25/2024,BSCRIM,Male,N/A,Cough / Colds
+08/25/2024,BSCRIM,Male,N/A,Cough / Colds
+08/25/2024,BSCRIM,Male,N/A,Cough / Colds
+08/25/2024,BSCRIM,Male,N/A,Cough / Colds
+08/25/2024,BSCRIM,Male,N/A,Cough / Colds
+08/25/2024,BSCRIM,Male,N/A,Cough / Colds
+08/25/2024,BSCRIM,Male,N/A,Cough / Colds
+08/25/2024,BSCRIM,Male,N/A,Cough / Colds
+08/25/2024,BSCRIM,Male,N/A,Cough / Colds
+08/25/2024,BSCRIM,Male,N/A,Cough / Colds
+08/25/2024,BSCRIM,Male,N/A,Cough / Colds
+08/25/2024,BSCRIM,Male,N/A,Cough / Colds
+08/25/2024,BSCRIM,Male,N/A,Cough / Colds
+08/25/2024,BSCRIM,Male,N/A,Cough / Colds
+08/25/2024,BSCRIM,Male,N/A,Cough / Colds
+08/25/2024,BSCRIM,Male,N/A,Cough / Colds
+08/25/2024,BSCRIM,Female,N/A,Cough / Colds
+08/25/2024,BSCRIM,Female,N/A,Cough / Colds
+09/11/2024,BSITECH-ELX,Female,18,BP 90/60
+09/11/2024,BSBA,Female,N/A,BP 90/60
+09/11/2024,BSED,Male,18,BP 90/60
+09/11/2024,BSEntrep,Male,23,BP 90/60
+09/11/2024,BSED,Female,21,Cough
+09/11/2024,BSIT,Female,N/A,Hyperventilated
+09/09/2024,BSED,Female,18,Colds
+09/09/2024,BSCRIM,Male,20,Dizziness
+09/11/2024,BSEMC,Female,N/A,Stomachache
+09/11/2024,BPED,Female,N/A,BP 110/80
+09/11/2024,BSBA,Female,N/A,Dysminorrhea
+09/11/2024,BSE,Female,N/A,Hyperacidity
+09/12/2024,BSCRIM,Female,N/A,Sore Throat
+09/12/2024,BAELS,Female,N/A,Headache
+09/12/2024,BEED,Female,N/A,BP 120/80
+09/12/2024,BEED,Female,N/A,BP 120/70
+09/12/2024,BSHM,Male,19,BP/130/90
+09/12/2024,BSLM,Male,21,Sore Throat
+09/12/2024,BSE,Female,17,Hip Pain
+09/12/2024,BSE,Female,20,Headache
+09/12/2024,BSE,Female,N/A,Hyperventilated
+09/12/2024,BSE,Female,19,Rhinitis
+09/13/2024,BSAIS,Male,19,Eye Irritation
+09/13/2024,BSAIS,Male,N/A,Eye Irritation
+09/13/2024,BEED,Female,N/A,Asthma
+09/13/2024,N/A,Female,22,Dizziness
+09/13/2024,N/A,Female,21,Hyperacidity
+09/16/2024,N/A,Female,21,Headache
+09/16/2024,N/A,Female,23,Colds
+09/16/2024,N/A,Female,20,Dysminorrhea
+09/16/2024,BAPOS,Female,21,Cough
+09/16/2024,BSMA,Female,17,Skin Allergy
+09/16/2024,BAELS,Female,21,Bone Pain
+09/26/2024,BSE,Male,27,BP 90/70
+09/28/2024,BSENT,Male,18,Colds
+09/30/2024,BSLM,Male,18,BP 90/60
+09/30/2024,BAT,Female,18,Minimal Cramps
+09/30/2024,BSLM,Male,N/A,BP 130/80
+10/01/2024,BSCRIM,Female,20,H/A
+10/01/2024,BSCRIM,Female,20,Colds
+10/01/2024,BSCRIM,Female,21,Allergy
+10/02/2024,BSE,Male,19,H/A
+10/02/2024,BSITECH-AUTO,Female,23,H/A
+10/07/2024,BSHM,Male,19,Anxiety Attack
+10/07/2024,BSIT,Male,18,Cough
+10/07/2024,BSCRIM,Male,18,Colds
+10/07/2024,BAT,Male,20,LW Stiches 
+10/07/2024,BSTM,Female,19,Dizziness
+10/16/2024,BSHM,Male,18,Stomachache
+10/16/2024,BEED,Male,N/A,Headache
+10/16/2024,BEED,Female,17,Colds
+10/16/2024,BSE,Male,N/A,Headache
+10/16/2024,BSENT,Female,19,Headache
+10/18/2024,BEED,Female,31,BP 100/70
+10/18/2024,BSHM,Male,20,Cough
+10/18/2024,BEED,Female,23,FBS 140
+10/07/2024,BSTM,Female,19,BP 90/60
+10/07/2024,BPED,Male,18,"Cough, Cold"
+10/07/2024,BSITECH-AUTO,Male,21,"Cough, Cold"
+10/07/2024,BSENT,Female,19,Headache
+10/07/2024,BSIT,Female,17,Abdominal pain
+10/07/2024,BAELS,Male,18,Cough
+10/07/2024,BSCRIM,Male,19,Cough
+10/07/2024,BSCRIM,Male,20,BP 80/60
+10/07/2024,BSCRIM,Male,20,BP 100/60
+10/07/2024,BSBA,Male,18,LBM
+10/07/2024,BSIT,Male,19,CCF
+10/07/2024,BSMA,Female,20,Sprain
+10/07/2024,BSMA,Female,20,Insect Bite
+10/07/2024,BSENT,Female,20,BP 80/60
+10/07/2024,BSENT,Female,22,BP 90/60
+10/07/2024,BSLM,Female,20,Colds
+10/09/2024,BSCRIM,Female,21,BP 100/70
+10/09/2024,BAT,Male,20,Fever
+10/09/2024,BSE,N/A,N/A,BP 90/60
+10/09/2024,BSE,N/A,N/A,BP 100/60
+10/09/2024,BSE,N/A,N/A,BP 80/60
+10/09/2024,BSIT,Male,18,Strain
+10/09/2024,BSENT,Male,18,BP 100/70
+10/09/2024,BSENT,Female,20,BP 100/70
+10/09/2024,BSENT,Male,22,BP 130/90
+10/09/2024,BSITECH-AUTO,Male,22,BP 120/80
+10/09/2024,BSITECH-AUTO,Male,20,H/A
+10/14/2024,BSLM,Female,19,Cough
+10/14/2024,BSE,Female,18,H/A
+10/14/2024,BSENT,Female,20,Back Pain
+10/14/2024,BSENT,Female,19,Cough
+10/14/2024,BEED,Female,20,Cough
+10/14/2024,BSITECH-AUTO,Male,21,Cough
+10/14/2024,BEED,Female,20,Dysminorrhea
+10/14/2024,BEED,Male,18,Cough
+10/14/2024,BEED,Female,18,Cough
+10/14/2024,BSE,Female,18,Itchy Throat
+10/14/2024,BAPOS,Female,20,Cough
+10/14/2024,BSHM,Male,19,H/A
+10/15/2024,BSCRIM,Male,20,Sore Eyes
+10/15/2024,BSCRIM,Female,21,Cough
+10/15/2024,BSCRIM,Female,18,Tootache
+10/15/2024,BEED,Male,18,Tootache
+10/15/2024,BSCRIM,Female,18,Tootache
+10/15/2024,BSLM,Female,22,BP 120/70
+10/15/2024,BSCRIM,Female,20,Tootache
+10/15/2024,BSCRIM,Female,20,Tootache
+10/15/2024,BSBA,Female,20,BP 80/60
+10/15/2024,BAT,Female,20,Colds
+10/15/2024,BSIT,Female,24,LBM
+10/15/2024,BSLM,Female,22,BP 100/70
+10/15/2024,BSBA,Male,18,LBM
+10/16/2024,BSITECH-AUTO,Male,18,Tootache
+10/17/2024,BSCRIM,Female,20,BP 100/70
+10/17/2024,BSLM,Male,19,Fever
+10/17/2024,BAT,Male,22,BP 100/70
+10/19/2024,BSIT,Male,18,LBM
+10/19/2024,BSLM,Female,18,Dizziness
+10/19/2024,BSCRIM,Female,18,Muscle Sprain
+10/19/2024,BSIT,Female,20,BP 110/80
+10/21/2024,BSCS,Male,19,Dizziness
+10/21/2024,BAPOS,Female,20,Cough
+10/21/2024,BEED,Female,20,Hyperacidity
+10/21/2024,PS,Male,18,Burn
+10/21/2024,BSLM,Male,21,Boils armpit
+10/21/2024,PS,Male,20,Feeling warm + Headache
+10/21/2024,BSCS,Female,18,LBM
+10/21/2024,BEED,Female,20,Hyperacidity
+10/22/2024,BSCRIM,Female,N/A,Hyperacidity
+10/22/2024,BEED,Female,18,Hyperacidity
+10/22/2024,BAPOS,Male,20,H/A
+10/22/2024,BSCRIM,Male,20,Colds
+11/27/2024,BSLM,Female,21,BP 100/70
+11/27/2024,BSCRIM,Female,20,Stomachache
+12/14/2024,BSITECH-ELX,Male,18,Stomachache
+12/14/2024,BSCRIM,Male,18,Muscle Sprain
+12/14/2024,BSCRIM,Female,18,Abdominal pain
+12/14/2024,BSCS,Male,19,Colds
+12/14/2024,BSCRIM,Male,18,Colds
+12/14/2024,BSCRIM,Male,18,Cough
+12/14/2024,BSCRIM,Female,20,Sore Throat
+12/14/2024,BSCRIM,Female,18,Hyperacidity
+12/16/2024,BSE,Female,21,BP 80/60
+12/16/2024,BSE,Female,22,BP 80/60
+12/16/2024,BSE,Female,N/A,BP 80/60
+06/02/2025,BSE-SCIENCE,Female,21,BP 80/60
+06/02/2025,BSE-SCIENCE,Female,22,BP 80/60
+06/02/2025,BSE-SCIENCE,Male,21,BP 90/60
+06/02/2025,SECURITY,Male,36,"Hypertensive, BP 160/120"
+06/02/2025,SUPPLY,Female,N/A,BP 120/70
+06/02/2025,PS,Male,N/A,BP 140/100
+06/02/2025,BSE,Male,21,Headache
+06/03/2025,BSIT,Male,20,Headache
+06/03/2025,MIS,Male,N/A,Headache
+06/04/2025,HR,Female,N/A,BP 110/70
+06/04/2025,BSLM,Male,20,Anxiety Attack
+06/10/2025,GSO,Female,N/A,BP 170/100
+06/10/2025,N/A,Male,N/A,BP 140/100
+06/10/2025,SUPPLY,Female,40,Body Ache
+O7/02/2025,BSE,Female,N/A,Epigastric Pain
+07/07/2025,BSED,Female,22,Allergic
+07/07/2025,BSTM,Female,18,Allergic
+05/13/2025,BSCRIM,Female,20,Hyperacidity
+05/23/2025,BSBA,Female,20,Hyperacidity
+05/23/2025,BSED,Female,19,Hyperacidity
+05/26/2025,BSHM,Female,19,Nose Bleeding
+05/26/2025,BEED,Female,18,Dysminorrhea
+05/26/2025,BAELS,Female,21,Dysminorrhea
+05/26/2025,BEED,Female,18,Headache

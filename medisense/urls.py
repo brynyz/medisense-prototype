@@ -25,6 +25,7 @@ urlpatterns = [
     path("", include("accounts.urls")),
     path("inventory/", include("inventory.urls")),
     path("symptoms/", include("patients.urls")),
+    path("predictors/", include("predictors.urls")),
     path("captcha/", include("captcha.urls")),
 
     path('password-reset/', auth_views.PasswordResetView.as_view(
