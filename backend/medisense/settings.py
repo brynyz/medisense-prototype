@@ -46,7 +46,6 @@ INSTALLED_APPS = [
     "crispy_forms",
     "accounts",
     "patients",
-    "predictor",
     "predictors",
     "inventory",
     "chartjs",
