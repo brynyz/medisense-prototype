@@ -21,6 +21,23 @@ const LineChart = ({ isCustomLineColors = false, isDashboard = false }) => {
     'Other': colors.grey?.[100] || '#95a5a6'
   };
 
+  // Shortened labels for dashboard display
+  const getLabelForDashboard = (categoryId) => {
+    if (!isDashboard) return categoryId;
+    
+    const shortLabels = {
+      'Respiratory': 'Respiratory',
+      'Digestive': 'Digestive',
+      'Pain & Musculoskeletal': 'Pain/Muscle',
+      'Dermatological & Trauma': 'Skin/Trauma',
+      'Neurological & Psychological': 'Neuro/Psych',
+      'Systemic & Infectious': 'Systemic',
+      'Other': 'Other'
+    };
+    
+    return shortLabels[categoryId] || categoryId;
+  };
+
   // Fetch real symptom trends data
   useEffect(() => {
     const fetchSymptomTrends = async () => {
@@ -33,23 +50,40 @@ const LineChart = ({ isCustomLineColors = false, isDashboard = false }) => {
           throw new Error('No authentication token found');
         }
 
-        const response = await fetch(`${process.env.REACT_APP_API_URL}/api/patients/symptoms/symptom_trends/`, {
+        const apiUrl = `${process.env.REACT_APP_API_URL}/api/patients/symptoms/symptom_trends/`;
+        console.log('🔗 Attempting API call to:', apiUrl);
+        console.log('🔑 Using token:', token ? `${token.substring(0, 20)}...` : 'No token');
+        
+        const response = await fetch(apiUrl, {
           headers: {
             'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json',
           },
         });
 
+        console.log('📡 Response received:', {
+          status: response.status,
+          statusText: response.statusText,
+          headers: Object.fromEntries(response.headers.entries())
+        });
+
         if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+          const errorText = await response.text();
+          console.error('❌ API Error Details:', {
+            status: response.status,
+            statusText: response.statusText,
+            body: errorText
+          });
+          throw new Error(`HTTP error! status: ${response.status} - ${errorText}`);
         }
 
         const result = await response.json();
         console.log('✅ Symptom trends API success:', result);
         
-        // Add colors to the data
+        // Add colors and shortened labels to the data
         const dataWithColors = result.data.map(category => ({
           ...category,
+          id: getLabelForDashboard(category.id),
           color: categoryColors[category.id] || colors.grey[500]
         }));
         
@@ -95,7 +129,7 @@ const LineChart = ({ isCustomLineColors = false, isDashboard = false }) => {
       }
       
       return {
-        id: categoryId,
+        id: getLabelForDashboard(categoryId),
         color: categoryColors[categoryId],
         data: categoryData
       };
@@ -206,7 +240,34 @@ const LineChart = ({ isCustomLineColors = false, isDashboard = false }) => {
       enableSlices="x"
       enableCrosshair={!isDashboard}
       crosshairType="cross"
-      legends={[
+      legends={isDashboard ? [
+        {
+          anchor: "bottom-right",
+          direction: "column",
+          justify: false,
+          translateX: 90,
+          translateY: 0,
+          itemsSpacing: 2,
+          itemDirection: "left-to-right",
+          itemWidth: 85,
+          itemHeight: 16,
+          itemOpacity: 0.75,
+          symbolSize: 10,
+          symbolShape: "circle",
+          symbolBorderColor: "rgba(0, 0, 0, .5)",
+          toggleSerie: true,
+          itemTextColor: colors.grey[100],
+          effects: [
+            {
+              on: "hover",
+              style: {
+                itemBackground: "rgba(0, 0, 0, .03)",
+                itemOpacity: 1,
+              },
+            },
+          ],
+        },
+      ] : [
         {
           anchor: "bottom-right",
           direction: "column",
@@ -215,13 +276,13 @@ const LineChart = ({ isCustomLineColors = false, isDashboard = false }) => {
           translateY: 0,
           itemsSpacing: 0,
           itemDirection: "left-to-right",
-          itemWidth: 80,
+          itemWidth: 120,
           itemHeight: 20,
           itemOpacity: 0.75,
           symbolSize: 12,
           symbolShape: "circle",
           symbolBorderColor: "rgba(0, 0, 0, .5)",
-          toggleSerie: true, // Enable click to hide/show series
+          toggleSerie: true,
           effects: [
             {
               on: "hover",

@@ -243,21 +243,6 @@ const Sidebar = ({ isSidebar, setIsSidebar, user }) => {
               selected={selected}
               setSelected={setSelected}
             />
-
-            <Typography
-              variant="h6"
-              color={colors.grey[300]}
-              sx={{ m: "15px 0 5px 20px" }}
-            >
-              Data
-            </Typography>
-            <Item
-              title="Manage Team"
-              to="/app/team"
-              icon={<PeopleOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
             <Item
               title="Symptoms"
               to="/app/symptoms"
@@ -265,14 +250,6 @@ const Sidebar = ({ isSidebar, setIsSidebar, user }) => {
               selected={selected}
               setSelected={setSelected}
             />
-
-            <Typography
-              variant="h6"
-              color={colors.grey[300]}
-              sx={{ m: "15px 0 5px 20px" }}
-            >
-              Analytics
-            </Typography>
             <Item
               title="Data Preprocessing"
               to="/app/datapreprocessing"
@@ -338,7 +315,7 @@ const Sidebar = ({ isSidebar, setIsSidebar, user }) => {
             sx={{ 
               marginTop: "auto", 
               paddingBottom: "20px",
-              paddingTop: "15px"
+              paddingTop: "200px"
             }}
           >
             <MenuItem

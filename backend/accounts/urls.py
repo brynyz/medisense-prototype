@@ -12,7 +12,8 @@ from .api_views import (
     dashboard_stats,
     get_user,
     logout_user,
-    update_user_profile
+    update_user_profile,
+    health_check
 )
 
 # API Router
@@ -42,4 +43,5 @@ urlpatterns = [
     path('api/auth/user/', get_user, name='api_get_user'),
     path('api/auth/logout-user/', logout_user, name='api_logout_user'),
     path('api/auth/profile/update/', update_user_profile, name='api_update_user_profile'),
+    path('api/auth/health/', health_check, name='api_health_check'),
 ]

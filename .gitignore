@@ -29,3 +29,6 @@ medisense/backend/data
 .env
 
 backup/
+
+DEPLOYMENT_CHECKLIST.md
+DEPLOYMENT_GUIDE.md

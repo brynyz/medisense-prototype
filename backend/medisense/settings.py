@@ -31,7 +31,15 @@ SECRET_KEY = os.getenv('SECRET_KEY', "django-insecure-5t@w6nt5q@rprhdjj+3e2(j)u9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'True').lower() == 'true'
 
-ALLOWED_HOSTS = ['*'] if DEBUG else ['.onrender.com', 'your-domain.com']
+# DigitalOcean App Platform domains
+ALLOWED_HOSTS = ['*'] if DEBUG else [
+    '.ondigitalocean.app',  # DigitalOcean App Platform
+    '.onrender.com',        # Keep Render support
+    'your-domain.com',      # Your custom domain
+    os.getenv('ALLOWED_HOSTS', '').split(',') if os.getenv('ALLOWED_HOSTS') else []
+]
+# Flatten the list
+ALLOWED_HOSTS = [host.strip() for sublist in ALLOWED_HOSTS for host in (sublist if isinstance(sublist, list) else [sublist]) if host.strip()]
 
 
 # Application definition
@@ -208,6 +216,11 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # React development server
     "http://127.0.0.1:3000",
 ]
+
+# Add production CORS origins from environment variable
+if not DEBUG:
+    production_origins = os.getenv('CORS_ALLOWED_ORIGINS', '').split(',')
+    CORS_ALLOWED_ORIGINS.extend([origin.strip() for origin in production_origins if origin.strip()])
 
 CORS_ALLOW_CREDENTIALS = True
 
