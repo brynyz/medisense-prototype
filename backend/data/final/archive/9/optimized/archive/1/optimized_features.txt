@@ -1,0 +1,61 @@
+OPTIMIZED FEATURE SET
+==================================================
+
+Total Features: 37
+Reduction from Original: 36.2%
+
+FEATURES BY CATEGORY:
+------------------------------
+
+Temporal Features (7):
+  - academic_period_encoded
+  - is_exam_period
+  - days_since_semester_start
+  - sin_day
+  - cos_day
+  - sin_week
+  - cos_week
+
+Lag Features (4):
+  - visit_count_lag_1
+  - visit_count_lag_3
+  - visit_count_lag_7
+  - visit_count_lag_14
+
+Rolling Features (3):
+  - visit_count_rolling_3d
+  - visit_count_rolling_7d
+  - visit_count_rolling_30d
+
+Environmental Features (6):
+  - temperature_2m_mean
+  - pm2_5_mean
+  - precipitation_sum
+  - wind_speed_10m_mean
+  - temperature_range
+  - heat_humidity_index
+
+Symptom Features (16):
+  - pollution_respiratory_risk
+  - temp_fever_risk
+  - respiratory_digestive_interaction
+  - pain_fever_interaction
+  - total_symptom_load
+  - symptom_diversity
+  - respiratory_dominance
+  - respiratory_count_lag_1
+  - respiratory_count_lag_3
+  - respiratory_count_lag_7
+  - respiratory_count_lag_14
+  - fever_count_lag_1
+  - fever_count_lag_3
+  - fever_count_lag_7
+  - fever_count_lag_14
+  - respiratory_count_rolling_std_3d
+
+Interaction Features (5):
+  - pollution_respiratory_risk
+  - temp_fever_risk
+  - cold_weather_stress
+  - respiratory_digestive_interaction
+  - pain_fever_interaction

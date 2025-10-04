@@ -1,0 +1,113 @@
+{
+  "timestamp": "2025-09-28T18:08:28.990130",
+  "best_model": "XGBoost",
+  "class_distribution": {
+    "respiratory": 52,
+    "pain_musculoskeletal": 38,
+    "digestive": 20,
+    "other": 20,
+    "systemic_infectious": 10,
+    "neuro_psych": 4,
+    "dermatological_trauma": 1,
+    "cardiovascular_chronic": 1
+  },
+  "random_forest": {
+    "avg_accuracy": 0.6203703703703703,
+    "avg_f1": 0.6139196023893382,
+    "fold_scores": [
+      {
+        "acc": 0.4722222222222222,
+        "prec": 0.6288359788359789,
+        "rec": 0.4722222222222222,
+        "f1": 0.4901960784313726
+      },
+      {
+        "acc": 0.5833333333333334,
+        "prec": 0.6349206349206349,
+        "rec": 0.5833333333333334,
+        "f1": 0.5590909090909091
+      },
+      {
+        "acc": 0.8055555555555556,
+        "prec": 0.7970085470085471,
+        "rec": 0.8055555555555556,
+        "f1": 0.7924718196457328
+      }
+    ]
+  },
+  "xgboost": {
+    "avg_accuracy": 0.8333333333333334,
+    "avg_f1": 0.8217372134038801,
+    "fold_scores": [
+      {
+        "acc": 0.8333333333333334,
+        "prec": 0.8423520923520924,
+        "rec": 0.8333333333333334,
+        "f1": 0.8217372134038801
+      }
+    ]
+  },
+  "final_accuracy": 0.9794520547945206,
+  "top_features": [
+    {
+      "feature": "other_count",
+      "importance": 0.12324199825525284
+    },
+    {
+      "feature": "respiratory_count",
+      "importance": 0.11155372112989426
+    },
+    {
+      "feature": "pain_musculoskeletal_count",
+      "importance": 0.07150217890739441
+    },
+    {
+      "feature": "digestive_count",
+      "importance": 0.06788714975118637
+    },
+    {
+      "feature": "other_count_lag_1",
+      "importance": 0.05490138754248619
+    },
+    {
+      "feature": "respiratory_count_rolling_std_3d",
+      "importance": 0.05395562946796417
+    },
+    {
+      "feature": "systemic_infectious_count",
+      "importance": 0.052455827593803406
+    },
+    {
+      "feature": "respiratory_count_lag_7",
+      "importance": 0.02898946963250637
+    },
+    {
+      "feature": "digestive_count_rolling_7d",
+      "importance": 0.02865000255405903
+    },
+    {
+      "feature": "cos_day",
+      "importance": 0.02857094071805477
+    },
+    {
+      "feature": "digestive_count_rolling_3d",
+      "importance": 0.02739548683166504
+    },
+    {
+      "feature": "neuro_psych_count",
+      "importance": 0.021204307675361633
+    },
+    {
+      "feature": "pm2_5_mean",
+      "importance": 0.021101439371705055
+    },
+    {
+      "feature": "sin_week",
+      "importance": 0.017584891989827156
+    },
+    {
+      "feature": "pain_musculoskeletal_count_lag_7",
+      "importance": 0.01749008148908615
+    }
+  ]
+}

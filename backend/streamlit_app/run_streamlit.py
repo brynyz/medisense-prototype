@@ -7,6 +7,9 @@ import sys
 import subprocess
 from pathlib import Path
 
+# Enable development mode for iframe access
+os.environ['STREAMLIT_DEV_MODE'] = 'true'
+
 def main():
     # Set environment variables for Django integration
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'medisense.settings')

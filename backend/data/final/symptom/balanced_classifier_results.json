@@ -1,0 +1,46 @@
+{
+  "timestamp": "2025-09-28T23:49:00.850258",
+  "best_model": "Random Forest (Balanced)",
+  "test_accuracy": 0.37349397590361444,
+  "balanced_accuracy": 0.3229332801701223,
+  "f1_weighted": 0.39108304626111146,
+  "f1_macro": 0.3020667787211904,
+  "all_results": {
+    "Random Forest (Balanced)": {
+      "accuracy": 0.37349397590361444,
+      "balanced_accuracy": 0.3229332801701223,
+      "f1_weighted": 0.39108304626111146,
+      "f1_macro": 0.3020667787211904
+    },
+    "XGBoost (Weighted)": {
+      "accuracy": 0.4036144578313253,
+      "balanced_accuracy": 0.24253341687552213,
+      "f1_weighted": 0.38474806445612325,
+      "f1_macro": 0.24204587624269316
+    },
+    "Logistic Regression (Balanced)": {
+      "accuracy": 0.3132530120481928,
+      "balanced_accuracy": 0.2719772917141338,
+      "f1_weighted": 0.3480524469835216,
+      "f1_macro": 0.24705601633011912
+    },
+    "Random Forest (SMOTE)": {
+      "accuracy": 0.3855421686746988,
+      "balanced_accuracy": 0.29150527834738355,
+      "f1_weighted": 0.401280954662784,
+      "f1_macro": 0.29151326397545557
+    }
+  },
+  "classes": [
+    "dermatological_trauma",
+    "digestive",
+    "neuro_psych",
+    "pain_musculoskeletal",
+    "respiratory",
+    "systemic_infectious"
+  ],
+  "num_features": 34,
+  "num_train_samples": 664,
+  "num_train_balanced": 1584,
+  "num_test_samples": 166
+}

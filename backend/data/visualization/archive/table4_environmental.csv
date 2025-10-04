@@ -1,0 +1,9 @@
+Environmental Factor,Correlation with Visits,Correlation with Respiratory,Significance Level,Optimal Range
+Temperature (°C),0.12,0.08,*,20-25°C
+Relative Humidity (%),-0.08,-0.12,ns,40-60%
+PM2.5 (μg/m³),0.23,0.34,***,<12 μg/m³
+PM10 (μg/m³),0.19,0.28,**,<20 μg/m³
+Precipitation (mm),0.15,0.09,*,<10mm/day
+Wind Speed (m/s),-0.06,-0.04,ns,2-8 m/s
+Heat-Humidity Index,0.18,0.22,**,<25
+Pollution-Respiratory Risk,0.31,0.42,***,<0.3

@@ -1,7 +1,9 @@
 from django import forms
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
-from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 from captcha.fields import CaptchaField, CaptchaTextInput
+
+User = get_user_model()
 
 class LoginForm(AuthenticationForm):
     captcha = CaptchaField(widget=CaptchaTextInput(attrs={'placeholder': 'Captcha'}))

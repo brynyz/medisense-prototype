@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap");
+
+html,
+body,
+#root,
+.app {
+  height: 100%;
+  width: 100%;
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  display: flex;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.content {
+  flex: 1;
+  height: 100vh;
+  overflow-y: auto;
+  transition: margin-left 0.3s ease;
+}
+
+/* When sidebar is collapsed */
+.content.collapsed {
+  margin-left: 0px;
+}
+
+.auth-container {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Modern Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #5a62e8 0%, #7a81f9 100%);
+  border: 2px solid transparent;
+  background-clip: content-box;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #4950d6 0%, #7a81f9 100%);
+  transform: scale(1.1);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Dark theme scrollbar for sidebar */
+.pro-sidebar ::-webkit-scrollbar {
+  width: 6px;
+}
+
+.pro-sidebar ::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.pro-sidebar ::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(104, 112, 250, 0.6) 0%, rgba(134, 141, 251, 0.6) 100%);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.pro-sidebar ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, rgba(104, 112, 250, 0.8) 0%, rgba(134, 141, 251, 0.8) 100%);
+}
+
+/* Firefox scrollbar styling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #6870fa transparent;
+}
+
+/* Custom scrollbar for specific elements */
+.custom-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #6870fa #2a2d3a;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: #2a2d3a;
+  border-radius: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #6870fa, #868dfb);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #5a62e8, #7a81f9);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}

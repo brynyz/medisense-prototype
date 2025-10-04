@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required #login required decora
 from django.contrib import messages #display messages if needed
 from django.shortcuts import render #render templetaes
 from django.urls import reverse_lazy #reverser url patters
-from django.contrib.auth.models import User #import user model
+from django.contrib.auth import get_user_model #import user model
 
 import os
 import subprocess
@@ -18,6 +18,8 @@ from django.conf import settings
 from .forms import LoginForm, RegistrationForm
 
 from chartjs.views.lines import BaseLineChartView
+
+User = get_user_model()
 
 # Create your views here.
 

@@ -22,7 +22,9 @@ media/
 .DS_Store
 Thumbs.db
 
-medisense/backups/
+medisense/backend/backups/
+medisense/backend/data
+
 
 .env
 

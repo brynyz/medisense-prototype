@@ -1,0 +1,4 @@
+Model,R² Score,RMSE,MAE,Within ±1 Visit (%),Within ±2 Visits (%)
+Random Forest,-2.03,0.72,0.45,93.2,98.5
+XGBoost,-2.35,0.75,0.48,95.1,99.0
+Linear Regression,-1.87,0.69,0.43,91.8,97.2

@@ -1,0 +1,692 @@
+date,course,gender,age,normalized_symptoms,course_cleaned,course_mapped
+12/01/2022,BSLM,Female,20.0,dizziness,bslm,bslm
+12/01/2022,BSBA,Female,19.0,muscle strain,bsba,bsba
+12/01/2022,BSBA, Female,18.0,dry mouth,bsba,bsba
+12/03/2022,BSCRIM,Female,19.0,cramps,bscrim,bscrim
+12/03/2022,BSE,Female,21.0,headache,bse,bse
+12/03/2022,BSCRIM,Female,18.0,dysmenorrhea,bscrim,bscrim
+12/03/2022,BEED,Female,19.0,cramps,beed,beed
+12/06/2022,BAELS,Female,19.0,fever,baels,baels
+11/24/2022,BSCS,Male,21.0,cold,bscs,bscs
+11/24/2022,BSE,Female,19.0,"dizziness,fever",bse,bse
+11/24/2022,BEED,Male,18.0,skin allergy,beed,beed
+11/28/2022,BSTM,Male,20.0,stomach ache,bstm,bstm
+11/28/2022,BAT,Female,20.0,cut,bat,bat
+11/09/2022,BSIT,Female,19.0,uti,bsit,bsit
+11/29/2022,BSLM,Male,18.0,"dizziness,headache",bslm,bslm
+11/29/2022,BEED,Female,19.0,hematoma,beed,beed
+11/22.2022,BSENT,Female,18.0,malaise,bsent,bsentrep
+11/22/2022,BSHM,Female,19.0,cold,bshm,bshm
+11/22/2022,BAELS,Male,22.0,"cough,fever",baels,baels
+11/22/2022,BSTM,Female,17.0,"cold,fever",bstm,bstm
+11/22/2022,BSBA,Male,,"cold,cough",bsba,bsba
+11/22/2022,BSMA,Female,18.0,"cold,fever",bsma,bsma
+11/22/2022,BEED,Female,18.0,"cold,cough",beed,beed
+11/22/2022,BSMA,Female,18.0,menstrual cramps,bsma,bsma
+11/22/2022,BSTM,Female,19.0,hyperacidity,bstm,bstm
+11/22/2022,BSIT,Male,21.0,headache,bsit,bsit
+11/22/2022,BSLM,Male,18.0,headache,bslm,bslm
+11/22/2022,BSE,Female,19.0,asthma,bse,bse
+11/22/2022,BSAIS,Female,,"dizziness,dysmenorrhea",bsais,bsais
+11/22/2022,BSBA,Female,18.0,infection,bsba,bsba
+11/22/2022,BSBA,Male,21.0,fever,bsba,bsba
+11/15/2022,BAPOS,Female,18.0,headache,bapos,bapos
+11/15/2022,BSCRIM,Female,18.0,"cold,fever",bscrim,bscrim
+11/16/2022,BSBA,Female,20.0,cough,bsba,bsba
+11/16/2022,BSIT,Male,19.0,cough,bsit,bsit
+11/16/2022,BEED,Female,18.0,allergy,beed,beed
+11/16/2022,BAPOS,Male,20.0,fever,bapos,bapos
+11/17/2022,BSLM,Female,19.0,vomiting,bslm,bslm
+11/17/2022,BSLM,Male,19.0,cold,bslm,bslm
+11/17/2022,BEED,Female,21.0,dysmenorrhea,beed,beed
+11/17/2022,BSBA,Female,19.0,"asthma,stomach ache",bsba,bsba
+11/17/2022,BSBA,Male,18.0,"asthma,cold,cough",bsba,bsba
+11/21/2022,BSBA,Female,18.0,lbm,bsba,bsba
+11/21/2022,BSBA,Female,18.0,epigastric pain,bsba,bsba
+11/21/2022,BSMA,Male,18.0,headache,bsma,bsma
+11/21/2022,BSIT,Male,,epigastric pain,bsit,bsit
+11/21/2022,BSCRIM,Female,20.0,dysmenorrhea,bscrim,bscrim
+11/08/2022,BSE,Male,20.0,malaise,bse,bse
+11/08/2022,BSEntrep,Female,19.0,abrasion,bsentrep,bsentrep
+11/08/2022,BSIT,Male,18.0,cold,bsit,bsit
+11/08/2022,BSCS,Male,18.0,abrasion,bscs,bscs
+11/08/2022,BSMA,Female,20.0,"clammy skin,hyperventilation",bsma,bsma
+11/08/2022,BSCRIM,Male,18.0,cold,bscrim,bscrim
+11/09/2022,BSIT,Female,23.0,dizziness,bsit,bsit
+11/09/2022,BSTM,Female,19.0,menstrual cramps,bstm,bstm
+11/09/2022,BSCRIM,Female,21.0,stiff neck,bscrim,bscrim
+11/09/2022,BSTM,Female,18.0,"cold,cough",bstm,bstm
+11/09/2022,BSTM,Female,19.0,cold,bstm,bstm
+11/10/2022,BAELS,Male,27.0,cough,baels,baels
+11/07/2022,BAPOS,Female,18.0,dysmenorrhea,bapos,bapos
+11/07/2022,MIS,Male,33.0,headache,mis,staff
+11/07/2022,BSHM,Female,19.0,dysmenorrhea,bshm,bshm
+11/07/2022,BSAIS,Female,19.0,chest pain,bsais,bsais
+11/07/2022,BSCS,Female,,lbm,bscs,bscs
+11/07/2022,BSE,Female,17.0,"fever,hyperventilation",bse,bse
+11/07/2022,GSO,Male,,lbm,gso,staff
+11/07/2022,CBAO,Male,,cold,cbao,staff
+11/07/2022,BSEntrep,Female,21.0,allergy,bsentrep,bsentrep
+11/07/2022,BSEntrep,Male,22.0,cold,bsentrep,bsentrep
+11/07/2022,BSLM,Female,18.0,migraine,bslm,bslm
+11/08/2022,BSE,Female,19.0,headache,bse,bse
+11/08/2022,BSE,Female,18.0,headache,bse,bse
+11/08/2022,BEED,Female,19.0,runny nose,beed,beed
+11/08/2022,Faculty,Female,30.0,runny nose,faculty,staff
+11/08/2022,Faculty,Female,34.0,headache,faculty,staff
+10/27/2022,BSTM,Male,18.0,"cold,cough,vomiting",bstm,bstm
+10/27/2022,Guidance,Female,32.0,dysmenorrhea,guidance,staff
+10/27/2022,MIS,Female,28.0,lbm,mis,staff
+10/27/2022,Faculty,Female,33.0,headache,faculty,staff
+11/07/2022,BSLM,Male,19.0,headache,bslm,bslm
+11/07/2022,BSHM,Female,,cold,bshm,bshm
+11/07/2022,BSCRIM,Female,20.0,allergy,bscrim,bscrim
+11/07/2022,BAELS,Female,26.0,allergy,baels,baels
+11/07/2022,STAFF,Female,,"cold,cough",staff,staff
+11/07/2022,BSMA,Female,19.0,dizziness,bsma,bsma
+11/07/2022,BSCRIM,Female,19.0,cold,bscrim,bscrim
+11/07/2022,BSCRIM,Female,19.0,cold,bscrim,bscrim
+10/25/2022,BSIT ,Female,23.0,dizziness,bsit,bsit
+10/25/2022,BSLM,Female,20.0,"cough,dizziness",bslm,bslm
+10/25/2022,BAT,Female,20.0,headache,bat,bat
+10/26/2022,BSCRIM,Female,20.0,headache,bscrim,bscrim
+10/26/2022,BSAIS,Female,18.0,dysmenorrhea,bsais,bsais
+10/26/2022,BSEntrep,Female,,dizziness,bsentrep,bsentrep
+10/26/2022,BSE,Female,18.0,dizziness,bse,bse
+10/26/2022,BSE,Female,17.0,"hyperventilation,shortness of breath",bse,bse
+10/26/2022,BSE,Male,,fever,bse,bse
+10/27/2022,BAELS,Female,20.0,fever,baels,baels
+10/27/2022,STAFF,Male,,headache,staff,staff
+10/27/2022,BSENT,Female,19.0,dysmenorrhea,bsent,bsentrep
+10/22/2022,BEED,Female,18.0,cough,beed,beed
+10/22/2022,BSCRIM,Female,18.0,dizziness,bscrim,bscrim
+10/22/2022,BAPOD,Female,20.0,fever,bapod,bapos
+10/24/2022,BEED,Female,21.0,pimple,beed,beed
+10/24/2022,BEED,Male,19.0,dizziness,beed,beed
+10/24/2022,BSCRIM,Female,18.0,epigastric pain,bscrim,bscrim
+10/24/2022,BSEntrep,Female,19.0,"dizziness,dysmenorrhea",bsentrep,bsentrep
+10/25/2022,BSLM,Male,19.0,lbm,bslm,bslm
+10/18/2022,BSE,Female,19.0,dysmenorrhea,bse,bse
+10/18/2022,BSCRIM,Female,21.0,headache,bscrim,bscrim
+10/18/2022,BSE,Male,19.0,pimple,bse,bse
+10/18/2022,BEED,Female,18.0,dysmenorrhea,beed,beed
+10/18/2022,BSBA,Female,18.0,dysmenorrhea,bsba,bsba
+10/18/2022,BSBA,Female,18.0,cough,bsba,bsba
+10/18/2022,BSBA,Female,18.0,"body pain,cold,fever",bsba,bsba
+10/19/2022,BAT ,Male,18.0,stomach ache,bat,bat
+10/19/2022,BSIT,Male,18.0,stomach ache,bsit,bsit
+10/19/2022,BSTM,Female,18.0,uti,bstm,bstm
+10/19/2022,BSBA,Male,21.0,asthma,bsba,bsba
+10/20/2022,BSHM,Female,19.0,"dizziness,dysmenorrhea",bshm,bshm
+10/20/2022,BSIT,Female,17.0,dizziness,bsit,bsit
+10/13/2022,BEED,Female,19.0,stomach ache,beed,beed
+10/13/2022,BSEntrep,Female,22.0,"dizziness,dysmenorrhea",bsentrep,bsentrep
+10/13/2022,BSEntrep,Female,17.0,malaise,bsentrep,bsentrep
+10/13/2022,BSITEC-Elc,Male,20.0,"cold,fever",bsitecelc,bsitelectech
+10/13/2022,BSBA,Male,21.0,hyperacidity,bsba,bsba
+10/13/2022,BSCS,Male,19.0,"hyperacidity,stomach ache",bscs,bscs
+10/13/2022,BSLM,Male,18.0,dizziness,bslm,bslm
+10/17/2022,BSED,Female,20.0,stomach ache,bsed,bse
+10/18/2022,BSENT,Female,19.0,lbm,bsent,bsentrep
+10/18/2022,BAT,Female,19.0,hyperacidity,bat,bat
+10/18/2022,BAT,Female,20.0,dizziness,bat,bat
+10/18/2022,BSLM,Male,18.0,lbm,bslm,bslm
+10/10/2022,BSCRIM,Female,18.0,headache,bscrim,bscrim
+10/11/2022,BSED,Female,18.0,cough,bsed,bse
+10/11/2022,BSTM,Female,19.0,itchy throat,bstm,bstm
+10/11/2022,BAT,Male,21.0,punctured wound,bat,bat
+10/11/2022,BSITECH-ELX,Male,22.0,asthma,bsitechelx,bsitelectech
+10/03/2022,BSLM,Male,18.0,asthma,bslm,bslm
+10/05/2022,BAT,Male,19.0,cough,bat,bat
+10/06/2022,BEED,Female,17.0,headache,beed,beed
+09/29/2022,BSIT,Female,19.0,stomach ache,bsit,bsit
+09/28/2022,BSCRIM,Female,18.0,earache,bscrim,bscrim
+09/28/2022,BSCRIM,Female,19.0,"hyperacidity,stomach ache",bscrim,bscrim
+09/28/2022,BSLM,Female,19.0,asthma,bslm,bslm
+09/28/2022,BSCRIM,Female,19.0,cough,bscrim,bscrim
+09/27/2022,BSE,Female,19.0,lbm,bse,bse
+09/21/2022,BSHM,Male,18.0,headache,bshm,bshm
+09/20/2022,BEED,Female,20.0,nosebleed,beed,beed
+09/20/2022,BSE,Female,20.0,hyperacidity,bse,bse
+09/14/2022,BAELS,Female,21.0,headache,baels,baels
+09/14/2022,BSIT,Female,33.0,asthma,bsit,bsit
+09/14/2022,BSLM,Female,20.0,malaise,bslm,bslm
+09/14/2022,BSCRIM,Male,18.0,hyperventilation,bscrim,bscrim
+09/14/2022,BSLM,Male,18.0,stomach ache,bslm,bslm
+09/14/2022,BSBA,Female,21.0,allergy,bsba,bsba
+09/14/2022,BSCRIM,Male,20.0,fever,bscrim,bscrim
+11/10/2022,BSTM,Female,18.0,stomach ache,bstm,bstm
+11/10/2022,BAT,Female,20.0,headache,bat,bat
+11/10/2022,BSHM,Male,18.0,stitches,bshm,bshm
+11/10/2022,BSCS,Male,18.0,abrasion,bscs,bscs
+11/10/2022,BSCS,Female,19.0,cold,bscs,bscs
+11/10/2022,BSLM,Female,19.0,lbm,bslm,bslm
+11/10/2022,BS-AUTO,Male,18.0,dizziness,bsauto,bsitautotech
+11/12/2022,BSE,Female,18.0,dizziness,bse,bse
+11/14/2022,BSLM,Female,20.0,hyperventilation,bslm,bslm
+11/14/2022,BSBA,Female,18.0,itchy throat,bsba,bsba
+11/14/2022,BSLM,Male,19.0,epigastric pain,bslm,bslm
+11/14/2022,BAPOS,Male,20.0,hyperacidity,bapos,bapos
+11/14/2022,BAPOS,Female,20.0,lbm,bapos,bapos
+11/14/2022,BSIT,Female,20.0,infection,bsit,bsit
+11/14/2022,BSCRIM,Female,21.0,fever,bscrim,bscrim
+11/15/2022,BAPOS,Female,18.0,dysmenorrhea,bapos,bapos
+11/15/2022,BSHM,Male,,allergy,bshm,bshm
+12/06/2022,BSCRIM,Female,21.0,dysmenorrhea,bscrim,bscrim
+12/07/2022,BSLM,Male,18.0,"cold,cough",bslm,bslm
+12/07/2022,BSIT,Female,25.0,infection,bsit,bsit
+12/07/2022,BSCS,Female,19.0,headache,bscs,bscs
+12/14/2022,BSIT,Male,20.0,cold,bsit,bsit
+12/14/2022,BAELS,Male,18.0,cold,baels,baels
+12/14/2022,,Male,18.0,diarrhea,,
+01/03/2023,BSE,Female,19.0,fever,bse,bse
+01/03/2023,BAPOS,Female,22.0,asthma,bapos,bapos
+01/04/2023,BSMA,Female,20.0,cold,bsma,bsma
+01/04/2023,BSLM,Male,18.0,fever,bslm,bslm
+01/04/2023,BSLM ,Female,20.0,"cold,cough",bslm,bslm
+01/04/2023,BSBA,Female,21.0,body pain,bsba,bsba
+01/04/2023,,Female,,hyperacidity,,
+01/03/2023,PS,Male,20.0,"cold,cough",ps,others
+01/03/2023,BAELS,Male,21.0,cold,baels,baels
+01/03/2023,BSCS,Male,20.0,"body pain,cold",bscs,bscs
+01/14/2023,BSCRIM,Female,19.0,dizziness,bscrim,bscrim
+01/16/2023,BSIT,Female,23.0,malaise,bsit,bsit
+01/16/2023,BAPOS,Female,20.0,cold,bapos,bapos
+01/16/2023,BSLM,Male,,lbm,bslm,bslm
+01/16/2023,BSCRIM,Male,,malaise,bscrim,bscrim
+01/17/2023,BSIT,Female,,cough,bsit,bsit
+01/17/2023,BSE,Female,,stomach ache,bse,bse
+01/17/2023,BSE,Female,,sprain,bse,bse
+01/17/2023,BAELS,Female,,infection,baels,baels
+01/17/2023,BSENT,Male,,cold,bsent,bsentrep
+01/30/2023,BSCRIM,Female,21.0,fever,bscrim,bscrim
+03/16/2023,,Male,,cold,,
+03/16/2023,BSIT,Female,21.0,dizziness,bsit,bsit
+03/16/2023,AB-E,Female,22.0,lbm,abe,others
+03/16/2023,BAPOS,Male,18.0,headache,bapos,bapos
+03/16/2023,BSMA,Female,21.0,cough,bsma,bsma
+03/16/2023,SAS,Male,,cough,sas,staff
+03/29/2023,,Male,,cough,,
+03/29/2023,,Female,,sprain,,
+03/29/2023,,Female,,sprain,,
+03/30/2023,,Male,,body pain,,
+03/30/2023,,Male,,body pain,,
+03/30/2023,,Female,,sprain,,
+03/30/2023,,Male,,body pain,,
+03/29/2023,,Female,,allergy,,
+03/29/2023,,Female,,headache,,
+03/29/2023,,Female,,hematoma,,
+03/29/2023,,Female,,allergy,,
+03/29/2023,,Female,,allergy,,
+03/29/2023,,Female,,sprain,,
+03/29/2023,,Male,,sprain,,
+03/29/2023,,Male,,sprain,,
+03/29/2023,,Female,,headache,,
+03/29/2023,,Female,,cough,,
+03/27/2023,,Female,20.0,skin allergy,,
+03/27/2023,,Female,19.0,body pain,,
+03/27/2023,,Male,19.0,headache,,
+03/27/2023,,Male,18.0,lbm,,
+03/27/2023,,Female,19.0,lbm,,
+03/27/2023,,Male,25.0,lbm,,
+03/27/2023,,Female,,lbm,,
+03/28/2023,,Male,37.0,headache,,
+03/28/2023,,Female,,lbm,,
+03/28/2023,,Male,,lbm,,
+03/28/2023,,Male,,body pain,,
+04/12/2023,IAT,Female,21.0,headache,iat,others
+0417/2023,BEED,Male,21.0,cut,beed,beed
+04/17/2023,BAT,Female,20.0,body pain,bat,bat
+04/24/2023,BSCRIM,Male,20.0,stomach ache,bscrim,bscrim
+04/25/2023,BSCRIM,Female,20.0,headache,bscrim,bscrim
+04/25/2023,BSBA,Female,19.0,nosebleed,bsba,bsba
+04/25/2023,BAT,Male,20.0,cold,bat,bat
+04/26/2023,BAPOS,Female,19.0,cold,bapos,bapos
+04/26/2023,,Female,,wound,,
+04/27/2023,BAT,Male,20.0,wound,bat,bat
+05/02/2023,BAT,Male,25.0,cough,bat,bat
+05/02/2023,BAPOS,Female,19.0,body pain,bapos,bapos
+05/02/2023,BAPOS,Female,20.0,body pain,bapos,bapos
+05/02/2023,BSMA,Female,21.0,hyperacidity,bsma,bsma
+05/03/2023,BSEntrep,Female,22.0,"cramps,dysmenorrhea",bsentrep,bsentrep
+01/03/2024,HR Management,Female,22.0,"cold,cough,dizziness",hr management,staff
+01/05/2024,OSAS,Male,24.0,"cold,cough",osas,staff
+01/08/2024,PS,Male,28.0,"auri,cold,cough",ps,others
+01/08/2024,Security,Male,36.0,wound,security,staff
+01/08/2024,BSBA,Female,20.0,"cold,cough",bsba,bsba
+01/08/2024,BEED,Male,19.0,headache,beed,beed
+01/08/2024,BSENT,Female,19.0,hyperacidity,bsent,bsentrep
+01/08/2024,CBM,Female,34.0,lbm,cbm,staff
+01/08/2024,CBM,Male,38.0,cold,cbm,staff
+01/08/2024,CBM,Female,46.0,headache,cbm,staff
+01/08/2024,SAS,Female,50.0,headache,sas,staff
+01/08/2024,SAS,Female,29.0,cold,sas,staff
+01/08/2024,CBM,Female,31.0,lbm,cbm,staff
+01/08/2024,CBM-HM,Female,33.0,cold,cbmhm,staff
+01/08/2024,CBM-HM,Female,33.0,cold,cbmhm,staff
+01/08/2024,BSLM,Male,20.0,skin allergy,bslm,bslm
+01/08/2024,MIS,Female,,cough,mis,staff
+01/08/2024,SAS,Male,32.0,cough,sas,staff
+01/08/2024,ENTREP,Female,19.0,cold,entrep,bsentrep
+01/08/2024,ENTREP,Male,22.0,cold,entrep,bsentrep
+01/08/2024,Planning,Female,,dizziness,planning,others
+01/08/2024,BSLM,Female,20.0,headache,bslm,bslm
+01/09/2024,BSCRIM,Female,20.0,malaise,bscrim,bscrim
+01/09/2024,BSAIS,Male,21.0,"dizziness,fever",bsais,bsais
+01/09/2024,BSHM,Male,21.0,asthma,bshm,bshm
+01/09/2024,BSCRIM,Female,20.0,abrasion,bscrim,bscrim
+01/09/2024,BSLM,Female,19.0,lbm,bslm,bslm
+01/09/2024,SAS,Female,,abrasion,sas,staff
+01/09/2024,BSE,Female,20.0,auri,bse,bse
+01/09/2024,Procurement,Female,26.0,"cold,headache,runny nose",procurement,staff
+01/09/2024,P&D,Female,38.0,"allergy,runny nose",pd,staff
+01/10/2024,Registrar,Female,42.0,infection,registrar,staff
+01/10/2024,BAELS,Female,23.0,headache,baels,baels
+01/10/2024,BSCRIM,Male,19.0,dizziness,bscrim,bscrim
+01/10/2024,BSLM,Female,21.0,asthma,bslm,bslm
+01/10/2024,BSIT,Male,23.0,headache,bsit,bsit
+01/10/2024,BSBA,Male,20.0,auri,bsba,bsba
+01/10/2024,BSE-SCI,Female,20.0,"cold,cough,fever",bsesci,bse
+01/10/2024,Registrar,Female,29.0,cough,registrar,staff
+01/10/2024,BEED,Female,20.0,cold,beed,beed
+01/10/2024,BSBA,Female,19.0,stomach ache,bsba,bsba
+01/11/2024,BS-AUTO,Male,20.0,headache,bsauto,bsitautotech
+01/11/2024,BSIT,Male,19.0,auri,bsit,bsit
+01/11/2024,BSCRIM,Female,20.0,"body pain,cold,fever,hyperacidity,vomiting",bscrim,bscrim
+01/11/2024,BSED,Male,21.0,hyperacidity,bsed,bse
+01/11/2024,BAELS,Female,23.0,stomach ache,baels,baels
+01/11/2024,BAPOS,Female,20.0,"body pain,cold,cough,fever",bapos,bapos
+01/11/2024,BEED,Female,19.0,dysmenorrhea,beed,beed
+01/11/2024,CED,Male,,hyperacidity,ced,ced
+01/11/2024,CED,Female,,body pain,ced,ced
+01/11/2024,CED,Female,20.0,dysmenorrhea,ced,ced
+01/11/2024,BAPOS,Male,20.0,cough,bapos,bapos
+01/11/2024,BAPOS,Male,42.0,cough,bapos,bapos
+01/11/2024,Registrar,Female,,cough,registrar,staff
+01/11/2024,BSTM,Female,18.0,auri,bstm,bstm
+01/11/2024,BSTM,Female,18.0,auri,bstm,bstm
+01/15/2024,BSIT,Female,23.0,cough,bsit,bsit
+01/16/2024,BSE,Female,19.0,hyperventilation,bse,bse
+01/16/2024,BAELS,Female,23.0,uti,baels,baels
+01/16/2024,BSAIS,Female,21.0,"cold,cough",bsais,bsais
+01/16/2024,BSIT,Female,22.0,cold,bsit,bsit
+01/16/2024,CSO,Male,49.0,uti,cso,staff
+01/16/2024,BSIT,Male,19.0,headache,bsit,bsit
+01/16/2024,BSCRIM,Female,20.0,infection,bscrim,bscrim
+01/16/2024,CCSICT,Male,20.0,hypertension,ccsict,ccsict
+01/16/2024,BSBA,Male,18.0,headache,bsba,bsba
+01/16/2024,CSO,Male,31.0,headache,cso,staff
+01/17/2024,FIC,Female,,"cold,cough,fever",fic,staff
+01/17/2024,FIC,Female,,headache,fic,staff
+01/17/2024,BSTM,Male,21.0,cough,bstm,bstm
+01/17/2024,BSTM,Female,21.0,cough,bstm,bstm
+01/17/2024,Faculty,Female,29.0,cough,faculty,staff
+01/17/2024,Faculty,Male,31.0,"cold,cough",faculty,staff
+01/17/2024,CED,Male,,"dizziness,headache",ced,ced
+01/17/2024,BSIT,Female,20.0,headache,bsit,bsit
+01/17/2024,BSTM,Female,18.0,"cold,cough,infection",bstm,bstm
+01/17/2024,CCSICT,Female,28.0,cold,ccsict,ccsict
+01/17/2024,BSCRIM,Male,21.0,"cold,cough",bscrim,bscrim
+01/17/2024,BSENT,Female,18.0,hyperventilation,bsent,bsentrep
+01/17/2024,BSCRIM,Male,18.0,punctured wound,bscrim,bscrim
+01/17/2024,BSCRIM,Female,18.0,hematoma,bscrim,bscrim
+01/18/2024,BSE,Female,18.0,stomach ache,bse,bse
+01/18/2024,SAS,Female,,body pain,sas,staff
+01/18/2024,BSIT,Female,,"headache,migraine",bsit,bsit
+01/18/2024,BAELS,Female,,"dizziness,headache",baels,baels
+01/18/2024,BSE,Female,,auri,bse,bse
+01/18/2024,BEED,Female,,"allergy,skin allergy",beed,beed
+01/18/2024,BSCS,Female,18.0,headache,bscs,bscs
+01/18/2024,BSCRIM,Female,19.0,headache,bscrim,bscrim
+01/18/2024,BSE,Male,,cold,bse,bse
+01/18/2024,BSE,Female,20.0,"cold,headache",bse,bse
+01/18/2024,BSE,Female,20.0,"cold,itchy throat",bse,bse
+01/18/2024,BEED,Female,19.0,headache,beed,beed
+01/18/2024,BSCRIM,Male,18.0,infection,bscrim,bscrim
+01/22/2024,BSCRIM,Female,21.0,malaise,bscrim,bscrim
+01/22/2024,BSCRIM,Female,18.0,"auri,cough",bscrim,bscrim
+01/22/2024,BSCRIM,Female,19.0,"auri,cough,fever",bscrim,bscrim
+01/22/2024,BSCRIM,Female,20.0,cough,bscrim,bscrim
+01/22/2024,BSCRIM,Female,20.0,cough,bscrim,bscrim
+01/22/2024,Clinic,Male,,dizziness,clinic,staff
+01/22/2024,BEED,Female,,dysmenorrhea,beed,beed
+01/22/2024,BAS,Male,19.0,"dizziness,headache",bas,bsba
+01/23/2024,BSLM,Male,21.0,auri,bslm,bslm
+01/23/2024,BSED,Female,18.0,auri,bsed,bse
+01/23/2024,BSIT,Male,20.0,body pain,bsit,bsit
+01/23/2024,BSENT,Female,19.0,cut,bsent,bsentrep
+01/23/2024,BSBA,Female,21.0,cut,bsba,bsba
+01/23/2024,,Female,,"cold,cough",,
+01/25/2024,EO Sec,Female,,cold,eo sec,staff
+01/25/2024,Library,Female,,cold,library,staff
+01/25/2024,Extension,Male,,cold,extension,staff
+01/25/2024,BAC,Female,,cold,bac,others
+01/25/2024,QA,Male,,cold,qa,staff
+01/25/2024,HR,Female,,cold,hr,staff
+01/25/2024,QA,Female,,cold,qa,staff
+01/25/2024,QA,Female,,cold,qa,staff
+01/25/2024,BSENT,Female,19.0,headache,bsent,bsentrep
+01/25/2024,BSENT,Female,19.0,"epigastric pain,stomach ache",bsent,bsentrep
+01/25/2024,BSCRIM,Female,18.0,dysmenorrhea,bscrim,bscrim
+01/29/2024,BSIT,Male,,auri,bsit,bsit
+01/29/2024,BSIT,Male,,infection,bsit,bsit
+01/29/2024,BSE,Female,19.0,hyperacidity,bse,bse
+01/29/2024,SAS,Male,40.0,headache,sas,staff
+01/29/2024,BSITech Auto,Male,21.0,dizziness,bsitech auto,bsitautotech
+01/29/2024,CSO,Female,38.0,"cold,cough",cso,staff
+01/29/2024,BSCRIM,Male,19.0,lbm,bscrim,bscrim
+01/29/2024,Supply,Female,,auri,supply,staff
+01/29/2024,CCSICT,Male,,fever,ccsict,ccsict
+01/29/2024,Accounting,Female,,dizziness,accounting,bsba
+01/29/2024,RSD,Female,,runny nose,rsd,others
+01/30/2024,AA,Female,,cough,aa,others
+01/30/2024,MFS,Female,,lbm,mfs,others
+01/30/2024,BAC,Male,,headache,bac,others
+01/30/2024,CED,Male,,hyperacidity,ced,ced
+01/30/2024,CSO,Female,,lbm,cso,staff
+01/30/2024,Security,Male,,headache,security,staff
+01/31/2024,BSCRIM,Female,21.0,auri,bscrim,bscrim
+01/22/2024,BSBA,Female,22.0,uti,bsba,bsba
+01/22/2024,BSBA,Female,22.0,uti,bsba,bsba
+01/22/2024,BSBA,Female,22.0,uti,bsba,bsba
+01/29/2024,,Female,21.0,uti,,
+01/29/2024,,Female,21.0,infection,,
+02/06/2024,Cashier,Female,,cold,cashier,staff
+02/06/2024,Cashier,Female,,cold,cashier,staff
+02/06/2024,Scholarship,Male,,"cold,cough",scholarship,others
+02/06/2024,Accounting,Female,,cold,accounting,bsba
+02/06/2024,Security,Female,,cold,security,staff
+02/06/2024,Registrar,Female,,menstrual cramps,registrar,staff
+02/06/2024,RGO,Male,,cold,rgo,staff
+02/06/2024,RGO,Female,,cold,rgo,staff
+02/06/2024,CBAO,Female,,cold,cbao,staff
+03/06/2024,BSE,Female,,sprain,bse,bse
+03/21/2024,BSENT,Female,21.0,uti,bsent,bsentrep
+03/21/2024,BAT,Female,28.0,allergy,bat,bat
+03/12/2024,BSCRIM,Female,21.0,dizziness,bscrim,bscrim
+03/20/2024,BEED,Female,20.0,headache,beed,beed
+03/05/2024,BSCRIM,Female,20.0,"asthma,cough,fever,runny nose",bscrim,bscrim
+03/05/2024,BSCRIM,Female,21.0,"cold,cough,dizziness",bscrim,bscrim
+03/05/2024,BS-EMC,Female,18.0,headache,bsemc,bsemc
+03/06/2024,,Female,,"cold,cough",,
+04/23/2024,BEED,Female,20.0,headache,beed,beed
+04/24/2024,Registrar,Female,29.0,dysmenorrhea,registrar,staff
+04/24/2024,BSCRIM,Male,19.0,abrasion,bscrim,bscrim
+04/24/2024,BS-AUTO,Male,20.0,cough,bsauto,bsitautotech
+05/30/2024,BSCRIM,Male,18.0,hyperacidity,bscrim,bscrim
+05/30/2024,BEED,Female,18.0,abrasion,beed,beed
+05/30/2024,BSCRIM,Male,18.0,body pain,bscrim,bscrim
+05/30/2024,BSCRIM,Male,18.0,body pain,bscrim,bscrim
+05/30/2024,BSCRIM,Female,19.0,diarrhea,bscrim,bscrim
+05/30/2024,BSIT,Male,,cold,bsit,bsit
+05/31/2024,BSCRIM,Female,19.0,dysmenorrhea,bscrim,bscrim
+05/30/2024,BSCRIM,Female,19.0,infection,bscrim,bscrim
+05/30/2024,BSCRIM,Female,19.0,lbm,bscrim,bscrim
+04/25/2024,,Male,,body pain,,
+05/05/2024,Guidance,Female,,headache,guidance,staff
+05/09/2024,BSIT,Female,,headache,bsit,bsit
+05/09/2024,BSHM,Female,,auri,bshm,bshm
+05/10/2024,BSCRIM,Male,,"body pain,cold",bscrim,bscrim
+05/13/2024,SAS,Female,,fever,sas,staff
+05/13/2024,Faculty,Male,,cut,faculty,staff
+05/13/2024,BSBA,Female,18.0,auri,bsba,bsba
+05/21/2024,BSIT,Male,18.0,sprain,bsit,bsit
+06/20/2024,BSLM,Female,21.0,"dizziness,fever,malaise",bslm,bslm
+06/20/2024,BSCRIM,Male,20.0,hyperacidity,bscrim,bscrim
+06/03/2024,BAPOS,Male,,"cold,headache",bapos,bapos
+06/03/2024,AFS,Female,28.0,cold,afs,staff
+06/03/2024,Accounting,female,25.0,toothache,accounting,bsba
+06/03/2024,BSTM,Male,19.0,epigastric pain,bstm,bstm
+06/03/2024,BS-EMC,Female,22.0,dysmenorrhea,bsemc,bsemc
+06/03/2024,BEED,Female,18.0,hematoma,beed,beed
+06/03/2024,BSCRIM,Female,18.0,lbm,bscrim,bscrim
+06/07/2024,BSIT,Female,30.0,hyperacidity,bsit,bsit
+06/10/2024,CCSICT,Female,,body pain,ccsict,ccsict
+06/10/2024,BAPOS,Female,,toothache,bapos,bapos
+06/10/2024,BAPOS,Female,,body pain,bapos,bapos
+06/10/2024,BSE,Female,21.0,body pain,bse,bse
+06/10/2024,BEED,Female,21.0,dizziness,beed,beed
+06/10/2024,BSHM,Male,,stomach ache,bshm,bshm
+06/10/2024,BAPOS,Male,21.0,"headache,lbm,stomach ache",bapos,bapos
+06/11/2024,BSAM,Male,19.0,hypertension,bsam,bsma
+06/10/2024,BSHM,Male,22.0,hematoma,bshm,bshm
+06/04/2024,BSED,Female,23.0,dizziness,bsed,bse
+06/04/2024,CED,Female,,auri,ced,ced
+06/04/2024,BS-EMC,Female,22.0,dysmenorrhea,bsemc,bsemc
+06/04/2024,BSIT,Female,23.0,body pain,bsit,bsit
+06/04/2024,BSIT,Female,,dysmenorrhea,bsit,bsit
+06/05/2024,BSIT,Female,22.0,dizziness,bsit,bsit
+06/05/2024,BSIT,Male,22.0,headache,bsit,bsit
+06/05/2024,BSTM,Female,19.0,dizziness,bstm,bstm
+06/05/2024,BSLM,Female,18.0,"cough,headache",bslm,bslm
+06/05/2024,BSLM,Female,20.0,headache,bslm,bslm
+06/05/2024,BSENT,Male,,"cough,headache",bsent,bsentrep
+06/05/2024,BSIT,Female,23.0,lbm,bsit,bsit
+06/05/2024,BAELS,Male,20.0,headache,baels,baels
+06/05/2024,BAELS,Female,21.0,headache,baels,baels
+06/05/2024,BSIT,Female,23.0,hyperacidity,bsit,bsit
+05/22/2024,BSBA,Female,21.0,auri,bsba,bsba
+05/22/2024,BSE,Female,20.0,"cold,cough",bse,bse
+05/24/2024,BSCRIM,Female,19.0,headache,bscrim,bscrim
+05/24/2024,BSCRIM,Female,19.0,malaise,bscrim,bscrim
+05/27/2024,BEED,Female,24.0,lbm,beed,beed
+05/27/2024,BSBA,Female,21.0,dizziness,bsba,bsba
+05/27/2024,BSIT,Female,20.0,hematoma,bsit,bsit
+05/27/2024,BSBA,Female,20.0,"cold,infection,skin allergy",bsba,bsba
+05/27/2024,BSBA,Female,23.0,"cold,cough",bsba,bsba
+05/27/2024,BSENT,Male,19.0,lbm,bsent,bsentrep
+05/27/2024,BS-AUTO,Male,21.0,cut,bsauto,bsitautotech
+05/28/2024,BSBA,Female,21.0,"dizziness,headache,malaise",bsba,bsba
+06/13/2024,BSENT,Female,23.0,lbm,bsent,bsentrep
+06/13/2024,BSHM,Female,19.0,runny nose,bshm,bshm
+06/13/2024,BSHM,Female,19.0,body pain,bshm,bshm
+06/13/2024,BSCRIM,Female,19.0,runny nose,bscrim,bscrim
+06/13/2024,BSED ,Female,18.0,lbm,bsed,bse
+06/13/2024,BSCS,Female,18.0,headache,bscs,bscs
+06/12/2024,BSIT,Female,23.0,body pain,bsit,bsit
+06/18/2024,BSCRIM,Female,22.0,"cough,fever",bscrim,bscrim
+06/18/2024,BSBA,Female,20.0,auri,bsba,bsba
+06/18/2024,BAPOS,Female,20.0,dysmenorrhea,bapos,bapos
+06/03/2024,BSENT,Male,23.0,auri,bsent,bsentrep
+06/04/2024,BSCS,,,infection,bscs,bscs
+05/28/2024,BSMA,Female,22.0,cough,bsma,bsma
+05/28/2024,BSBA,Female,19.0,sprain,bsba,bsba
+05/29/2024,Registrar,Female,33.0,"lbm,stomach ache",registrar,staff
+05/29/2024,BSCRIM,Male,18.0,auri,bscrim,bscrim
+08/07/2024,BSCS,Female,21.0,"cold,dizziness",bscs,bscs
+08/12/2024,BSCRIM,Female,19.0,auri,bscrim,bscrim
+06/13/2024,BSENT,Female,23.0,lbm,bsent,bsentrep
+08/14/2024,BSIT,Female,17.0,"abrasion,dizziness",bsit,bsit
+08/14/2024,BSIT,Female,18.0,"cold,fever",bsit,bsit
+08/14/2024,BAPOS,Female,21.0,allergy,bapos,bapos
+08/15/2024,BSIT,Male,18.0,fever,bsit,bsit
+08/15/2024,BS-Entrep,Female,18.0,"cold,cough,dizziness",bsentrep,bsentrep
+08/15/2024,BSIT,Male,21.0,cough,bsit,bsit
+08/15/2024,BSIT,Female,18.0,cough,bsit,bsit
+08/15/2024,BSED,Female,19.0,hyperacidity,bsed,bse
+08/19/2024,BEED,Female,20.0,lbm,beed,beed
+08/19/2024,BAELS,Female,21.0,"epigastric pain,hyperacidity",baels,baels
+08/19/2024,BAELS,Female,19.0,hyperacidity,baels,baels
+08/19/2024,BEED,Female,20.0,epigastric pain,beed,beed
+08/19/2024,BSHM,Female,19.0,hematoma,bshm,bshm
+08/19/2024,BSBA,Female,20.0,auri,bsba,bsba
+08/19/2024,BEED,Male,20.0,"cold,headache",beed,beed
+08/19/2024,BSIT,Male,,lbm,bsit,bsit
+08/20/2024,BSE,Female,19.0,"lbm,stomach ache",bse,bse
+08/20/2024,BEED,Female,21.0,auri,beed,beed
+08/20/2024,BSCRIM,Female,19.0,dysmenorrhea,bscrim,bscrim
+08/20/2024,BSHM,Female,19.0,"auri,cold",bshm,bshm
+08/20/2024,BSLM,Male,,dizziness,bslm,bslm
+08/20/2024,BEED,Female,20.0,hyperacidity,beed,beed
+08/12/2024,BSC,Female,20.0,dizziness,bsc,bscs
+08/12/2024,BSCRIM,Male,20.0,headache,bscrim,bscrim
+08/12/2024,BAT,Male,21.0,headache,bat,bat
+08/12/2024,BSIT,Male,18.0,abrasion,bsit,bsit
+08/13/2024,BSE,Female,20.0,lbm,bse,bse
+08/13/2024,,Male,,cold,,
+08/13/2024,,Male,,cold,,
+08/13/2024,BSHM,Female,19.0,headache,bshm,bshm
+08/14/2024,BSHM,Male,18.0,stomach ache,bshm,bshm
+08/14/2024,BSHM,Male,19.0,stomach ache,bshm,bshm
+08/20/2024,BSENT,Female,18.0,cold,bsent,bsentrep
+08/20/2024,BEED,,20.0,vomiting,beed,beed
+08/20/2024,BSLM,Male,19.0,auri,bslm,bslm
+08/20/2024,BS-EMC,Female,18.0,dysmenorrhea,bsemc,bsemc
+08/28/2024,BSENT,Female,18.0,dysmenorrhea,bsent,bsentrep
+08/28/2024,BSCRIM,Female,21.0,dysmenorrhea,bscrim,bscrim
+08/22/2024,BEED,Female,20.0,body pain,beed,beed
+08/22/2024,BSENT,Female,19.0,menstrual cramps,bsent,bsentrep
+08/20/2024,BSCS,Male,23.0,dizziness,bscs,bscs
+08/21/2024,BAT,Male,21.0,allergy,bat,bat
+08/21/2024,BSENT,Female,17.0,malaise,bsent,bsentrep
+08/21/2024,BS-EMC,Female,18.0,skin allergy,bsemc,bsemc
+08/21/2024,BS-EMC,Male,20.0,cough,bsemc,bsemc
+08/25/2024,BSCRIM,Male,,malaise,bscrim,bscrim
+08/25/2024,BSCRIM,Male,,"cold,cough",bscrim,bscrim
+08/25/2024,BSCRIM,Male,,"cold,cough",bscrim,bscrim
+08/25/2024,BSCRIM,Male,,"cold,cough",bscrim,bscrim
+08/25/2024,BSCRIM,Male,,"cold,cough",bscrim,bscrim
+08/25/2024,BSCRIM,Male,,"cold,cough",bscrim,bscrim
+08/25/2024,BSCRIM,Male,,"cold,cough",bscrim,bscrim
+08/25/2024,BSCRIM,Male,,"cold,cough",bscrim,bscrim
+08/25/2024,BSCRIM,Male,,"cold,cough",bscrim,bscrim
+08/25/2024,BSCRIM,Male,,"cold,cough",bscrim,bscrim
+08/25/2024,BSCRIM,Male,,"cold,cough",bscrim,bscrim
+08/25/2024,BSCRIM,Male,,"cold,cough",bscrim,bscrim
+08/25/2024,BSCRIM,Male,,"cold,cough",bscrim,bscrim
+08/25/2024,BSCRIM,Male,,"cold,cough",bscrim,bscrim
+08/25/2024,BSCRIM,Male,,"cold,cough",bscrim,bscrim
+08/25/2024,BSCRIM,Male,,"cold,cough",bscrim,bscrim
+08/25/2024,BSCRIM,Male,,"cold,cough",bscrim,bscrim
+08/25/2024,BSCRIM,Male,,"cold,cough",bscrim,bscrim
+08/25/2024,BSCRIM,Male,,"cold,cough",bscrim,bscrim
+08/25/2024,BSCRIM,Male,,"cold,cough",bscrim,bscrim
+08/25/2024,BSCRIM,Male,,"cold,cough",bscrim,bscrim
+08/25/2024,BSCRIM,Male,,"cold,cough",bscrim,bscrim
+08/25/2024,BSCRIM,Male,,"cold,cough",bscrim,bscrim
+08/25/2024,BSCRIM,Male,,"cold,cough",bscrim,bscrim
+08/25/2024,BSCRIM,Male,,"cold,cough",bscrim,bscrim
+08/25/2024,BSCRIM,Male,,"cold,cough",bscrim,bscrim
+08/25/2024,BSCRIM,Male,,"cold,cough",bscrim,bscrim
+08/25/2024,BSCRIM,Male,,"cold,cough",bscrim,bscrim
+08/25/2024,BSCRIM,Male,,"cold,cough",bscrim,bscrim
+08/25/2024,BSCRIM,Male,,"cold,cough",bscrim,bscrim
+08/25/2024,BSCRIM,Male,,"cold,cough",bscrim,bscrim
+08/25/2024,BSCRIM,Male,,"cold,cough",bscrim,bscrim
+08/25/2024,BSCRIM,Female,,"cold,cough",bscrim,bscrim
+08/25/2024,BSCRIM,Female,,"cold,cough",bscrim,bscrim
+09/11/2024,BSED,Female,21.0,cough,bsed,bse
+09/11/2024,BSIT,Female,,hyperventilation,bsit,bsit
+09/09/2024,BSED,Female,18.0,cold,bsed,bse
+09/09/2024,BSCRIM,Male,20.0,dizziness,bscrim,bscrim
+09/11/2024,BSEMC,Female,,stomach ache,bsemc,bsemc
+09/11/2024,BSBA,Female,,dysmenorrhea,bsba,bsba
+09/11/2024,BSE,Female,,hyperacidity,bse,bse
+09/12/2024,BSCRIM,Female,,infection,bscrim,bscrim
+09/12/2024,BAELS,Female,,headache,baels,baels
+09/12/2024,BSLM,Male,21.0,infection,bslm,bslm
+09/12/2024,BSE,Female,17.0,body pain,bse,bse
+09/12/2024,BSE,Female,20.0,headache,bse,bse
+09/12/2024,BSE,Female,,hyperventilation,bse,bse
+09/12/2024,BSE,Female,19.0,runny nose,bse,bse
+09/13/2024,BSAIS,Male,19.0,infection,bsais,bsais
+09/13/2024,BSAIS,Male,,infection,bsais,bsais
+09/13/2024,BEED,Female,,asthma,beed,beed
+09/13/2024,,Female,22.0,dizziness,,
+09/13/2024,,Female,21.0,hyperacidity,,
+09/16/2024,,Female,21.0,headache,,
+09/16/2024,,Female,23.0,cold,,
+09/16/2024,,Female,20.0,dysmenorrhea,,
+09/16/2024,BAPOS,Female,21.0,cough,bapos,bapos
+09/16/2024,BSMA,Female,17.0,skin allergy,bsma,bsma
+09/16/2024,BAELS,Female,21.0,body pain,baels,baels
+09/28/2024,BSENT,Male,18.0,cold,bsent,bsentrep
+09/30/2024,BAT,Female,18.0,cramps,bat,bat
+10/01/2024,BSCRIM,Female,20.0,headache,bscrim,bscrim
+10/01/2024,BSCRIM,Female,20.0,cold,bscrim,bscrim
+10/01/2024,BSCRIM,Female,21.0,allergy,bscrim,bscrim
+10/02/2024,BSE,Male,19.0,headache,bse,bse
+10/02/2024,BSITECH-AUTO,Female,23.0,headache,bsitechauto,bsitautotech
+10/07/2024,BSHM,Male,19.0,anxiety,bshm,bshm
+10/07/2024,BSIT,Male,18.0,cough,bsit,bsit
+10/07/2024,BSCRIM,Male,18.0,cold,bscrim,bscrim
+10/07/2024,BAT,Male,20.0,stitches,bat,bat
+10/07/2024,BSTM,Female,19.0,dizziness,bstm,bstm
+10/16/2024,BSHM,Male,18.0,stomach ache,bshm,bshm
+10/16/2024,BEED,Male,,headache,beed,beed
+10/16/2024,BEED,Female,17.0,cold,beed,beed
+10/16/2024,BSE,Male,,headache,bse,bse
+10/16/2024,BSENT,Female,19.0,headache,bsent,bsentrep
+10/18/2024,BSHM,Male,20.0,cough,bshm,bshm
+10/07/2024,BPED,Male,18.0,"cold,cough",bped,bped
+10/07/2024,BSITECH-AUTO,Male,21.0,"cold,cough",bsitechauto,bsitautotech
+10/07/2024,BSENT,Female,19.0,headache,bsent,bsentrep
+10/07/2024,BSIT,Female,17.0,stomach ache,bsit,bsit
+10/07/2024,BAELS,Male,18.0,cough,baels,baels
+10/07/2024,BSCRIM,Male,19.0,cough,bscrim,bscrim
+10/07/2024,BSBA,Male,18.0,lbm,bsba,bsba
+10/07/2024,BSIT,Male,19.0,malaise,bsit,bsit
+10/07/2024,BSMA,Female,20.0,sprain,bsma,bsma
+10/07/2024,BSMA,Female,20.0,skin allergy,bsma,bsma
+10/07/2024,BSLM,Female,20.0,cold,bslm,bslm
+10/09/2024,BAT,Male,20.0,fever,bat,bat
+10/09/2024,BSIT,Male,18.0,muscle strain,bsit,bsit
+10/09/2024,BSITECH-AUTO,Male,20.0,headache,bsitechauto,bsitautotech
+10/14/2024,BSLM,Female,19.0,cough,bslm,bslm
+10/14/2024,BSE,Female,18.0,headache,bse,bse
+10/14/2024,BSENT,Female,20.0,body pain,bsent,bsentrep
+10/14/2024,BSENT,Female,19.0,cough,bsent,bsentrep
+10/14/2024,BEED,Female,20.0,cough,beed,beed
+10/14/2024,BSITECH-AUTO,Male,21.0,cough,bsitechauto,bsitautotech
+10/14/2024,BEED,Female,20.0,dysmenorrhea,beed,beed
+10/14/2024,BEED,Male,18.0,cough,beed,beed
+10/14/2024,BEED,Female,18.0,cough,beed,beed
+10/14/2024,BSE,Female,18.0,itchy throat,bse,bse
+10/14/2024,BAPOS,Female,20.0,cough,bapos,bapos
+10/14/2024,BSHM,Male,19.0,headache,bshm,bshm
+10/15/2024,BSCRIM,Male,20.0,infection,bscrim,bscrim
+10/15/2024,BSCRIM,Female,21.0,cough,bscrim,bscrim
+10/15/2024,BAT,Female,20.0,cold,bat,bat
+10/15/2024,BSIT,Female,24.0,lbm,bsit,bsit
+10/15/2024,BSBA,Male,18.0,lbm,bsba,bsba
+10/17/2024,BSLM,Male,19.0,fever,bslm,bslm
+10/19/2024,BSIT,Male,18.0,lbm,bsit,bsit
+10/19/2024,BSLM,Female,18.0,dizziness,bslm,bslm
+10/19/2024,BSCRIM,Female,18.0,muscle strain,bscrim,bscrim
+10/21/2024,BSCS,Male,19.0,dizziness,bscs,bscs
+10/21/2024,BAPOS,Female,20.0,cough,bapos,bapos
+10/21/2024,BEED,Female,20.0,hyperacidity,beed,beed
+10/21/2024,PS,Male,18.0,wound,ps,others
+10/21/2024,BSLM,Male,21.0,infection,bslm,bslm
+10/21/2024,PS,Male,20.0,fever,ps,others
+10/21/2024,BSCS,Female,18.0,lbm,bscs,bscs
+10/21/2024,BEED,Female,20.0,hyperacidity,beed,beed
+10/22/2024,BSCRIM,Female,,hyperacidity,bscrim,bscrim
+10/22/2024,BEED,Female,18.0,hyperacidity,beed,beed
+10/22/2024,BAPOS,Male,20.0,headache,bapos,bapos
+10/22/2024,BSCRIM,Male,20.0,cold,bscrim,bscrim
+11/27/2024,BSCRIM,Female,20.0,stomach ache,bscrim,bscrim
+12/14/2024,BSITECH-ELX,Male,18.0,stomach ache,bsitechelx,bsitelectech
+12/14/2024,BSCRIM,Male,18.0,muscle strain,bscrim,bscrim
+12/14/2024,BSCRIM,Female,18.0,stomach ache,bscrim,bscrim
+12/14/2024,BSCS,Male,19.0,cold,bscs,bscs
+12/14/2024,BSCRIM,Male,18.0,cold,bscrim,bscrim
+12/14/2024,BSCRIM,Male,18.0,cough,bscrim,bscrim
+12/14/2024,BSCRIM,Female,20.0,infection,bscrim,bscrim
+12/14/2024,BSCRIM,Female,18.0,hyperacidity,bscrim,bscrim
+06/02/2025,SECURITY,Male,36.0,hypertension,security,staff
+06/02/2025,BSE,Male,21.0,headache,bse,bse
+06/03/2025,BSIT,Male,20.0,headache,bsit,bsit
+06/03/2025,MIS,Male,,headache,mis,staff
+06/04/2025,BSLM,Male,20.0,anxiety,bslm,bslm
+06/10/2025,SUPPLY,Female,40.0,body pain,supply,staff
+O7/02/2025,BSE,Female,,epigastric pain,bse,bse
+07/07/2025,BSED,Female,22.0,allergy,bsed,bse
+07/07/2025,BSTM,Female,18.0,allergy,bstm,bstm
+05/13/2025,BSCRIM,Female,20.0,hyperacidity,bscrim,bscrim
+05/23/2025,BSBA,Female,20.0,hyperacidity,bsba,bsba
+05/23/2025,BSED,Female,19.0,hyperacidity,bsed,bse
+05/26/2025,BSHM,Female,19.0,nosebleed,bshm,bshm
+05/26/2025,BEED,Female,18.0,dysmenorrhea,beed,beed
+05/26/2025,BAELS,Female,21.0,dysmenorrhea,baels,baels
+05/26/2025,BEED,Female,18.0,headache,beed,beed

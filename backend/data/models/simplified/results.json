@@ -1,0 +1,30 @@
+{
+  "timestamp": "2025-09-28T23:59:07.921485",
+  "features": [
+    "dow",
+    "visits_lag1",
+    "visits_lag7",
+    "visits_rollmean7",
+    "resp_lag1",
+    "resp_rollmean7",
+    "digest_lag1",
+    "digest_rollmean7",
+    "temp",
+    "humidity",
+    "rainfall",
+    "pm2_5"
+  ],
+  "n_features": 12,
+  "n_samples": 1021,
+  "zero_inflation": 0.8579823702252694,
+  "regressor_type": "Linear",
+  "metrics": {
+    "rmse": 1.5441343714799673,
+    "mae": 0.46697804778879914,
+    "r2": 0.5893888313546671,
+    "within_1": 0.8726738491674828,
+    "within_2": 0.9157688540646425,
+    "zero_accuracy": 0.95662100456621,
+    "nonzero_recall": 0.9862068965517241
+  }
+}

@@ -18,16 +18,27 @@ Including another URLconf
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from django.urls import path, include
+from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView, SpectacularRedocView
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path("admin-page/", admin.site.urls),
+    path("api/auth/", include('accounts.urls')),
+    path("api/patients/", include('patients.urls')), 
 
+    # Existing template-based routes
     path("", include("accounts.urls")),
-    path("inventory/", include("inventory.urls")),
     path("symptoms/", include("patients.urls")),
-    path("predictors/", include("predictors.urls")),
     path("captcha/", include("captcha.urls")),
 
+    # API Documentation
+    path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
+    path('api/docs/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
+    path('api/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
+
+
+    # Password reset views
     path('password-reset/', auth_views.PasswordResetView.as_view(
         template_name='registration/password_reset_form.html'
     ), name='password_reset'),
@@ -44,3 +55,7 @@ urlpatterns = [
         template_name='registration/password_reset_complete.html'
     ), name='password_reset_complete'),
 ]
+
+# Serve media files during development
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
