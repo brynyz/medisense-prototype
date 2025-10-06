@@ -125,9 +125,9 @@ def dashboard_stats(request):
 def get_user(request):
     try:
         user = request.user
-        print(f"Debug: User found: {user.username}")
-        print(f"Debug: User type: {type(user)}")
-        print(f"Debug: Has profile_image: {hasattr(user, 'profile_image')}")
+        # print(f"Debug: User found: {user.username}")
+        # print(f"Debug: User type: {type(user)}")
+        # print(f"Debug: Has profile_image: {hasattr(user, 'profile_image')}")
         
         # Build the response data safely
         response_data = {
@@ -168,7 +168,7 @@ def get_user(request):
 def update_user_profile(request):
     try:
         user = request.user
-        print(f"Debug: Updating profile for user: {user.username}")
+        # print(f"Debug: Updating profile for user: {user.username}")
         
         # Update basic fields
         user.first_name = request.data.get('first_name', user.first_name)
@@ -188,7 +188,7 @@ def update_user_profile(request):
             from .utils import validate_image_file, get_image_info, PROFILE_IMAGE_SETTINGS
             
             uploaded_image = request.FILES['profile_image']
-            print(f"Debug: Processing image: {uploaded_image.name} ({uploaded_image.size} bytes)")
+            # print(f"Debug: Processing image: {uploaded_image.name} ({uploaded_image.size} bytes)")
             
             # Validate the image first
             validation_result = validate_image_file(
@@ -204,7 +204,7 @@ def update_user_profile(request):
             
             # Get original image info
             original_info = validation_result['info']
-            print(f"Debug: Original image - {original_info['format']} {original_info['size']} {original_info['mode']}")
+            # print(f"Debug: Original image - {original_info['format']} {original_info['size']} {original_info['mode']}")
             
             # Delete old image if exists
             if user.profile_image:
@@ -212,7 +212,7 @@ def update_user_profile(request):
                     old_path = user.profile_image.path
                     if os.path.exists(old_path):
                         os.remove(old_path)
-                        print(f"Debug: Deleted old image: {old_path}")
+                        # print(f"Debug: Deleted old image: {old_path}")
                 except Exception as e:
                     print(f"Debug: Could not delete old image: {e}")
             
@@ -227,7 +227,7 @@ def update_user_profile(request):
         
         # Save the user (this will trigger image processing)
         user.save()
-        print(f"Debug: User saved successfully")
+        # print(f"Debug: User saved successfully")
         
         # Get final image info if image was processed
         if image_info and user.profile_image:
@@ -235,7 +235,7 @@ def update_user_profile(request):
                 processed_info = user.get_profile_image_info()
                 if processed_info:
                     image_info['processed'] = processed_info
-                    print(f"Debug: Processed image - {processed_info}")
+                    # print(f"Debug: Processed image - {processed_info}")
             except Exception as e:
                 print(f"Debug: Could not get processed image info: {e}")
         
@@ -258,7 +258,7 @@ def update_user_profile(request):
         if image_info:
             response_data['image_processing'] = image_info
         
-        print(f"Debug: Response data prepared")
+        # print(f"Debug: Response data prepared")
         return Response(response_data)
         
     except ValidationError as e:

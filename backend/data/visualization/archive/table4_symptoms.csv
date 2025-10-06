@@ -1,9 +1,0 @@
-Symptom Category,Total Cases,Percentage (%),Classification Accuracy (%),Seasonal Peak
-Respiratory,156,33.6,68.2,Fall/Winter
-Digestive,89,19.2,52.3,Year-round
-Pain/Musculoskeletal,67,14.4,41.2,Fall/Spring
-Dermatological/Trauma,45,9.7,38.7,Summer
-Neuropsychiatric,32,6.9,35.1,Fall/Winter
-Systemic/Infectious,28,6.0,32.4,Winter
-Cardiovascular/Chronic,12,2.6,15.8,Year-round
-Other,38,8.2,45.6,Variable

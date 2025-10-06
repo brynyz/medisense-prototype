@@ -1,8 +1,0 @@
-Study/Method,Accuracy (%),F1-Score (%),Data Type,Sample Size
-This Work (XGBoost),93.7,84.7,Medical Visits,"1,025 days"
-Traditional ML (Baseline),87.2,76.3,Medical Visits,"1,025 days"
-Healthcare Prediction (Avg),78.5,71.2,Various,Variable
-Medical Visit Prediction (Lit),82.3,74.8,Emergency Visits,500-2000
-Time Series Forecasting (Lit),75.8,68.9,Patient Flow,365-1000
-SMOTE + RF (Literature),85.6,79.4,Medical Records,1000-5000
-Deep Learning (Healthcare),88.9,82.1,EHR Data,10000+

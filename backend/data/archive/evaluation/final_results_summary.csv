@@ -1,3 +1,0 @@
-Task,Best Model,Primary Metric,Secondary Metric,R² Score
-Visit Count Regression,XGBoost,Within ±1: 88.5%,RMSE: 1.80,-0.092
-Binary Visit Classification,RandomForest,Accuracy: 92.4%,F1-Score: 0.540,N/A

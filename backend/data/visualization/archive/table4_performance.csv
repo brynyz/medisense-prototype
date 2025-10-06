@@ -1,4 +1,0 @@
-Model,Accuracy (%),Precision (%),Recall (%),F1-Score (%),AUC-ROC,Training Time (s)
-Random Forest,91.5,85.0,78.0,81.0,0.87,12.3
-XGBoost,93.7,87.5,82.0,84.7,0.89,8.7
-Gradient Boosting,89.0,82.0,75.0,78.5,0.85,15.2

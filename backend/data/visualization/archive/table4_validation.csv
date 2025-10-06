@@ -1,7 +1,0 @@
-Validation Fold,Binary Accuracy (%),Binary F1-Score (%),Regression RMSE,Within ±1 Visit (%)
-Fold 1,92.5,84.2,0.74,91.2
-Fold 2,91.8,83.1,0.78,89.8
-Fold 3,94.2,86.5,0.69,94.5
-Fold 4,93.5,85.3,0.71,92.1
-Fold 5,92.8,84.7,0.75,90.7
-Mean ± SD,92.8 ± 1.4,84.7 ± 1.8,0.73 ± 0.04,91.7 ± 1.9
