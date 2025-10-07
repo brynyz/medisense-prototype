@@ -17,13 +17,15 @@ env/
 .Python
 
 staticfiles/
-media/
+backend/media/profile_images*.jpg
+backend/mediaprofile_images/*.jpeg
+backend/mediaprofile_images/*.webp
 
 .DS_Store
 Thumbs.db
 
-medisense/backend/backups/
-medisense/backend/data
+/backend/backups/
+/backend/data
 
 
 .env
