@@ -31,7 +31,7 @@ DEBUG = os.getenv('DEBUG', 'True').lower() == 'true'
 
 # DigitalOcean App Platform domains
 ALLOWED_HOSTS = [
-    'https://medisense-backend-ml3h5.ondigitalocean.app/',
+    'https://medisense-backend-ml3h5.ondigitalocean.app',
     'localhost',
     '127.0.0.1'
 ]

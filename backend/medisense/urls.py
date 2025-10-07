@@ -23,14 +23,10 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path("admin-page/", admin.site.urls),
+    path("admin/", admin.site.urls),
     path("api/auth/", include('accounts.urls')),
     path("api/patients/", include('patients.urls')), 
 
-    # Existing template-based routes
-    path("", include("accounts.urls")),
-    path("symptoms/", include("patients.urls")),
-    path("captcha/", include("captcha.urls")),
 
     # API Documentation
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
