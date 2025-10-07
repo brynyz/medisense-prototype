@@ -16,6 +16,9 @@ import axios from 'axios';
 import { tokens } from '../../theme';
 
 const AuthForm = () => {
+  console.log('API URL:', process.env.REACT_APP_API_URL);
+  console.log('Payload:', payload);
+  
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const navigate = useNavigate();
