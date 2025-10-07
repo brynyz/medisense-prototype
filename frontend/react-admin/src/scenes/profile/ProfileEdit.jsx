@@ -264,6 +264,89 @@ const ProfileEdit = ({ userData, onCancel, onSave }) => {
             Update your photo and personal details here.
           </Typography>
 
+                      {/* Photo Upload Section */}
+                      <Box mb={4}>
+              <Box display="flex" alignItems="center" mb={2}>
+                <Typography
+                  variant="body1"
+                  color={colors.grey[100]}
+                  fontWeight="500"
+                  mr={1}
+                >
+                  Your photo <span style={{ color: colors.redAccent[400] }}>*</span>
+                </Typography>
+                <Tooltip title="This will be displayed on your profile." arrow>
+                  <InfoIcon sx={{ color: colors.grey[400], fontSize: 18 }} />
+                </Tooltip>
+              </Box>
+              
+              <Grid container spacing={3} alignItems="center">
+                {/* Current Photo */}
+                <Grid item>
+                  <Avatar
+                    src={profileImage}
+                    sx={{
+                      width: 80,
+                      height: 80,
+                      border: `2px solid ${colors.grey[600]}`,
+                      fontSize: "32px",
+                      backgroundColor: colors.blueAccent[600],
+                    }}
+                  >
+                    {formData.first_name?.[0] || userData.username?.[0] || 'U'}
+                  </Avatar>
+                </Grid>
+
+                {/* Upload Area */}
+                <Grid item xs>
+                  <input
+                    type="file"
+                    ref={fileInputRef}
+                    onChange={handleImageUpload}
+                    accept="image/*"
+                    style={{ display: 'none' }}
+                  />
+                  
+                  <Paper
+                    onClick={() => fileInputRef.current?.click()}
+                    sx={{
+                      p: 3,
+                      border: `2px dashed ${colors.grey[600]}`,
+                      backgroundColor: colors.primary[500],
+                      cursor: 'pointer',
+                      textAlign: 'center',
+                      '&:hover': {
+                        borderColor: colors.blueAccent[500],
+                        backgroundColor: colors.primary[400],
+                      },
+                    }}
+                  >
+                    <CloudUploadIcon 
+                      sx={{ 
+                        color: colors.blueAccent[500], 
+                        fontSize: 32,
+                        mb: 1 
+                      }} 
+                    />
+                    <Typography
+                      variant="body1"
+                      color={colors.grey[100]}
+                      fontWeight="500"
+                      mb={1}
+                    >
+                      Click to upload or drag and drop
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color={colors.grey[400]}
+                    >
+                      SVG, PNG, JPG or GIF (max. 800x400px)
+                    </Typography>
+                  </Paper>
+                </Grid>
+              </Grid>
+            </Box>
+
           <Box component="form" onSubmit={handleSubmit}>
             {/* Name Fields */}
             <Box mb={4}>
@@ -352,6 +435,8 @@ const ProfileEdit = ({ userData, onCancel, onSave }) => {
             </Box>
 
             {/* Email Field */}
+            <Grid container spacing={1}>
+              <Grid item xs={2}>
             <Box mb={4}>
               <Typography
                 variant="body1"
@@ -372,9 +457,6 @@ const ProfileEdit = ({ userData, onCancel, onSave }) => {
                 helperText={errors.email}
                 variant="outlined"
                 InputProps={{
-                  startAdornment: (
-                    <EmailIcon sx={{ color: colors.grey[400], mr: 1 }} />
-                  ),
                 }}
                 sx={{
                   '& .MuiOutlinedInput-root': {
@@ -402,92 +484,11 @@ const ProfileEdit = ({ userData, onCancel, onSave }) => {
                 }}
               />
             </Box>
-
-            {/* Photo Upload Section */}
-            <Box mb={4}>
-              <Box display="flex" alignItems="center" mb={2}>
-                <Typography
-                  variant="body1"
-                  color={colors.grey[100]}
-                  fontWeight="500"
-                  mr={1}
-                >
-                  Your photo <span style={{ color: colors.redAccent[400] }}>*</span>
-                </Typography>
-                <Tooltip title="This will be displayed on your profile." arrow>
-                  <InfoIcon sx={{ color: colors.grey[400], fontSize: 18 }} />
-                </Tooltip>
-              </Box>
-              
-              <Grid container spacing={3} alignItems="center">
-                {/* Current Photo */}
-                <Grid item>
-                  <Avatar
-                    src={profileImage}
-                    sx={{
-                      width: 80,
-                      height: 80,
-                      border: `2px solid ${colors.grey[600]}`,
-                      fontSize: "32px",
-                      backgroundColor: colors.blueAccent[600],
-                    }}
-                  >
-                    {formData.first_name?.[0] || userData.username?.[0] || 'U'}
-                  </Avatar>
-                </Grid>
-
-                {/* Upload Area */}
-                <Grid item xs>
-                  <input
-                    type="file"
-                    ref={fileInputRef}
-                    onChange={handleImageUpload}
-                    accept="image/*"
-                    style={{ display: 'none' }}
-                  />
-                  
-                  <Paper
-                    onClick={() => fileInputRef.current?.click()}
-                    sx={{
-                      p: 3,
-                      border: `2px dashed ${colors.grey[600]}`,
-                      backgroundColor: colors.primary[500],
-                      cursor: 'pointer',
-                      textAlign: 'center',
-                      '&:hover': {
-                        borderColor: colors.blueAccent[500],
-                        backgroundColor: colors.primary[400],
-                      },
-                    }}
-                  >
-                    <CloudUploadIcon 
-                      sx={{ 
-                        color: colors.blueAccent[500], 
-                        fontSize: 32,
-                        mb: 1 
-                      }} 
-                    />
-                    <Typography
-                      variant="body1"
-                      color={colors.grey[100]}
-                      fontWeight="500"
-                      mb={1}
-                    >
-                      Click to upload or drag and drop
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      color={colors.grey[400]}
-                    >
-                      SVG, PNG, JPG or GIF (max. 800x400px)
-                    </Typography>
-                  </Paper>
-                </Grid>
-              </Grid>
-            </Box>
+            </Grid>
+            </Grid>
 
             {/* Role Field */}
-            <Box mb={4}>
+            {/* <Box mb={4}>
               <Typography
                 variant="body1"
                 color={colors.grey[100]}
@@ -525,7 +526,7 @@ const ProfileEdit = ({ userData, onCancel, onSave }) => {
                   },
                 }}
               />
-            </Box>
+            </Box> */}
           </Box>
         </CardContent>
       </Card>
