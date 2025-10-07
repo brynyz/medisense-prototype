@@ -21,7 +21,6 @@ router = DefaultRouter()
 router.register(r'activity-logs', ActivityLogViewSet, basename='activitylog')
 
 urlpatterns = [
-    
     # API routes
     path('api/', include(router.urls)),
     path('api/auth/register/', RegisterView.as_view(), name='api_register'),

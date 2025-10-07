@@ -96,7 +96,7 @@ const AuthForm = () => {
     setLoading(true);
 
     const endpoint = isLogin
-      ? `${process.env.REACT_APP_API_URL}/api/auth/api/auth/login/` 
+      ? `${process.env.REACT_APP_API_URL}/api/auth/login/` 
       : `${process.env.REACT_APP_API_URL}/api/auth/register/`;
 
     try {

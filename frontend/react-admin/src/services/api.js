@@ -47,7 +47,7 @@ api.interceptors.response.use(
       try {
         const refreshToken = getRefreshToken();
         if (refreshToken) {
-          const response = await axios.post(`${API_BASE_URL}/api/auth/api/auth/refresh/`, {
+          const response = await axios.post(`${API_BASE_URL}/api/auth/refresh/`, {
             refresh: refreshToken,
           });
           
@@ -70,17 +70,17 @@ api.interceptors.response.use(
 
 // Auth API
 export const authAPI = {
-  login: (credentials) => api.post('/api/auth/api/auth/login/', credentials),
-  register: (userData) => api.post('/api/auth/api/auth/register/', userData),
-  logout: (refreshToken) => api.post('/api/auth/api/auth/logout/', { refresh: refreshToken }),
-  refreshToken: (refreshToken) => api.post('/api/auth/api/auth/refresh/', { refresh: refreshToken }),
-  getProfile: () => api.get('/api/auth/api/auth/profile/'),
-  updateProfile: (data) => api.patch('/api/auth/api/auth/profile/', data),
+  login: (credentials) => api.post('/api/auth/login/', credentials),
+  register: (userData) => api.post('/api/auth/register/', userData),
+  logout: (refreshToken) => api.post('/api/auth/logout/', { refresh: refreshToken }),
+  refreshToken: (refreshToken) => api.post('/api/auth/refresh/', { refresh: refreshToken }),
+  getProfile: () => api.get('/api/auth/profile/'),
+  updateProfile: (data) => api.patch('/api/auth/profile/', data),
 };
 
 // Dashboard API
 export const dashboardAPI = {
-  getStats: () => api.get('/api/auth/api/dashboard/stats/'),
+  getStats: () => api.get('/api/auth/dashboard/stats/'),
 };
 
 // Patients API
@@ -107,11 +107,11 @@ export const symptomsAPI = {
 
 // Activity Logs API
 export const activityAPI = {
-  getAll: (params) => api.get('/api/auth/api/activity-logs/', { params }),
-  getById: (id) => api.get(`/api/auth/api/activity-logs/${id}/`),
-  create: (data) => api.post('/api/auth/api/activity-logs/', data),
-  update: (id, data) => api.patch(`/api/auth/api/activity-logs/${id}/`, data),
-  delete: (id) => api.delete(`/api/auth/api/activity-logs/${id}/`),
+  getAll: (params) => api.get('/api/auth/activity-logs/', { params }),
+  getById: (id) => api.get(`/api/auth/activity-logs/${id}/`),
+  create: (data) => api.post('/api/auth/activity-logs/', data),
+  update: (id, data) => api.patch(`/api/auth/activity-logs/${id}/`, data),
+  delete: (id) => api.delete(`/api/auth/activity-logs/${id}/`),
 };
 
 export { setTokens, clearTokens, getToken };
