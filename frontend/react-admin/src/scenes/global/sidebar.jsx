@@ -38,7 +38,7 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
 const Sidebar = ({ isSidebar, setIsSidebar, user }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(true);
   const [selected, setSelected] = useState("Dashboard");
   const navigate = useNavigate();
   const [userData, setUserData] = useState({});
@@ -315,7 +315,7 @@ const Sidebar = ({ isSidebar, setIsSidebar, user }) => {
             sx={{ 
               marginTop: "auto", 
               paddingBottom: "20px",
-              paddingTop: "200px"
+              paddingTop: isCollapsed? "390px" : "200px"
             }}
           >
             <MenuItem
