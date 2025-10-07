@@ -30,11 +30,10 @@ SECRET_KEY = os.getenv('SECRET_KEY', "django-insecure-5t@w6nt5q@rprhdjj+3e2(j)u9
 DEBUG = os.getenv('DEBUG', 'True').lower() == 'true'
 
 # DigitalOcean App Platform domains
-ALLOWED_HOSTS = ['*'] if DEBUG else [
-    '.ondigitalocean.app',  # DigitalOcean App Platform
-    '.onrender.com',        # Keep Render support
-    'your-domain.com',      # Your custom domain
-    os.getenv('ALLOWED_HOSTS', '').split(',') if os.getenv('ALLOWED_HOSTS') else []
+ALLOWED_HOSTS = [
+    'https://medisense-backend-ml3h5.ondigitalocean.app/',
+    'localhost',
+    '127.0.0.1'
 ]
 # Flatten the list
 ALLOWED_HOSTS = [host.strip() for sublist in ALLOWED_HOSTS for host in (sublist if isinstance(sublist, list) else [sublist]) if host.strip()]
@@ -107,7 +106,6 @@ if os.getenv('DATABASE_URL'):
         'default': dj_database_url.parse(os.getenv('DATABASE_URL'))
     }
 else:
-    # local
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
@@ -213,6 +211,7 @@ SIMPLE_JWT = {
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # React development server
     "http://127.0.0.1:3000",
+    "https://medisense-isu.onrender.com/",
 ]
 
 # Add production CORS origins from environment variable
