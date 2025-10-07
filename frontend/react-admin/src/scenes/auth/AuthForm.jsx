@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 import {
   Box,
   Button,
@@ -10,30 +11,30 @@ import {
   Link,
   Grid,
   useTheme,
-} from '@mui/material';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
-import { tokens } from '../../theme';
+} from "@mui/material";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { tokens } from "../../theme";
 
 const AuthForm = () => {
-  console.log('API URL:', process.env.REACT_APP_API_URL);
-  console.log('Payload:', payload);
-  
+  console.log("API URL:", process.env.REACT_APP_API_URL);
+  const [captchaValue, setCaptchaValue] = useState(null);
+
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const navigate = useNavigate();
   const [isLogin, setIsLogin] = useState(true);
   const [formData, setFormData] = useState({
-    username: '',
-    email: '',
-    first_name: '',
-    last_name: '',
-    password: '',
-    password_confirm: '',
+    username: "",
+    email: "",
+    first_name: "",
+    last_name: "",
+    password: "",
+    password_confirm: "",
   });
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
-  const [apiError, setApiError] = useState('');
+  const [apiError, setApiError] = useState("");
   const [success, setSuccess] = useState(false);
 
   const handleChange = (e) => {
@@ -44,44 +45,47 @@ const AuthForm = () => {
     }));
     setErrors((prev) => ({
       ...prev,
-      [name]: '',
+      [name]: "",
     }));
-    setApiError('');
+    setApiError("");
   };
 
   const validateForm = () => {
     const newErrors = {};
 
     if (!formData.username.trim()) {
-      newErrors.username = 'Username is required';
+      newErrors.username = "Username is required";
     } else if (!isLogin && formData.username.length < 3) {
-      newErrors.username = 'Username must be at least 3 characters';
+      newErrors.username = "Username must be at least 3 characters";
     }
 
     if (!isLogin && !formData.email.trim()) {
-      newErrors.email = 'Email is required';
+      newErrors.email = "Email is required";
     } else if (!isLogin && !/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = 'Email is invalid';
+      newErrors.email = "Email is invalid";
     }
 
     if (!isLogin && !formData.first_name.trim()) {
-      newErrors.first_name = 'First name is required';
+      newErrors.first_name = "First name is required";
     }
 
     if (!isLogin && !formData.last_name.trim()) {
-      newErrors.last_name = 'Last name is required';
+      newErrors.last_name = "Last name is required";
     }
 
     if (!formData.password) {
-      newErrors.password = 'Password is required';
+      newErrors.password = "Password is required";
     } else if (!isLogin && formData.password.length < 8) {
-      newErrors.password = 'Password must be at least 8 characters';
+      newErrors.password = "Password must be at least 8 characters";
     }
 
     if (!isLogin && !formData.password_confirm) {
-      newErrors.password_confirm = 'Password confirmation is required';
+      newErrors.password_confirm = "Password confirmation is required";
     } else if (!isLogin && formData.password !== formData.password_confirm) {
-      newErrors.password_confirm = 'Passwords do not match';
+      newErrors.password_confirm = "Passwords do not match";
+    }
+    if (!captchaValue) {
+      setApiError("Please complete the reCAPTCHA verification");
     }
 
     setErrors(newErrors);
@@ -90,7 +94,7 @@ const AuthForm = () => {
 
   const handleAuth = async (e) => {
     e.preventDefault();
-    setApiError('');
+    setApiError("");
 
     if (!validateForm()) {
       return;
@@ -99,7 +103,7 @@ const AuthForm = () => {
     setLoading(true);
 
     const endpoint = isLogin
-      ? `${process.env.REACT_APP_API_URL}/api/auth/login/` 
+      ? `${process.env.REACT_APP_API_URL}/api/auth/login/`
       : `${process.env.REACT_APP_API_URL}/api/auth/register/`;
 
     try {
@@ -110,30 +114,30 @@ const AuthForm = () => {
       const response = await axios.post(endpoint, payload);
 
       if (isLogin) {
-        localStorage.setItem('token', response.data.access);
-        localStorage.setItem('refresh_token', response.data.refresh);
-        localStorage.setItem('user', JSON.stringify(response.data.user));
-        navigate('/dashboard');
+        localStorage.setItem("token", response.data.access);
+        localStorage.setItem("refresh_token", response.data.refresh);
+        localStorage.setItem("user", JSON.stringify(response.data.user));
+        navigate("/dashboard");
       } else {
         setSuccess(true);
         setTimeout(() => {
           setIsLogin(true); // Switch to login view after successful registration
           setSuccess(false);
           setFormData({
-            username: '',
-            email: '',
-            first_name: '',
-            last_name: '',
-            password: '',
-            password_confirm: '',
+            username: "",
+            email: "",
+            first_name: "",
+            last_name: "",
+            password: "",
+            password_confirm: "",
           }); // Clear form data
         }, 2000);
       }
     } catch (error) {
       if (error.response?.data) {
-        setApiError(error.response.data.detail || 'Authentication failed');
+        setApiError(error.response.data.detail || "Authentication failed");
       } else {
-        setApiError('Network error. Please try again.');
+        setApiError("Network error. Please try again.");
       }
     } finally {
       setLoading(false);
@@ -142,15 +146,16 @@ const AuthForm = () => {
 
   const handleToggleForm = () => {
     setIsLogin(!isLogin);
+    setCaptchaValue(null); 
     setErrors({});
-    setApiError('');
+    setApiError("");
     setFormData({
-      username: '',
-      email: '',
-      first_name: '',
-      last_name: '',
-      password: '',
-      password_confirm: '',
+      username: "",
+      email: "",
+      first_name: "",
+      last_name: "",
+      password: "",
+      password_confirm: "",
     });
   };
 
@@ -159,10 +164,10 @@ const AuthForm = () => {
       <div className="auth-container">
         <Box
           sx={{
-            minHeight: '100vh',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
+            minHeight: "100vh",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
             backgroundColor: colors.primary[500],
             padding: 2,
           }}
@@ -171,21 +176,21 @@ const AuthForm = () => {
             elevation={3}
             sx={{
               padding: 4,
-              width: '100%',
+              width: "100%",
               maxWidth: 400,
               borderRadius: 2,
-              textAlign: 'center',
+              textAlign: "center",
               backgroundColor: colors.primary[400],
               border: `1px solid ${colors.grey[700]}`,
             }}
           >
-            <Alert 
-              severity="success" 
-              sx={{ 
+            <Alert
+              severity="success"
+              sx={{
                 mb: 2,
                 backgroundColor: colors.greenAccent[800],
                 color: colors.greenAccent[200],
-                '& .MuiAlert-icon': {
+                "& .MuiAlert-icon": {
                   color: colors.greenAccent[200],
                 },
               }}
@@ -203,10 +208,10 @@ const AuthForm = () => {
     <div className="auth-container">
       <Box
         sx={{
-          minHeight: '100vh',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
+          minHeight: "100vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
           backgroundColor: colors.primary[500],
           padding: 2,
         }}
@@ -215,43 +220,43 @@ const AuthForm = () => {
           elevation={3}
           sx={{
             padding: 4,
-            width: '100%',
+            width: "100%",
             maxWidth: isLogin ? 400 : 500,
             borderRadius: 2,
             backgroundColor: colors.primary[400],
             border: `1px solid ${colors.grey[700]}`,
           }}
         >
-          <Box sx={{ textAlign: 'center', mb: 3 }}>
-            <Typography 
-              variant="h4" 
-              component="h1" 
+          <Box sx={{ textAlign: "center", mb: 3 }}>
+            <Typography
+              variant="h4"
+              component="h1"
               gutterBottom
-              sx={{ 
+              sx={{
                 color: colors.grey[100],
-                fontWeight: 'bold',
+                fontWeight: "bold",
               }}
             >
               MediSense
             </Typography>
-            <Typography 
-              variant="h6" 
-              sx={{ 
+            <Typography
+              variant="h6"
+              sx={{
                 color: colors.grey[300],
               }}
             >
-              {isLogin ? 'Sign in to your account' : 'Create your account'}
+              {isLogin ? "Sign in to your account" : "Create your account"}
             </Typography>
           </Box>
 
           {apiError && (
-            <Alert 
-              severity="error" 
-              sx={{ 
+            <Alert
+              severity="error"
+              sx={{
                 mb: 2,
                 backgroundColor: colors.redAccent[800],
                 color: colors.redAccent[200],
-                '& .MuiAlert-icon': {
+                "& .MuiAlert-icon": {
                   color: colors.redAccent[200],
                 },
               }}
@@ -275,29 +280,32 @@ const AuthForm = () => {
                   required
                   variant="filled"
                   sx={{
-                    '& .MuiFilledInput-root': {
+                    "& .MuiFilledInput-root": {
                       backgroundColor: colors.primary[500],
-                      '&:hover': {
+                      "&:hover": {
                         backgroundColor: colors.primary[400],
                       },
-                      '&.Mui-focused': {
+                      "&.Mui-focused": {
                         backgroundColor: colors.primary[400],
                       },
                     },
-                    '& .MuiInputLabel-root': {
+                    "& .MuiInputLabel-root": {
                       color: colors.grey[200],
-                      '&.Mui-focused': {
+                      "&.Mui-focused": {
                         color: colors.blueAccent[500],
                       },
                     },
-                    '& .MuiInputBase-input': {
-                      color: theme.palette.mode === 'dark' ? colors.grey[100] : colors.grey[800],
-                      '&::placeholder': {
-                        color: '#fcfcfc',
+                    "& .MuiInputBase-input": {
+                      color:
+                        theme.palette.mode === "dark"
+                          ? colors.grey[100]
+                          : colors.grey[800],
+                      "&::placeholder": {
+                        color: "#fcfcfc",
                         opacity: 1,
                       },
                     },
-                    '& .MuiFormHelperText-root': {
+                    "& .MuiFormHelperText-root": {
                       color: colors.redAccent[400],
                     },
                   }}
@@ -314,29 +322,32 @@ const AuthForm = () => {
                   required
                   variant="filled"
                   sx={{
-                    '& .MuiFilledInput-root': {
+                    "& .MuiFilledInput-root": {
                       backgroundColor: colors.primary[500],
-                      '&:hover': {
+                      "&:hover": {
                         backgroundColor: colors.primary[400],
                       },
-                      '&.Mui-focused': {
+                      "&.Mui-focused": {
                         backgroundColor: colors.primary[400],
                       },
                     },
-                    '& .MuiInputLabel-root': {
+                    "& .MuiInputLabel-root": {
                       color: colors.grey[200],
-                      '&.Mui-focused': {
+                      "&.Mui-focused": {
                         color: colors.blueAccent[500],
                       },
                     },
-                    '& .MuiInputBase-input': {
-                      color: theme.palette.mode === 'dark' ? colors.grey[100] : colors.grey[800],
-                      '&::placeholder': {
-                        color: '#fcfcfc',
+                    "& .MuiInputBase-input": {
+                      color:
+                        theme.palette.mode === "dark"
+                          ? colors.grey[100]
+                          : colors.grey[800],
+                      "&::placeholder": {
+                        color: "#fcfcfc",
                         opacity: 1,
                       },
                     },
-                    '& .MuiFormHelperText-root': {
+                    "& .MuiFormHelperText-root": {
                       color: colors.redAccent[400],
                     },
                   }}
@@ -358,29 +369,32 @@ const AuthForm = () => {
               autoComplete="off"
               variant="filled"
               sx={{
-                '& .MuiFilledInput-root': {
+                "& .MuiFilledInput-root": {
                   backgroundColor: colors.primary[500],
-                  '&:hover': {
+                  "&:hover": {
                     backgroundColor: colors.primary[400],
                   },
-                  '&.Mui-focused': {
+                  "&.Mui-focused": {
                     backgroundColor: colors.primary[400],
                   },
                 },
-                '& .MuiInputLabel-root': {
+                "& .MuiInputLabel-root": {
                   color: colors.grey[200],
-                  '&.Mui-focused': {
+                  "&.Mui-focused": {
                     color: colors.blueAccent[500],
                   },
                 },
-                '& .MuiInputBase-input': {
-                  color: theme.palette.mode === 'dark' ? colors.grey[100] : colors.grey[800],
-                  '&::placeholder': {
-                    color: '#fcfcfc',
+                "& .MuiInputBase-input": {
+                  color:
+                    theme.palette.mode === "dark"
+                      ? colors.grey[100]
+                      : colors.grey[800],
+                  "&::placeholder": {
+                    color: "#fcfcfc",
                     opacity: 1,
                   },
                 },
-                '& .MuiFormHelperText-root': {
+                "& .MuiFormHelperText-root": {
                   color: colors.redAccent[400],
                 },
               }}
@@ -400,29 +414,32 @@ const AuthForm = () => {
                 required
                 variant="filled"
                 sx={{
-                  '& .MuiFilledInput-root': {
+                  "& .MuiFilledInput-root": {
                     backgroundColor: colors.primary[500],
-                    '&:hover': {
+                    "&:hover": {
                       backgroundColor: colors.primary[400],
                     },
-                    '&.Mui-focused': {
+                    "&.Mui-focused": {
                       backgroundColor: colors.primary[400],
                     },
                   },
-                  '& .MuiInputLabel-root': {
+                  "& .MuiInputLabel-root": {
                     color: colors.grey[200],
-                    '&.Mui-focused': {
+                    "&.Mui-focused": {
                       color: colors.blueAccent[500],
                     },
                   },
-                  '& .MuiInputBase-input': {
-                    color: theme.palette.mode === 'dark' ? colors.grey[100] : colors.grey[800],
-                    '&::placeholder': {
-                      color: '#fcfcfc',
+                  "& .MuiInputBase-input": {
+                    color:
+                      theme.palette.mode === "dark"
+                        ? colors.grey[100]
+                        : colors.grey[800],
+                    "&::placeholder": {
+                      color: "#fcfcfc",
                       opacity: 1,
                     },
                   },
-                  '& .MuiFormHelperText-root': {
+                  "& .MuiFormHelperText-root": {
                     color: colors.redAccent[400],
                   },
                 }}
@@ -443,29 +460,32 @@ const AuthForm = () => {
               autoComplete="off"
               variant="filled"
               sx={{
-                '& .MuiFilledInput-root': {
+                "& .MuiFilledInput-root": {
                   backgroundColor: colors.primary[500],
-                  '&:hover': {
+                  "&:hover": {
                     backgroundColor: colors.primary[400],
                   },
-                  '&.Mui-focused': {
+                  "&.Mui-focused": {
                     backgroundColor: colors.primary[400],
                   },
                 },
-                '& .MuiInputLabel-root': {
+                "& .MuiInputLabel-root": {
                   color: colors.grey[200],
-                  '&.Mui-focused': {
+                  "&.Mui-focused": {
                     color: colors.blueAccent[500],
                   },
                 },
-                '& .MuiInputBase-input': {
-                  color: theme.palette.mode === 'dark' ? colors.grey[100] : colors.grey[800],
-                  '&::placeholder': {
-                    color: '#fcfcfc',
+                "& .MuiInputBase-input": {
+                  color:
+                    theme.palette.mode === "dark"
+                      ? colors.grey[100]
+                      : colors.grey[800],
+                  "&::placeholder": {
+                    color: "#fcfcfc",
                     opacity: 1,
                   },
                 },
-                '& .MuiFormHelperText-root': {
+                "& .MuiFormHelperText-root": {
                   color: colors.redAccent[400],
                 },
               }}
@@ -485,50 +505,66 @@ const AuthForm = () => {
                 required
                 variant="filled"
                 sx={{
-                  '& .MuiFilledInput-root': {
+                  "& .MuiFilledInput-root": {
                     backgroundColor: colors.primary[500],
-                    '&:hover': {
+                    "&:hover": {
                       backgroundColor: colors.primary[400],
                     },
-                    '&.Mui-focused': {
+                    "&.Mui-focused": {
                       backgroundColor: colors.primary[400],
                     },
                   },
-                  '& .MuiInputLabel-root': {
+                  "& .MuiInputLabel-root": {
                     color: colors.grey[200],
-                    '&.Mui-focused': {
+                    "&.Mui-focused": {
                       color: colors.blueAccent[500],
                     },
                   },
-                  '& .MuiInputBase-input': {
-                    color: theme.palette.mode === 'dark' ? colors.grey[100] : colors.grey[800],
-                    '&::placeholder': {
-                      color: '#fcfcfc',
+                  "& .MuiInputBase-input": {
+                    color:
+                      theme.palette.mode === "dark"
+                        ? colors.grey[100]
+                        : colors.grey[800],
+                    "&::placeholder": {
+                      color: "#fcfcfc",
                       opacity: 1,
                     },
                   },
-                  '& .MuiFormHelperText-root': {
+                  "& .MuiFormHelperText-root": {
                     color: colors.redAccent[400],
                   },
                 }}
               />
             )}
-
+              <Box
+                sx={{ mt: 2, mb: 2, display: "flex", justifyContent: "center" }}
+              >
+                <ReCAPTCHA
+                  sitekey="6LcH1-ErAAAAAJgoNa8dqcYX1hlmmmgdJ6j5MC7E"
+                  onChange={setCaptchaValue}
+                  theme={theme.palette.mode === "dark" ? "dark" : "light"}
+                />
+                {errors.captcha && (
+                  <Typography color="error" variant="caption" sx={{ mt: 1 }}>
+                    {errors.captcha}
+                  </Typography>
+                )}
+              </Box>
             <Button
               type="submit"
               fullWidth
               variant="contained"
               disabled={loading}
-              sx={{ 
-                mt: 3, 
-                mb: 2, 
+              sx={{
+                mt: 3,
+                mb: 2,
                 py: 1.5,
                 backgroundColor: colors.blueAccent[600],
                 color: colors.grey[100],
-                '&:hover': {
+                "&:hover": {
                   backgroundColor: colors.blueAccent[700],
                 },
-                '&:disabled': {
+                "&:disabled": {
                   backgroundColor: colors.grey[600],
                   color: colors.grey[400],
                 },
@@ -536,28 +572,32 @@ const AuthForm = () => {
             >
               {loading ? (
                 <CircularProgress size={24} sx={{ color: colors.grey[100] }} />
+              ) : isLogin ? (
+                "Sign In"
               ) : (
-                isLogin ? 'Sign In' : 'Sign Up'
+                "Sign Up"
               )}
             </Button>
 
-            <Box sx={{ textAlign: 'center' }}>
+            <Box sx={{ textAlign: "center" }}>
               <Typography variant="body2" sx={{ color: colors.grey[300] }}>
-                {isLogin ? 'Don\'t have an account?' : 'Already have an account?'}{' '}
+                {isLogin
+                  ? "Don't have an account?"
+                  : "Already have an account?"}{" "}
                 <Link
                   component="button"
                   type="button"
                   onClick={handleToggleForm}
-                  sx={{ 
-                    textDecoration: 'none',
+                  sx={{
+                    textDecoration: "none",
                     color: colors.blueAccent[500],
-                    '&:hover': {
+                    "&:hover": {
                       color: colors.blueAccent[400],
-                      textDecoration: 'underline',
+                      textDecoration: "underline",
                     },
                   }}
                 >
-                  {isLogin ? 'Sign up' : 'Sign in'}
+                  {isLogin ? "Sign up" : "Sign in"}
                 </Link>
               </Typography>
             </Box>

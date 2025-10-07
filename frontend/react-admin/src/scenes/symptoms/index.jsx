@@ -238,13 +238,13 @@ const Symptoms = () => {
       renderCell: (params) => {
         return (
           <Box display="flex" gap={0.5}>
-            <IconButton
+            {/* <IconButton
               onClick={() => handleView(params.row.id)}
               sx={{ color: colors.greenAccent[400] }}
               size="small"
             >
               <VisibilityOutlinedIcon />
-            </IconButton>
+            </IconButton> */}
             
             <IconButton
               onClick={() => handleEdit(params.row.id)}
