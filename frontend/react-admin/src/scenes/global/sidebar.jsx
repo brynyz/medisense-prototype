@@ -220,7 +220,7 @@ const Sidebar = ({ isSidebar, setIsSidebar, user }) => {
                   }
                 </Typography>
                 <Typography variant="h5" color={colors.greenAccent[500]}>
-                  {userData?.role || (userData?.is_staff ? 'Administrator' : 'User')}
+                  {userData.role || (userData.is_staff ? 'Administrator' : 'User')}
                 </Typography>
               </Box>
             </Box>
