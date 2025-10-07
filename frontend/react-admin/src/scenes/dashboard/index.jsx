@@ -244,7 +244,7 @@ const Dashboard = () => {
                 fontWeight="600"
                 color={colors.grey[100]}
               >
-                Campus per Department Heatmap
+                Visits per Department Heatmap
               </Typography>
             </Box>
             <Box>

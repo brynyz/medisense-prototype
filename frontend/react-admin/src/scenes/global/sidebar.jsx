@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
-import { Box, IconButton, Typography, useTheme } from "@mui/material";
+import { Box, IconButton, Typography, useTheme, Avatar} from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios'; // Import axios
 import "react-pro-sidebar/dist/css/styles.css";
