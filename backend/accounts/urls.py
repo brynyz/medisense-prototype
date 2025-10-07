@@ -29,8 +29,8 @@ urlpatterns = [
     path('refresh/', TokenRefreshView.as_view(), name='api_token_refresh'),
     path('profile/', UserProfileView.as_view(), name='api_profile'),
     path('dashboard/stats/', dashboard_stats, name='api_dashboard_stats'),
-    path('auth/user/', get_user, name='api_get_user'),
-    path('auth/logout-user/', logout_user, name='api_logout_user'),
-    path('auth/profile/update/', update_user_profile, name='api_update_user_profile'),
-    path('auth/health/', health_check, name='api_health_check'),
+    path('user/', get_user, name='api_get_user'),
+    path('logout-user/', logout_user, name='api_logout_user'),
+    path('profile/update/', update_user_profile, name='api_update_user_profile'),
+    path('health/', health_check, name='api_health_check'),
 ]
