@@ -31,12 +31,10 @@ DEBUG = os.getenv('DEBUG', 'True').lower() == 'true'
 
 # DigitalOcean App Platform domains
 ALLOWED_HOSTS = [
-    'https://medisense-backend-ml3h5.ondigitalocean.app',
+    'medisense-backend-ml3h5.ondigitalocean.app',
     'localhost',
     '127.0.0.1'
 ]
-# Flatten the list
-ALLOWED_HOSTS = [host.strip() for sublist in ALLOWED_HOSTS for host in (sublist if isinstance(sublist, list) else [sublist]) if host.strip()]
 
 
 # Application definition
