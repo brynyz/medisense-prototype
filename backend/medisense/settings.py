@@ -211,7 +211,7 @@ SIMPLE_JWT = {
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # React development server
     "http://127.0.0.1:3000",
-    "https://medisense-isu.onrender.com/",
+    "https://medisense-isu.onrender.com",
 ]
 
 # Add production CORS origins from environment variable
