@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: medisense-isu
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: serve -s build
+    routes:
+      - type: static
+        path: /*
+        destination: /index.html
