@@ -85,6 +85,7 @@ const AuthForm = () => {
       newErrors.password_confirm = "Passwords do not match";
     }
     if (!captchaValue) {
+      newErrors.captcha = "Please complete the reCAPTCHA verification";
       setApiError("Please complete the reCAPTCHA verification");
     }
 
