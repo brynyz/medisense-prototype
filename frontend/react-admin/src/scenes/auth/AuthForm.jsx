@@ -122,7 +122,7 @@ const AuthForm = () => {
       } else {
         setSuccess(true);
         setTimeout(() => {
-          setIsLogin(true); // Switch to login view after successful registration
+          setIsLogin(true); // switch to login when registration is successful
           setSuccess(false);
           setFormData({
             username: "",
