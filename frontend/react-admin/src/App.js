@@ -23,6 +23,7 @@ import ModelTraining from "./scenes/modeltraining";
 import DataPreprocessing from "./scenes/datapreprocessing";
 import Help from "./scenes/help";
 import Profile from "./scenes/profile";
+import APIDebugTool from "./components/debug/APIDebugTool";
 
 // Protected Route Component
 const ProtectedRoute = ({ children }) => {
@@ -83,6 +84,7 @@ function App() {
                     <Route path="/help" element={<Help />} />
                     <Route path="/profile" element={<Profile />} />
                     <Route path="/heatmap" element={<Heatmap />} />
+                    <Route path="/debug" element={<APIDebugTool />} />
                   </Routes>
                 </main>
               </ProtectedRoute>
