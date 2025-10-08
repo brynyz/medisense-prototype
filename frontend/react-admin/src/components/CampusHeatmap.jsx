@@ -27,7 +27,7 @@ const CampusHeatmap = ({ isDashboard = false }) => {
       
       // Test base endpoint first
       console.log('🧪 Testing base symptoms endpoint...');
-      const testResponse = await fetch('http://localhost:8000/api/patients/symptoms/', {
+      const testResponse = await fetch(`${process.env.REACT_APP_API_URL}/api/patients/symptoms/`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -36,7 +36,7 @@ const CampusHeatmap = ({ isDashboard = false }) => {
       });
       console.log('🧪 Base symptoms endpoint status:', testResponse.status);
       
-      const response = await fetch('http://localhost:8000/api/patients/symptoms/department_visits/', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/patients/symptoms/department_visits/`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
