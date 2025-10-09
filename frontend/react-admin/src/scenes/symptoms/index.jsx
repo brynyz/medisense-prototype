@@ -331,8 +331,6 @@ const Symptoms = () => {
         </Button>
       </Box>
 
-      {/* Temporary Debug Panel */}
-      <AuthDebugPanel />
 
       {/* DataGrid */}
       <Box

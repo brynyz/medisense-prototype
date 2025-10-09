@@ -105,7 +105,17 @@ const SymptomsForm = () => {
         date_logged: new Date(values.date).toISOString(),
       };
 
-      console.log('Submitting symptom data:', submitData);
+      console.group('📤 Preparing Symptom Submission');
+      console.log('Patient ID:', patientId);
+      console.log('Form values:', values);
+      console.log('Final submit data:', submitData);
+      console.log('Submit data types:', {
+        patient: typeof submitData.patient,
+        symptom: typeof submitData.symptom,
+        notes: typeof submitData.notes,
+        date_logged: typeof submitData.date_logged
+      });
+      console.groupEnd();
 
       if (isEdit) {
         const response = await symptomsAPI.update(id, submitData);
@@ -122,14 +132,31 @@ const SymptomsForm = () => {
         navigate("/app/symptoms");
       }, 1500);
     } catch (error) {
-      console.error("Error submitting form:", error);
+      console.group("❌ Form Submission Error");
+      console.error("Full error object:", error);
+      console.error("Error message:", error.message);
       console.error("Error response:", error.response);
       console.error("Error data:", error.response?.data);
       console.error("Error status:", error.response?.status);
+      console.error("Error headers:", error.response?.headers);
+      
+      // Log the request that failed
+      if (error.config) {
+        console.error("Failed request config:", {
+          url: error.config.url,
+          method: error.config.method,
+          data: error.config.data,
+          headers: error.config.headers
+        });
+      }
+      console.groupEnd();
       
       // More detailed error message
       let errorMessage = "Failed to save symptom record";
-      if (error.response?.data) {
+      
+      if (error.response?.status === 500) {
+        errorMessage = "Server Error (500): There's an issue with the backend server. Please check the server logs or contact support.";
+      } else if (error.response?.data) {
         if (typeof error.response.data === 'string') {
           errorMessage = error.response.data;
         } else if (error.response.data.detail) {

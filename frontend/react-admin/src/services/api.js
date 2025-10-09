@@ -41,6 +41,7 @@ api.interceptors.request.use(
     }
     
     console.log('Request headers:', config.headers);
+    console.log('Request data:', config.data);
     console.groupEnd();
     
     return config;
