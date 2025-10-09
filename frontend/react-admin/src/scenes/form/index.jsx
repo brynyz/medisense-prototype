@@ -184,6 +184,53 @@ const SymptomsForm = () => {
     navigate("/app/symptoms");
   };
 
+  // Test function to check if other API endpoints work
+  const handleTestAPI = async () => {
+    console.group('🧪 API Endpoint Test');
+    
+    try {
+      // Test 1: Get all patients (should work)
+      console.log('Testing patients API...');
+      const patientsResponse = await patientsAPI.getAll();
+      console.log('✅ Patients API works:', patientsResponse.status, patientsResponse.data);
+      
+      // Test 2: Get all symptoms (might work)
+      console.log('Testing symptoms GET API...');
+      const symptomsResponse = await symptomsAPI.getAll();
+      console.log('✅ Symptoms GET API works:', symptomsResponse.status, symptomsResponse.data);
+      
+      // Test 3: Check what patients are available
+      const availablePatients = patientsResponse.data.results || patientsResponse.data || [];
+      console.log('Available patients:', availablePatients.map(p => ({ id: p.id, name: p.name })));
+      
+      if (availablePatients.length > 0) {
+        // Test 4: Try a simple POST with minimal data using a real patient ID
+        console.log('Testing symptoms POST with minimal data...');
+        const firstPatient = availablePatients[0];
+        const testData = {
+          patient: firstPatient.id, // Use actual patient ID
+          symptom: "Test symptom",
+          notes: "Test notes",
+          date_logged: new Date().toISOString()
+        };
+        console.log('Test data:', testData);
+        console.log('Using patient:', firstPatient);
+        
+        const testResponse = await symptomsAPI.create(testData);
+        console.log('✅ Symptoms POST works:', testResponse.status, testResponse.data);
+      } else {
+        console.warn('⚠️ No patients available for testing');
+      }
+      
+    } catch (error) {
+      console.error('❌ API Test failed:', error);
+      console.error('Error response:', error.response);
+      console.error('Error data:', error.response?.data);
+    }
+    
+    console.groupEnd();
+  };
+
   // Course options with display labels and values
   const courseOptions = [
     { label: "STAFF", value: "staff" },
@@ -478,6 +525,15 @@ const SymptomsForm = () => {
             </Box>
 
             <Box display="flex" justifyContent="end" mt="20px" gap="10px">
+              <Button
+                type="button"
+                color="secondary"
+                variant="outlined"
+                onClick={handleTestAPI}
+                size="small"
+              >
+                Test API
+              </Button>
               <Button
                 type="button"
                 color="secondary"
