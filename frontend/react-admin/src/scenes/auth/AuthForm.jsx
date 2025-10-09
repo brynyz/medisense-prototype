@@ -15,6 +15,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { tokens } from "../../theme";
+import { useAuth } from "../../contexts/AuthContext";
 
 const AuthForm = () => {
   console.log("API URL:", process.env.REACT_APP_API_URL);
@@ -23,6 +24,7 @@ const AuthForm = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const navigate = useNavigate();
+  const { login, register } = useAuth();
   const [isLogin, setIsLogin] = useState(true);
   const [formData, setFormData] = useState({
     username: "",
@@ -103,43 +105,43 @@ const AuthForm = () => {
 
     setLoading(true);
 
-    const endpoint = isLogin
-      ? `${process.env.REACT_APP_API_URL}/api/auth/login/`
-      : `${process.env.REACT_APP_API_URL}/api/auth/register/`;
-
     try {
-      const payload = isLogin
-        ? { username: formData.username, password: formData.password }
-        : formData;
-
-      const response = await axios.post(endpoint, payload);
-
       if (isLogin) {
-        localStorage.setItem("token", response.data.access);
-        localStorage.setItem("refresh_token", response.data.refresh);
-        localStorage.setItem("user", JSON.stringify(response.data.user));
-        navigate("/dashboard");
+        const credentials = { 
+          username: formData.username, 
+          password: formData.password 
+        };
+        
+        const result = await login(credentials);
+        
+        if (result.success) {
+          navigate("/dashboard");
+        } else {
+          setApiError(result.error || "Login failed");
+        }
       } else {
-        setSuccess(true);
-        setTimeout(() => {
-          setIsLogin(true); // switch to login when registration is successful
-          setSuccess(false);
-          setFormData({
-            username: "",
-            email: "",
-            first_name: "",
-            last_name: "",
-            password: "",
-            password_confirm: "",
-          }); // Clear form data
-        }, 2000);
+        const result = await register(formData);
+        
+        if (result.success) {
+          setSuccess(true);
+          setTimeout(() => {
+            setIsLogin(true); // switch to login when registration is successful
+            setSuccess(false);
+            setFormData({
+              username: "",
+              email: "",
+              first_name: "",
+              last_name: "",
+              password: "",
+              password_confirm: "",
+            }); // Clear form data
+          }, 2000);
+        } else {
+          setApiError(result.error || "Registration failed");
+        }
       }
     } catch (error) {
-      if (error.response?.data) {
-        setApiError(error.response.data.detail || "Authentication failed");
-      } else {
-        setApiError("Network error. Please try again.");
-      }
+      setApiError("Network error. Please try again.");
     } finally {
       setLoading(false);
     }

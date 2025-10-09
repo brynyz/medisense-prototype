@@ -279,13 +279,13 @@ const Sidebar = ({ isSidebar, setIsSidebar, user }) => {
               selected={selected}
               setSelected={setSelected}
             />
-            <Item
+            {/* <Item
               title="Smart Help"
               to="/app/help"
               icon={<AssistantIcon />}
               selected={selected}
               setSelected={setSelected}
-            />
+            /> */}
             <Item
               title="FAQ Page"
               to="/app/faq"

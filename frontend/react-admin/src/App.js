@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
+import { useAuth } from "./contexts/AuthContext";
 import Topbar from "./scenes/global/topbar";
 import Sidebar from "./scenes/global/sidebar";
 import Dashboard from "./scenes/dashboard";
@@ -24,11 +25,17 @@ import DataPreprocessing from "./scenes/datapreprocessing";
 import Help from "./scenes/help";
 import Profile from "./scenes/profile";
 import APIDebugTool from "./components/debug/APIDebugTool";
+import LoadingSpinner from "./components/LoadingSpinner";
 
 // Protected Route Component
 const ProtectedRoute = ({ children }) => {
-  const token = localStorage.getItem('token');
-  return token ? children : <Navigate to="/login" replace />;
+  const { isAuthenticated, isLoading } = useAuth();
+  
+  if (isLoading) {
+    return <LoadingSpinner message="Checking authentication..." />;
+  }
+  
+  return isAuthenticated ? children : <Navigate to="/login" replace />;
 };
 
 function App() {
@@ -85,10 +92,15 @@ function App() {
                     <Route path="/profile" element={<Profile />} />
                     <Route path="/heatmap" element={<Heatmap />} />
                     <Route path="/debug" element={<APIDebugTool />} />
+                    {/* Fallback route for unmatched paths */}
+                    <Route path="*" element={<Navigate to="/dashboard" replace />} />
                   </Routes>
                 </main>
               </ProtectedRoute>
             } />
+            
+            {/* Fallback route for any unmatched paths outside /app */}
+            <Route path="*" element={<Navigate to="/login" replace />} />
           </Routes>
         </div>
       </ThemeProvider>

@@ -67,6 +67,7 @@ export const AuthProvider = ({ children }) => {
             payload: { user: response.data },
           });
         } catch (error) {
+          console.error('Auth check failed:', error);
           clearTokens();
           dispatch({
             type: 'AUTH_FAILURE',
@@ -81,7 +82,19 @@ export const AuthProvider = ({ children }) => {
       }
     };
 
-    checkAuth();
+    // Add a timeout to prevent infinite loading
+    const timeoutId = setTimeout(() => {
+      dispatch({
+        type: 'AUTH_FAILURE',
+        payload: 'Authentication timeout',
+      });
+    }, 10000); // 10 second timeout
+
+    checkAuth().finally(() => {
+      clearTimeout(timeoutId);
+    });
+
+    return () => clearTimeout(timeoutId);
   }, []);
 
   const login = async (credentials) => {
