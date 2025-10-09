@@ -27,9 +27,22 @@ const clearTokens = () => {
 api.interceptors.request.use(
   (config) => {
     const token = getToken();
+    console.group('🚀 API Request Debug');
+    console.log('URL:', config.url);
+    console.log('Method:', config.method?.toUpperCase());
+    console.log('Token exists:', !!token);
+    console.log('Token preview:', token ? token.substring(0, 20) + '...' : 'No token');
+    
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
+      console.log('Authorization header set:', `Bearer ${token.substring(0, 20)}...`);
+    } else {
+      console.warn('⚠️ No token found - request will be unauthorized');
     }
+    
+    console.log('Request headers:', config.headers);
+    console.groupEnd();
+    
     return config;
   },
   (error) => Promise.reject(error)

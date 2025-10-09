@@ -10,6 +10,8 @@ import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
 import AddIcon from "@mui/icons-material/Add";
 import { CircularProgress, Alert, IconButton } from "@mui/material";
+import AuthDebugPanel from "../../components/AuthDebugPanel";
+import { useAuth } from "../../contexts/AuthContext";
 
 // Transform Django API data to match DataGrid format
 const transformApiData = (apiData) => {
@@ -44,9 +46,19 @@ const Symptoms = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const navigate = useNavigate();
+  const { isAuthenticated, user } = useAuth();
   const [symptomsData, setSymptomsData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  // Debug authentication status
+  useEffect(() => {
+    console.log('🔍 Symptoms Component - Auth Status:', {
+      isAuthenticated,
+      user,
+      token: localStorage.getItem('token') ? 'exists' : 'missing'
+    });
+  }, [isAuthenticated, user]);
 
   // Load symptoms data from Django API
   const loadSymptomsData = useCallback(async () => {
@@ -318,6 +330,9 @@ const Symptoms = () => {
           Add Symptom Record
         </Button>
       </Box>
+
+      {/* Temporary Debug Panel */}
+      <AuthDebugPanel />
 
       {/* DataGrid */}
       <Box
