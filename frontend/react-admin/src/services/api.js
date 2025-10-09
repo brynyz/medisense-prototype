@@ -27,22 +27,31 @@ const clearTokens = () => {
 api.interceptors.request.use(
   (config) => {
     const token = getToken();
-    console.group('🚀 API Request Debug');
-    console.log('URL:', config.url);
-    console.log('Method:', config.method?.toUpperCase());
-    console.log('Token exists:', !!token);
-    console.log('Token preview:', token ? token.substring(0, 20) + '...' : 'No token');
     
-    if (token) {
-      config.headers.Authorization = `Bearer ${token}`;
-      console.log('Authorization header set:', `Bearer ${token.substring(0, 20)}...`);
+    // Only log for symptom-related requests to reduce noise
+    if (config.url?.includes('symptoms')) {
+      console.group('🚀 API Request Debug');
+      console.log('Full URL:', `${config.baseURL || API_BASE_URL}${config.url}`);
+      console.log('Method:', config.method?.toUpperCase());
+      console.log('Token exists:', !!token);
+      console.log('Token preview:', token ? token.substring(0, 20) + '...' : 'No token');
+      
+      if (token) {
+        config.headers.Authorization = `Bearer ${token}`;
+        console.log('Authorization header set:', `Bearer ${token.substring(0, 20)}...`);
+      } else {
+        console.warn('⚠️ No token found - request will be unauthorized');
+      }
+      
+      console.log('Request headers:', config.headers);
+      console.log('Request data:', config.data);
+      console.groupEnd();
     } else {
-      console.warn('⚠️ No token found - request will be unauthorized');
+      // Still add auth header for all requests
+      if (token) {
+        config.headers.Authorization = `Bearer ${token}`;
+      }
     }
-    
-    console.log('Request headers:', config.headers);
-    console.log('Request data:', config.data);
-    console.groupEnd();
     
     return config;
   },
@@ -80,6 +89,9 @@ api.interceptors.response.use(
         enhancedError.isServerError = true;
         enhancedError.originalStatus = error.response.status;
         enhancedError.originalUrl = error.config?.url;
+        // Preserve the original response data for debugging
+        enhancedError.response = error.response;
+        enhancedError.config = error.config;
         return Promise.reject(enhancedError);
       }
     }

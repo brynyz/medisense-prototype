@@ -115,6 +115,12 @@ const SymptomsForm = () => {
         notes: typeof submitData.notes,
         date_logged: typeof submitData.date_logged
       });
+      
+      // Validate the data before sending
+      console.log('Data validation:');
+      console.log('- Patient ID is valid:', !!patientId && !isNaN(patientId));
+      console.log('- Symptom is not empty:', !!submitData.symptom && submitData.symptom.length > 0);
+      console.log('- Date is valid:', !isNaN(new Date(submitData.date_logged).getTime()));
       console.groupEnd();
 
       if (isEdit) {
